@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name" translatable="false">Wallpaper App</string>
+
+    <string name="english">English</string>
+    <string name="vietnamese">Vietnamese</string>
+    <string name="hindi">Hindi</string>
+    <string name="spanish">Spanish</string>
+    <string name="french">French</string>
+    <string name="japanese">Japanese</string>
+    <string name="korean">Korean</string>
+    <string name="turkish">Turkish</string>
+    <string name="german">German</string>
+    <string name="portuguese">Portuguese</string>
+    <string name="italian">Italian</string>
+    <string name="indonesian">Indonesian</string>
+    <string name="russian">Russian</string>
+    <string name="arabic">Arabic</string>
+    <string name="thai">Thai</string>
+    <string name="filipino">Filipino</string>
+    <string name="malay">Malay</string>
+    <string name="polish">Polish</string>
+    <string name="bengali">Bengali</string>
+    <string name="tamil">Tamil</string>
+    <string name="telugu">Telugu</string>
+    <string name="romanian">Romanian</string>
+    <string name="czech">Czech</string>
+    <string name="greek">Greek</string>
+    <string name="chinese_traditional">Chinese (Traditional)</string>
+
+    <string name="permission">Permission</string>
+    <string name="permission_message">This app needs permissions below to work properly.</string>
+    <string name="camera">Camera</string>
+    <string name="_continue">Continue</string>
+
+    <string name="language">Language</string>
+    <string name="next">Next</string>
+    <string name="action_contain_ads">This action may contain ads</string>
+    <string name="choose_one">Choose one</string>
+    <string name="done">Done</string>
+    <string name="connection_lost">Oops! No Internet Connection</string>
+    <string name="connection_lost_message">It seems your connection is offline.</string>
+    <string name="go_to_setting">Go to Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="exit">Exit</string>
+    <string name="retry">Retry</string>
+
+    <string name="title_onboarding_1">Swipe To See More.</string>
+    <string name="des_onboarding_1">Discover new fascinating stories with every swipe.</string>
+    <string name="title_onboarding_2">Discover Stories You Will Love.</string>
+    <string name="des_onboarding_2">Swipe through hot short dramas. Discover your next passion.</string>
+    <string name="title_onboarding_3">Short Clips, Deep Feelings.</string>
+    <string name="des_onboarding_3">Immerse yourself in romance, thrilling twists and surprises in every episode.</string>
+    <string name="title_onboarding_4">Find The Best Shows</string>
+    <string name="des_onboarding_4">Browse top rated selections and pick your next favorite show.</string>
+
+    <string name="rate_1_title">Oh no! We are sorry to hear that.</string>
+    <string name="rate_2_title">That is sad!</string>
+    <string name="rate_3_title">Thanks for your feedback!</string>
+    <string name="rate_4_title">Thanks for your support!</string>
+    <string name="rate_5_title">Awesome! You made our day!</string>
+
+    <string name="rate_1_message">Your feedback is vital to us. Could you tell us what went wrong?</string>
+    <string name="rate_2_message">What could we do to earn a 5-star rating from you?</string>
+    <string name="rate_3_message">We would love to know how we can improve your experience.</string>
+    <string name="rate_4_message">We are glad you like the app! Public reviews help us grow.</string>
+    <string name="rate_5_message">Your satisfaction makes all our effort worth it.</string>
+
+    <string name="rate_1_button">Send Private Feedback</string>
+    <string name="rate_2_button">Send Private Feedback</string>
+    <string name="rate_3_button">Suggest Improvement</string>
+    <string name="rate_4_button">Rate On Google Play</string>
+    <string name="rate_5_button">Rate On Google Play</string>
+
+    <string name="rate_us">Rate Us</string>
+    <string name="share_app">Share App</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="policy_setting">Policy Settings</string>
+    <string name="rate_title">Enjoying %s?</string>
+    <string name="rate_message">Your feedback helps us improve. Please take a moment to rate your experience.</string>
+    <string name="rate_us_now">Rate Us Now</string>
+    <string name="thanks_for_feedback">Thanks for your feedback</string>
+
+    <string name="load_ad_fail">Failed to load ad, please try again later</string>
+    <string name="premium_short_dramas">Premium Short Dramas</string>
+    <string name="get_it_now">Get It Now</string>
+    <string name="loading_ads">Loading ads…</string>
+    <string name="get_started">Get Started!</string>
+
+    <string name="unlock_vip_access">Unlock VIP Access</string>
+    <string name="unlock_vip_access_message">Watch unlimited dramas with premium features and exclusive content.</string>
+    <string name="monthly">Monthly</string>
+    <string name="monthly_des">Perfect for binge-watching your favorite shows.</string>
+    <string name="yearly">Yearly</string>
+    <string name="yearly_des">Save more and enjoy VIP access all year.</string>
+    <string name="weekly">Weekly</string>
+    <string name="weekly_des">Perfect for binge-watching your favorite shows.</string>
+    <string name="unlimited_viewing">Unlimited Viewing</string>
+    <string name="hd_1080">1080p HD</string>
+    <string name="ad_free">Ad Free</string>
+    <string name="vip_dramas">VIP Dramas</string>
+    <string name="get_vip_access">Get VIP Access</string>
+    <string name="term_of_use">Terms of Use</string>
+    <string name="cancel_anytime">Cancel anytime.\nSubscription auto-renews unless canceled.</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="best_value">Best Value</string>
+    <string name="month">Month</string>
+    <string name="week">Week</string>
+    <string name="year">Year</string>
+    <string name="episode_locked">Episode Locked</string>
+    <string name="episode_locked_message">Unlock VIP to continue watching immediately.</string>
+    <string name="unlock_now">Unlock Now</string>
+    <string name="cancel_anytime_2">Cancel anytime. Auto-renews unless canceled.</string>
+    <string name="unlock_episode">Upgrade To Premium To Unlock Your Episode</string>
+    <string name="just_one">Just One</string>
+    <string name="unlock_premium">Unlock Premium</string>
+    <string name="force_update_title">Update Required</string>
+    <string name="force_update_message">A new version of the app is available. Please update to continue using the app.</string>
+    <string name="force_update_button">Update Now</string>
+    <string name="exit_app_title">Want to Exit?</string>
+    <string name="exit_app_message">You can return anytime and continue where you left off.</string>
+    <string name="keep_using_app">Keep Using App</string>
+    <string name="exit_app">Exit App</string>
+    <string name="settings">Settings</string>
+</resources>

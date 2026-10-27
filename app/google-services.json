@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "565265270469",
+    "project_id": "wallpaper-app-79471",
+    "storage_bucket": "wallpaper-app-79471.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565265270469:android:c700bfdfb11f395f1d12ac",
+        "android_client_info": {
+          "package_name": "com.duongnd.wallpaper"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDm3VFoOoIyRAa8DU2KeFPrsW0G5mrNx48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
