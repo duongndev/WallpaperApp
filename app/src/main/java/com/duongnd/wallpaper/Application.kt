@@ -9,6 +9,7 @@ import com.duongnd.wallpaper.utils.LocaleHelper
 import com.duongnd.wallpaper.utils.SpManager
 import com.duongnd.wallpaper.utils.getDeviceLanguage
 import dagger.hilt.android.HiltAndroidApp
+import java.util.Locale
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -20,6 +21,7 @@ class App : Application(), Application.ActivityLifecycleCallbacks {
     lateinit var spManager: SpManager
 
     private var isColdStart = true
+
     private var firstActivityCreated = false
 
     companion object {
@@ -36,9 +38,14 @@ class App : Application(), Application.ActivityLifecycleCallbacks {
     }
 
     override fun onActivityCreated(p0: Activity, p1: Bundle?) {
-        registerActivityLifecycleCallbacks(this)
+        if (isColdStart) {
+            isColdStart = false
+        }
     }
-
+    override fun attachBaseContext(base: Context?) {
+        val context = LocaleHelper.onAttach(base, Locale.getDefault().language)
+        super.attachBaseContext(context)
+    }
     override fun onActivityDestroyed(p0: Activity) {
 
     }

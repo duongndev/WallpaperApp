@@ -1,13 +1,16 @@
 package com.duongnd.wallpaper.data.sources
 
 import com.duongnd.wallpaper.R
-import com.duongnd.wallpaper.utils.Constant
+import com.duongnd.wallpaper.data.database.ImageDao
+import com.duongnd.wallpaper.data.model.ImageEntity
 import com.duongnd.wallpaper.data.model.Language
 import com.duongnd.wallpaper.data.model.PermissionModel
 import javax.inject.Inject
 import com.duongnd.wallpaper.utils.Permission as PermissionRequest
 
-class LocalDataSource @Inject constructor() {
+class LocalDataSource @Inject constructor(
+    private val imageDao: ImageDao
+) {
 
     fun getListLanguage(): List<Language> {
         return listOf(
@@ -38,6 +41,37 @@ class LocalDataSource @Inject constructor() {
             Language("el", R.string.greek)
         )
     }
+
+    fun getListImage(): List<ImageEntity> {
+
+        return listOf(
+            ImageEntity(1, R.mipmap.img_01),
+            ImageEntity(2, R.mipmap.img_01, true),
+            ImageEntity(3, R.mipmap.img_01),
+            ImageEntity(4, R.mipmap.img_01),
+            ImageEntity(5, R.mipmap.img_01, true),
+            ImageEntity(6, R.mipmap.img_01),
+            ImageEntity(7, R.mipmap.img_01),
+            ImageEntity(8, R.mipmap.img_01),
+            ImageEntity(9, R.mipmap.img_01, true),
+            ImageEntity(10, R.mipmap.img_01),
+            ImageEntity(11, R.mipmap.img_01),
+            ImageEntity(12, R.mipmap.img_01, true),
+            ImageEntity(13, R.mipmap.img_01),
+            ImageEntity(14, R.mipmap.img_01),
+            ImageEntity(15, R.mipmap.img_01),
+            ImageEntity(16, R.mipmap.img_01, true),
+            ImageEntity(17, R.mipmap.img_01),
+            ImageEntity(18, R.mipmap.img_01),
+            ImageEntity(19, R.mipmap.img_01, true),
+            ImageEntity(20, R.mipmap.img_01),
+        )
+    }
+
+
+
+
+
 
 
     fun getListPermission(): List<PermissionModel> =
