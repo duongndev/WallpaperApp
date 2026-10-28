@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WallpaperApp">
         <activity
-            android:name=".component.main.activity.MainActivity"
+            android:name=".presentation.main.activity.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
@@ -28,21 +28,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".component.preview.activity.PreviewActivity"
+            android:name=".presentation.preview.activity.PreviewActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".component.favorite.activity.FavoriteActivity"
+            android:name=".presentation.favorite.activity.FavoriteActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".component.setting.SettingActivity"
+            android:name=".presentation.setting.SettingActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".component.language.activity.LanguageActivity"
+            android:name=".presentation.language.activity.LanguageActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

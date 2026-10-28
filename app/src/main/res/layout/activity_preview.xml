@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".component.preview.activity.PreviewActivity">
+    tools:context=".presentation.preview.activity.PreviewActivity">
 
     <!-- Wallpaper full screen -->
     <androidx.appcompat.widget.AppCompatImageView
@@ -131,13 +131,6 @@
             app:backgroundTint="@null"
             android:background="@drawable/bg_button_set_wallpaper" />
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="@dimen/size14"-->
-<!--            android:text="@string/tap_to_preview_full"-->
-<!--            android:textColor="#66FFFFFF"-->
-<!--            android:textSize="@dimen/text_size_11" />-->
 
     </LinearLayout>
 

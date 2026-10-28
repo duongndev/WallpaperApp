@@ -22,8 +22,8 @@ import androidx.viewbinding.ViewBinding
 import com.duongnd.wallpaper.utils.LocaleHelper
 import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.domain.model.Language
-import com.duongnd.wallpaper.dialog.LoadingDialog
-import com.duongnd.wallpaper.dialog.NoInternetFullDialog
+import com.duongnd.wallpaper.presentation.dialog.LoadingDialog
+import com.duongnd.wallpaper.presentation.dialog.NoInternetFullDialog
 import com.duongnd.wallpaper.utils.NetworkConnectivityUtils
 import com.duongnd.wallpaper.utils.SpManager
 
