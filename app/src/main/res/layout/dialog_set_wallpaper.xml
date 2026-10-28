@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_preview_bottom"
+    android:padding="@dimen/size17">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_wallpaper"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size20"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHomeScreen"
+        style="@style/CustomTextDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/home_screen"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvLockScreen"
+        style="@style/CustomTextDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lock_screen"
+        app:layout_constraintTop_toBottomOf="@id/tvHomeScreen" />
+
+    <TextView
+        android:id="@+id/tvBothScreen"
+        style="@style/CustomTextDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/both_screens"
+        app:layout_constraintTop_toBottomOf="@id/tvLockScreen" />
+
+    <TextView
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size10"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="@dimen/size13"
+        android:text="@string/cancel"
+        android:textColor="@color/purple2"
+        android:textSize="@dimen/size17"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvBothScreen" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

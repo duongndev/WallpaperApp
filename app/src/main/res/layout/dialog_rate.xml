@@ -63,7 +63,7 @@
         android:includeFontPadding="false"
         android:text="@string/cancel"
         android:textAllCaps="false"
-        android:textColor="@color/black"
+        android:textColor="#EF9999"
         android:textSize="@dimen/size14" />
 
 </LinearLayout>

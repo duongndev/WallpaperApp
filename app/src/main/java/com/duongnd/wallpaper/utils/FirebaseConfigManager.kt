@@ -5,7 +5,7 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import com.duongnd.wallpaper.BuildConfig
-import com.duongnd.wallpaper.data.model.AdConfig
+import com.duongnd.wallpaper.domain.model.AdConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.gson.Gson
 

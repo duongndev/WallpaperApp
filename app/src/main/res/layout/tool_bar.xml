@@ -2,25 +2,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/size88">
+    android:layout_height="@dimen/size88"
+    android:background="@color/color_main">
 
     <Space
         android:id="@+id/space"
         android:layout_width="@dimen/size10"
         android:layout_height="@dimen/size24"
-        android:layout_marginBottom="@dimen/size10"
+        android:layout_marginBottom="@dimen/size15"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btnBack"
-        android:layout_width="@dimen/size24"
-        android:layout_height="@dimen/size24"
+        android:layout_width="@dimen/size30"
+        android:layout_height="@dimen/size30"
         android:layout_marginBottom="@dimen/size10"
         android:layout_gravity="center_vertical"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_back"
+        app:srcCompat="@drawable/ic_back"
         android:visibility="gone"
+        android:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/space" />
 
@@ -28,22 +30,23 @@
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/size5"
-        android:autoSizeMaxTextSize="@dimen/size16"
-        android:autoSizeMinTextSize="@dimen/size13"
+        android:layout_marginHorizontal="@dimen/size10"
+        android:autoSizeMaxTextSize="@dimen/size20"
+        android:autoSizeMinTextSize="@dimen/size12"
         android:autoSizeTextType="uniform"
         android:gravity="center_vertical"
         android:includeFontPadding="false"
         android:maxLines="2"
+        android:textColor="@color/white"
         android:text="@string/app_name"
-        android:textSize="@dimen/size16"
+        android:textSize="@dimen/size20"
         app:layout_constraintBottom_toBottomOf="@+id/space"
-        app:layout_constraintEnd_toStartOf="@+id/btnAction"
+        app:layout_constraintEnd_toStartOf="@+id/btnFav"
         app:layout_constraintStart_toEndOf="@+id/btnBack"
         app:layout_constraintTop_toTopOf="@+id/space" />
 
     <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btnAction"
+        android:id="@+id/btnFav"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/size40"
         android:layout_marginEnd="@dimen/size10"
@@ -52,7 +55,24 @@
         android:paddingHorizontal="@dimen/size15"
         android:textSize="@dimen/size16"
         android:visibility="visible"
-        android:src="@drawable/ic_settings"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/ic_favorite_selected"
+        app:layout_constraintBottom_toBottomOf="@+id/space"
+        app:layout_constraintEnd_toStartOf="@+id/btnSetting"
+        app:layout_constraintTop_toTopOf="@+id/space" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size40"
+        android:layout_marginEnd="@dimen/size10"
+        android:background="@drawable/background_transparent_selector"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/size15"
+        android:textSize="@dimen/size16"
+        android:visibility="visible"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/ic_settings"
         app:layout_constraintBottom_toBottomOf="@+id/space"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/space" />

@@ -6,7 +6,10 @@ import android.preference.PreferenceManager
 import androidx.room.Room
 import com.duongnd.wallpaper.data.database.AppDatabase
 import com.duongnd.wallpaper.data.database.ImageDao
+import com.duongnd.wallpaper.domain.repository.WallpaperRepository
+import com.duongnd.wallpaper.domain.repository.WallpaperRepositoryImpl
 import com.duongnd.wallpaper.utils.SpManager
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,6 +26,7 @@ object AppModule {
     fun provideSpManager(@ApplicationContext context: Context): SpManager {
         return SpManager.getInstance(context)
     }
+
     @Provides
     @Singleton
     fun provideSharedPreferences(@ApplicationContext appContext: Context): SharedPreferences {
@@ -39,4 +43,11 @@ object AppModule {
     @Singleton
     fun provideImageDao(db: AppDatabase): ImageDao = db.imagesDao()
 
+    @Provides
+    @Singleton
+    fun provideWallpaperRepository(
+        @ApplicationContext context: Context
+    ): WallpaperRepository {
+        return WallpaperRepositoryImpl(context)
+    }
 }

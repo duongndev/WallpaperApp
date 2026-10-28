@@ -1,4 +1,4 @@
-package com.duongnd.wallpaper.data.usecase
+package com.duongnd.wallpaper.domain.usecase
 
 abstract class UseCase<in P : UseCase.Param, out T> where T : Any {
 

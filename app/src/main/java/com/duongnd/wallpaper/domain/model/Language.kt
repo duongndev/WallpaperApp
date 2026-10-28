@@ -1,4 +1,4 @@
-package com.duongnd.wallpaper.data.model
+package com.duongnd.wallpaper.domain.model
 
 data class Language (
     val languageCode: String,

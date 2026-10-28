@@ -21,7 +21,7 @@ import androidx.fragment.app.commit
 import androidx.viewbinding.ViewBinding
 import com.duongnd.wallpaper.utils.LocaleHelper
 import com.duongnd.wallpaper.R
-import com.duongnd.wallpaper.data.model.Language
+import com.duongnd.wallpaper.domain.model.Language
 import com.duongnd.wallpaper.dialog.LoadingDialog
 import com.duongnd.wallpaper.dialog.NoInternetFullDialog
 import com.duongnd.wallpaper.utils.NetworkConnectivityUtils

@@ -26,12 +26,10 @@ import android.widget.TextView
 import androidx.annotation.ColorInt
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
-import com.duongnd.wallpaper.utils.LocaleHelper
-import com.duongnd.wallpaper.utils.Logger
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.duongnd.wallpaper.R
-import com.duongnd.wallpaper.data.model.Language
+import com.duongnd.wallpaper.domain.model.Language
 import com.google.android.material.tabs.TabLayout
 import com.google.gson.Gson
 import java.text.SimpleDateFormat

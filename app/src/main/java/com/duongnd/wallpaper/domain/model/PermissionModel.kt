@@ -1,4 +1,4 @@
-package com.duongnd.wallpaper.data.model
+package com.duongnd.wallpaper.domain.model
 
 import androidx.annotation.Keep
 import androidx.annotation.StringRes

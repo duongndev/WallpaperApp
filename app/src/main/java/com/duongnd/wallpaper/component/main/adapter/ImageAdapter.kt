@@ -2,12 +2,15 @@ package com.duongnd.wallpaper.component.main.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.base.adapter.BaseAdapter
-import com.duongnd.wallpaper.data.model.ImageEntity
+import com.duongnd.wallpaper.domain.model.ImageEntity
 import com.duongnd.wallpaper.databinding.ItemImageBinding
 
 class ImageAdapter : BaseAdapter<ImageEntity, ItemImageBinding>() {
+
+    var onFavoriteClick: ((ImageEntity) -> Unit)? = null
 
     override fun setData(listItem: ArrayList<ImageEntity>) {
         super.setData(listItem)
@@ -20,14 +23,18 @@ class ImageAdapter : BaseAdapter<ImageEntity, ItemImageBinding>() {
     override fun binData(viewBinding: ItemImageBinding, item: ImageEntity, position: Int) {
 
         viewBinding.apply {
-            ivWallpaper.setImageResource(item.imgRes)
+//            ivWallpaper.setImageResource(item.imgRes)
+
+            Glide.with(root.context).load(item.imgRes).into(ivWallpaper)
+
+
             if (item.isFavorite) {
                 imFav.setImageResource(R.drawable.ic_favorite_selected)
             } else {
                 imFav.setImageResource(R.drawable.ic_favorite)
             }
             imFav.setOnClickListener {
-                onClick?.invoke(item)
+                onFavoriteClick?.invoke(item)
             }
             root.setOnClickListener {
                 onClick?.invoke(item)

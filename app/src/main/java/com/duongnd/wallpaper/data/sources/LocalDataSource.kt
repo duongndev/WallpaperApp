@@ -2,9 +2,9 @@ package com.duongnd.wallpaper.data.sources
 
 import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.data.database.ImageDao
-import com.duongnd.wallpaper.data.model.ImageEntity
-import com.duongnd.wallpaper.data.model.Language
-import com.duongnd.wallpaper.data.model.PermissionModel
+import com.duongnd.wallpaper.domain.model.ImageEntity
+import com.duongnd.wallpaper.domain.model.Language
+import com.duongnd.wallpaper.domain.model.PermissionModel
 import javax.inject.Inject
 import com.duongnd.wallpaper.utils.Permission as PermissionRequest
 
@@ -46,25 +46,26 @@ class LocalDataSource @Inject constructor(
 
         return listOf(
             ImageEntity(1, R.mipmap.img_01),
-            ImageEntity(2, R.mipmap.img_01, true),
-            ImageEntity(3, R.mipmap.img_01),
+            ImageEntity(2, R.mipmap.img_02, ),
+            ImageEntity(3, R.mipmap.img_03),
             ImageEntity(4, R.mipmap.img_01),
-            ImageEntity(5, R.mipmap.img_01, true),
-            ImageEntity(6, R.mipmap.img_01),
+            ImageEntity(5, R.mipmap.img_02),
+            ImageEntity(6, R.mipmap.img_03),
             ImageEntity(7, R.mipmap.img_01),
-            ImageEntity(8, R.mipmap.img_01),
-            ImageEntity(9, R.mipmap.img_01, true),
+            ImageEntity(8, R.mipmap.img_02),
+            ImageEntity(9, R.mipmap.img_03),
             ImageEntity(10, R.mipmap.img_01),
-            ImageEntity(11, R.mipmap.img_01),
-            ImageEntity(12, R.mipmap.img_01, true),
+            ImageEntity(11, R.mipmap.img_02),
+            ImageEntity(12, R.mipmap.img_03),
             ImageEntity(13, R.mipmap.img_01),
-            ImageEntity(14, R.mipmap.img_01),
-            ImageEntity(15, R.mipmap.img_01),
-            ImageEntity(16, R.mipmap.img_01, true),
-            ImageEntity(17, R.mipmap.img_01),
-            ImageEntity(18, R.mipmap.img_01),
-            ImageEntity(19, R.mipmap.img_01, true),
-            ImageEntity(20, R.mipmap.img_01),
+            ImageEntity(14, R.mipmap.img_02),
+            ImageEntity(15, R.mipmap.img_03),
+            ImageEntity(16, R.mipmap.img_01),
+            ImageEntity(17, R.mipmap.img_02),
+            ImageEntity(18, R.mipmap.img_03),
+            ImageEntity(19, R.mipmap.img_01),
+            ImageEntity(20, R.mipmap.img_02),
+            ImageEntity(21, R.mipmap.img_03),
         )
     }
 

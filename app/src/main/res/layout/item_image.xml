@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/size165"
+    android:layout_height="wrap_content"
     android:padding="@dimen/size4">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardWallpaper"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/size0"
-        app:cardCornerRadius="10dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="12dp"
         app:cardElevation="0dp"
+        app:cardUseCompatPadding="false"
         app:layout_constraintDimensionRatio="3:4"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
+        <!-- Wallpaper image -->
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivWallpaper"
             android:layout_width="match_parent"
@@ -23,19 +27,22 @@
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop" />
 
-        <ImageButton
+        <!-- Favorite button -->
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/imFav"
-            android:layout_width="@dimen/size25"
-            android:layout_height="@dimen/size25"
-            android:layout_gravity="end"
+            android:layout_width="@dimen/size30"
+            android:layout_height="@dimen/size30"
+            android:layout_gravity="top|end"
             android:layout_margin="@dimen/size10"
-            android:backgroundTint="@color/transparent"
-            android:importantForAccessibility="no"
+            android:background="@color/transparent"
+            android:backgroundTint="@null"
+            android:scaleType="fitCenter"
             android:src="@drawable/ic_favorite"
+            android:contentDescription="Favorite"
+            android:clickable="true"
+            android:focusable="true"
             app:tint="@color/red" />
 
-
     </androidx.cardview.widget.CardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

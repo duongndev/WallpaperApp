@@ -1,6 +1,6 @@
-package com.duongnd.wallpaper.data.usecase
+package com.duongnd.wallpaper.domain.usecase
 
-import com.duongnd.wallpaper.data.model.ImageEntity
+import com.duongnd.wallpaper.domain.model.ImageEntity
 import com.duongnd.wallpaper.data.repositories.LocalRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -11,7 +11,7 @@ class GetListImageUseCase @Inject constructor(private val localRepository: Local
 
     open class Param : UseCase.Param()
 
-    override suspend fun execute(param: GetListImageUseCase.Param): List<ImageEntity> = withContext(Dispatchers.IO) {
+    override suspend fun execute(param: Param): List<ImageEntity> = withContext(Dispatchers.IO) {
         localRepository.getListImage()
     }
 }

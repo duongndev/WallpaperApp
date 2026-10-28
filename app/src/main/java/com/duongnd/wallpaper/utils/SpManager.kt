@@ -6,7 +6,7 @@ import android.preference.PreferenceManager
 import androidx.core.content.edit
 import com.duongnd.wallpaper.App
 import com.duongnd.wallpaper.R
-import com.duongnd.wallpaper.data.model.Language
+import com.duongnd.wallpaper.domain.model.Language
 
 class SpManager(private val preferences: SharedPreferences) {
     companion object {
