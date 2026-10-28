@@ -24,6 +24,12 @@
     <string name="czech">చెక్</string>
     <string name="greek">గ్రీక్</string>
     <string name="chinese_traditional">చైనీస్ (సాంప్రదాయ)</string>
+
+    <string name="permission">అనుమతి</string>
+    <string name="permission_message">ఈ యాప్ సరిగ్గా పనిచేయడానికి క్రింది అనుమతులు అవసరం.</string>
+    <string name="camera">కెమెరా</string>
+    <string name="_continue">కొనసాగించండి</string>
+
     <string name="language">భాష</string>
     <string name="next">తదుపరి</string>
     <string name="action_contain_ads">ఈ చర్యలో ప్రకటనలు ఉండవచ్చు</string>
@@ -33,7 +39,13 @@
     <string name="connection_lost_message">మీ కనెక్షన్ ఆఫ్‌లైన్‌లో ఉన్నట్లు కనిపిస్తోంది.</string>
     <string name="go_to_setting">సెట్టింగ్‌లకు వెళ్లండి</string>
     <string name="cancel">రద్దు చేయండి</string>
+    <string name="exit">నిష్క్రమించు</string>
     <string name="retry">మళ్లీ ప్రయత్నించండి</string>
+    <string name="favorite">ఇష్టమైనవి</string>
+    <string name="emty_list">ఖాళీ జాబితా</string>
+    <string name="emty_list_message">ప్రస్తుతం ప్రదర్శించడానికి ఎటువంటి డేటా లేదు</string>
+    <string name="wallpaper_set_successfully">వాల్‌పేపర్ విజయవంతంగా సెట్ చేయబడింది!</string>
+
     <string name="title_onboarding_1">మరిన్నింటి కోసం స్వైప్ చేయండి.</string>
     <string name="des_onboarding_1">ప్రతి స్వైప్‌తో ఆకర్షణీయమైన కొత్త కథలను కనుగొనండి.</string>
     <string name="title_onboarding_2">మీకు నచ్చే కథలను కనుగొనండి.</string>
@@ -42,21 +54,25 @@
     <string name="des_onboarding_3">ప్రతి ఎపిసోడ్‌తో రొమాన్స్, థ్రిల్లింగ్ మలుపులు మరియు ఆశ్చర్యాల్లో మునిగిపోండి.</string>
     <string name="title_onboarding_4">ఉత్తమ చిత్రాలను కనుగొనండి</string>
     <string name="des_onboarding_4">అత్యధిక రేటింగ్ ఉన్న ఎంపికలను బ్రౌజ్ చేసి మీ తదుపరి ఇష్టమైనదాన్ని ఎంచుకోండి.</string>
+
     <string name="rate_1_title">అయ్యో! అది వినడం మాకు బాధగా అనిపించింది.</string>
     <string name="rate_2_title">హృదయవిదారకంగా ఉంది!</string>
     <string name="rate_3_title">ఫీడ్‌బ్యాక్‌కు ధన్యవాదాలు!</string>
     <string name="rate_4_title">మీ మద్దతుకు ధన్యవాదాలు!</string>
     <string name="rate_5_title">అద్భుతం! మా రోజును సంతోషంగా మార్చారు!</string>
+
     <string name="rate_1_message">మెరుగుపరచడానికి మీ ఫీడ్‌బ్యాక్ మాకు చాలా ముఖ్యం. ఏమి తప్పు జరిగిందో దయచేసి మాకు చెప్పగలరా?</string>
     <string name="rate_2_message">మీ నుండి 5-స్టార్ రేటింగ్ పొందడానికి మేము ఏమి చేయగలం?</string>
     <string name="rate_3_message">మీ అనుభవాన్ని ఎలా మెరుగుపరచాలో మేము తెలుసుకోవాలని అనుకుంటున్నాము.</string>
     <string name="rate_4_message">మీరు యాప్‌ను ఆనందిస్తున్నారని సంతోషంగా ఉంది! పబ్లిక్ రివ్యూలు మేము ఎదగడానికి సహాయపడతాయి.</string>
     <string name="rate_5_message">మీ సంతృప్తి మా కష్టాన్ని విలువైనదిగా చేస్తుంది.</string>
+
     <string name="rate_1_button">ప్రైవేట్ ఫీడ్‌బ్యాక్ ఇవ్వండి</string>
     <string name="rate_2_button">ప్రైవేట్ ఫీడ్‌బ్యాక్ ఇవ్వండి</string>
     <string name="rate_3_button">మెరుగుదల సూచించండి</string>
     <string name="rate_4_button">గూగుల్ ప్లేలో రేట్ చేయండి</string>
     <string name="rate_5_button">గూగుల్ ప్లేలో రేట్ చేయండి</string>
+
     <string name="rate_us">మమ్మల్ని రేట్ చేయండి</string>
     <string name="share_app">యాప్‌ను షేర్ చేయండి</string>
     <string name="privacy_policy">ప్రైవసీ పాలసీ</string>
@@ -65,11 +81,13 @@
     <string name="rate_message">మీ ఫీడ్‌బ్యాక్ మెరుగుపరచడంలో మాకు సహాయపడుతుంది. దయచేసి మీ అనుభవాన్ని రేట్ చేయడానికి ఒక క్షణం సమయం ఇవ్వండి.</string>
     <string name="rate_us_now">ఇప్పుడే రేట్ చేయండి</string>
     <string name="thanks_for_feedback">మీ ఫీడ్‌బ్యాక్‌కు ధన్యవాదాలు</string>
+
     <string name="load_ad_fail">ప్రకటన లోడ్ కావడంలో విఫలమైంది, దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి</string>
     <string name="premium_short_dramas">ప్రీమియం షార్ట్ డ్రామాలు</string>
     <string name="get_it_now">ఇప్పుడే పొందండి</string>
     <string name="loading_ads">ప్రకటనలు లోడ్ అవుతున్నాయి…</string>
     <string name="get_started">ప్రారంభించండి!</string>
+
     <string name="unlock_vip_access">VIP యాక్సెస్‌ను అన్‌లాక్ చేయండి</string>
     <string name="unlock_vip_access_message">ప్రీమియం ఫీచర్లు మరియు ఎక్స్‌క్లూసివ్ కంటెంట్‌తో అపరిమిత డ్రామాలను చూడండి.</string>
     <string name="monthly">నెలవారీ</string>
@@ -105,4 +123,13 @@
     <string name="keep_using_app">యాప్‌ను ఉపయోగించడం కొనసాగించండి</string>
     <string name="exit_app">యాప్ నుండి నిష్క్రమించండి</string>
     <string name="settings">సెట్టింగ్‌లు</string>
+
+    <string name="make_your_screen_look_amazing">మీ స్క్రీన్‌ను అద్భుతంగా మార్చండి</string>
+    <string name="set_wallpaper">వాల్‌పేపర్‌ను సెట్ చేయండి</string>
+    <string name="wallpaper_preview">వాల్‌పేపర్ ప్రివ్యూ</string>
+    <string name="home_screen">హోమ్ స్క్రీన్</string>
+    <string name="lock_screen">లాక్ స్క్రీన్</string>
+    <string name="both_screens">రెండూ స్క్రీన్‌లు</string>
+    <string name="lock_screen_preview">లాక్ స్క్రీన్ ప్రివ్యూ</string>
+    <string name="tap_to_preview_full">కంట్రోల్స్ టోగుల్ చేయడానికి స్క్రీన్‌పై టాప్ చేయండి</string>
 </resources>

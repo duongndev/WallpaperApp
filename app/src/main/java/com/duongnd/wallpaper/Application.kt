@@ -22,7 +22,6 @@ class App : Application(), Application.ActivityLifecycleCallbacks {
 
     private var isColdStart = true
 
-    private var firstActivityCreated = false
 
     companion object {
         var context: Context? = null

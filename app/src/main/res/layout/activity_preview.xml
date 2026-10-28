@@ -12,65 +12,95 @@
     <!-- Wallpaper full screen -->
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivPreview"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/size0"
+        android:layout_height="@dimen/size0"
         android:scaleType="centerCrop"
-        android:contentDescription="Wallpaper preview"
+        android:contentDescription="@string/wallpaper_preview"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Top toolbar -->
-    <LinearLayout
+    <!-- Top Scrim & Toolbar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topBar"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/size0"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
+        android:background="@drawable/bg_preview_gradient_top"
         android:paddingStart="@dimen/size17"
         android:paddingEnd="@dimen/size17"
-        android:paddingTop="@dimen/size40"
-        android:paddingBottom="@dimen/size17"
+        android:paddingTop="@dimen/size48"
+        android:paddingBottom="@dimen/size24"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/btnBack"
-            android:layout_width="@dimen/size30"
-            android:layout_height="@dimen/size30"
+            android:layout_width="@dimen/size44"
+            android:layout_height="@dimen/size44"
+            android:background="@drawable/bg_circle_glass"
             android:src="@drawable/ic_back"
-            android:scaleType="fitCenter"
-            app:tint="@color/white" />
+            android:scaleType="center"
+            android:padding="@dimen/size10"
+            android:contentDescription="@string/wallpaper_preview"
+            app:tint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/tvTitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallpaper_preview"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/btnFav"
-            android:layout_width="@dimen/size30"
-            android:layout_height="@dimen/size30"
-            android:src="@drawable/ic_favorite"
-            android:scaleType="fitCenter"
-            app:tint="@color/red" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-    </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnFav"
+                android:layout_width="@dimen/size44"
+                android:layout_height="@dimen/size44"
+                android:background="@drawable/bg_circle_glass"
+                android:src="@drawable/ic_favorite"
+                android:scaleType="center"
+                android:padding="@dimen/size10"
+                android:contentDescription="@string/favorite"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Bottom control panel -->
     <LinearLayout
         android:id="@+id/bottomPanel"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
-        android:paddingStart="@dimen/size17"
-        android:paddingEnd="@dimen/size17"
-        android:paddingTop="@dimen/size40"
-        android:paddingBottom="@dimen/size30"
-        android:background="@drawable/bg_preview_bottom"
+        android:gravity="center_horizontal"
+        android:paddingStart="@dimen/size20"
+        android:paddingEnd="@dimen/size20"
+        android:paddingTop="@dimen/size24"
+        android:paddingBottom="@dimen/size28"
+        android:background="@drawable/bg_preview_bottom_card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -78,31 +108,36 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/wallpaper_preview"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size17"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/size10"
             android:text="@string/make_your_screen_look_amazing"
-            android:textColor="#BDBDBD"
-            android:textSize="@dimen/size13" />
+            android:textColor="#C0FFFFFF"
+            android:textSize="@dimen/text_size_14"
+            android:gravity="center" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSetWallpaper"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size54"
-            android:layout_marginTop="@dimen/size20"
+            android:layout_height="@dimen/size56"
+            android:layout_marginTop="@dimen/size18"
             android:text="@string/set_wallpaper"
             android:textAllCaps="false"
-            android:textSize="@dimen/size13"
+            android:textSize="@dimen/text_size_16"
             android:textStyle="bold"
             android:textColor="@color/white"
-            app:cornerRadius="@dimen/size14"
-            app:backgroundTint="@color/color_main" />
+            app:icon="@drawable/ic_wallpaper"
+            app:iconTint="@color/white"
+            app:iconGravity="textStart"
+            app:iconPadding="@dimen/size10"
+            app:cornerRadius="@dimen/size20"
+            app:backgroundTint="@null"
+            android:background="@drawable/bg_button_set_wallpaper" />
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/size14"-->
+<!--            android:text="@string/tap_to_preview_full"-->
+<!--            android:textColor="#66FFFFFF"-->
+<!--            android:textSize="@dimen/text_size_11" />-->
 
     </LinearLayout>
 

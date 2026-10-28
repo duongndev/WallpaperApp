@@ -24,6 +24,10 @@
     <string name="czech">Tchèque</string>
     <string name="greek">Grec</string>
     <string name="chinese_traditional">Chinois (traditionnel)</string>
+    <string name="permission">Autorisation</string>
+    <string name="permission_message">Cette application a besoin des autorisations ci-dessous pour fonctionner correctement.</string>
+    <string name="camera">Appareil photo</string>
+    <string name="_continue">Continuer</string>
     <string name="language">Langue</string>
     <string name="next">Suivant</string>
     <string name="action_contain_ads">Cette action peut contenir de la publicité</string>
@@ -33,7 +37,12 @@
     <string name="connection_lost_message">Il semble que votre connexion soit hors ligne.</string>
     <string name="go_to_setting">Aller aux paramètres</string>
     <string name="cancel">Annuler</string>
+    <string name="exit">Quitter</string>
     <string name="retry">Réessayer</string>
+    <string name="favorite">Favoris</string>
+    <string name="emty_list">Liste vide</string>
+    <string name="emty_list_message">Il n\'y a actuellement aucune donnée à afficher</string>
+    <string name="wallpaper_set_successfully">Fond d\'écran défini avec succès !</string>
     <string name="title_onboarding_1">Glissez pour en voir plus.</string>
     <string name="des_onboarding_1">Découvrez de nouvelles histoires captivantes à chaque glissement.</string>
     <string name="title_onboarding_2">Découvrez des histoires que vous allez adorer.</string>
@@ -105,4 +114,12 @@
     <string name="keep_using_app">Continuer à utiliser l\'app</string>
     <string name="exit_app">Quitter l\'application</string>
     <string name="settings">Paramètres</string>
+    <string name="make_your_screen_look_amazing">Rendez votre écran magnifique</string>
+    <string name="set_wallpaper">Définir comme fond d\'écran</string>
+    <string name="wallpaper_preview">Aperçu du fond d\'écran</string>
+    <string name="home_screen">Écran d\'accueil</string>
+    <string name="lock_screen">Écran de verrouillage</string>
+    <string name="both_screens">Les deux écrans</string>
+    <string name="lock_screen_preview">Aperçu de l\'écran de verrouillage</string>
+    <string name="tap_to_preview_full">Appuyez sur l\'écran pour afficher/masquer les commandes</string>
 </resources>

@@ -1,8 +1,10 @@
 package com.duongnd.wallpaper.dialog
 
+import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
+import android.view.KeyEvent
 import androidx.core.net.toUri
 import com.duongnd.wallpaper.base.dialog.BaseDialog
 import com.duongnd.wallpaper.databinding.DialogForceUpdateBinding
@@ -19,14 +21,26 @@ class ForceUpdateDialog(private val context: Context) :
     override fun initViews() = with(viewBinding) {
         super.initViews()
         setCancelable(false)
+        setCanceledOnTouchOutside(false)
+
+        // Block back button dismiss
+        setOnKeyListener { _, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
+                onExit.invoke()
+                (context as? Activity)?.finishAffinity()
+                true
+            } else {
+                false
+            }
+        }
 
         btnUpdate.setOnClickListener {
             openPlayStore()
         }
 
         btnExit.setOnClickListener {
-            dismiss()
             onExit.invoke()
+            (context as? Activity)?.finishAffinity()
         }
     }
 
@@ -36,7 +50,7 @@ class ForceUpdateDialog(private val context: Context) :
             context.startActivity(
                 Intent(Intent.ACTION_VIEW, "market://details?id=$packageName".toUri())
             )
-        } catch (e: ActivityNotFoundException) {
+        } catch (_: ActivityNotFoundException) {
             context.startActivity(
                 Intent(
                     Intent.ACTION_VIEW,

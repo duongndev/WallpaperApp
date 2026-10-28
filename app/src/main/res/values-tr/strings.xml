@@ -24,6 +24,12 @@
     <string name="czech">Çekçe</string>
     <string name="greek">Yunanca</string>
     <string name="chinese_traditional">Çince (Geleneksel)</string>
+
+    <string name="permission">İzin</string>
+    <string name="permission_message">Bu uygulamanın düzgün çalışabilmesi için aşağıdaki izinlere ihtiyacı var.</string>
+    <string name="camera">Kamera</string>
+    <string name="_continue">Devam Et</string>
+
     <string name="language">Dil</string>
     <string name="next">İleri</string>
     <string name="action_contain_ads">Bu işlem reklam içerebilir</string>
@@ -33,7 +39,13 @@
     <string name="connection_lost_message">Görünüşe göre bağlantın çevrimdışı.</string>
     <string name="go_to_setting">Ayarlara Git</string>
     <string name="cancel">İptal</string>
+    <string name="exit">Çıkış</string>
     <string name="retry">Yeniden Dene</string>
+    <string name="favorite">Favori</string>
+    <string name="emty_list">Boş Liste</string>
+    <string name="emty_list_message">Şu anda görüntülenecek veri yok</string>
+    <string name="wallpaper_set_successfully">Duvar kağıdı başarıyla ayarlandı!</string>
+
     <string name="title_onboarding_1">Daha Fazlası İçin Kaydır.</string>
     <string name="des_onboarding_1">Her kaydırmada büyüleyici yeni hikayeler keşfet.</string>
     <string name="title_onboarding_2">Seveceğin Hikayeleri Keşfet.</string>
@@ -42,21 +54,25 @@
     <string name="des_onboarding_3">Her bölümde romantizme, çarpıcı olay örgülerine ve sürprizlere dal.</string>
     <string name="title_onboarding_4">En İyi Filmleri Bul</string>
     <string name="des_onboarding_4">En yüksek puanlı seçimlere göz at ve bir sonraki favorini seç.</string>
+
     <string name="rate_1_title">Ah, olmadı! Bunu duyduğumuza üzüldük.</string>
     <string name="rate_2_title">Çok üzücü!</string>
     <string name="rate_3_title">Geri bildirimin için teşekkürler!</string>
     <string name="rate_4_title">Desteğin için teşekkürler!</string>
     <string name="rate_5_title">Harika! Günümüzü güzelleştirdin!</string>
+
     <string name="rate_1_message">Geri bildirimin, kendimizi geliştirmemiz için çok önemli. Neyin yanlış gittiğini bize söyler misin?</string>
     <string name="rate_2_message">Senden 5 yıldız almak için ne yapabiliriz?</string>
     <string name="rate_3_message">Deneyimini nasıl daha iyi hale getirebileceğimizi bilmek isteriz.</string>
     <string name="rate_4_message">Uygulamayı sevdiğine sevindik! Herkese açık yorumlar büyümemize yardımcı olur.</string>
     <string name="rate_5_message">Memnuniyetin, tüm emeklerimizi değerli kılıyor.</string>
+
     <string name="rate_1_button">Özel Geri Bildirim Ver</string>
     <string name="rate_2_button">Özel Geri Bildirim Ver</string>
     <string name="rate_3_button">Bir İyileştirme Öner</string>
     <string name="rate_4_button">Google Play\'de Değerlendir</string>
     <string name="rate_5_button">Google Play\'de Değerlendir</string>
+
     <string name="rate_us">Bizi Değerlendir</string>
     <string name="share_app">Uygulamayı Paylaş</string>
     <string name="privacy_policy">Gizlilik Politikası</string>
@@ -65,11 +81,13 @@
     <string name="rate_message">Geri bildirimin gelişmemize yardımcı olur. Deneyimini değerlendirmek için bir dakikanı ayır.</string>
     <string name="rate_us_now">Şimdi Değerlendir</string>
     <string name="thanks_for_feedback">Geri bildirimin için teşekkürler</string>
+
     <string name="load_ad_fail">Reklam yüklenemedi, lütfen daha sonra tekrar dene</string>
     <string name="premium_short_dramas">Premium Kısa Diziler</string>
     <string name="get_it_now">Şimdi Al</string>
     <string name="loading_ads">Reklamlar yükleniyor…</string>
     <string name="get_started">Başlayalım!</string>
+
     <string name="unlock_vip_access">VIP Erişiminin Kilidini Aç</string>
     <string name="unlock_vip_access_message">Premium özellikler ve özel içeriklerle sınırsız dizi izle.</string>
     <string name="monthly">Aylık</string>
@@ -105,4 +123,13 @@
     <string name="keep_using_app">Uygulamayı Kullanmaya Devam Et</string>
     <string name="exit_app">Uygulamadan Çık</string>
     <string name="settings">Ayarlar</string>
+
+    <string name="make_your_screen_look_amazing">Ekranının harika görünmesini sağla</string>
+    <string name="set_wallpaper">Duvar Kağıdını Ayarla</string>
+    <string name="wallpaper_preview">Duvar Kağıdı Önizlemesi</string>
+    <string name="home_screen">Ana Ekran</string>
+    <string name="lock_screen">Kilit Ekranı</string>
+    <string name="both_screens">Her İki Ekran</string>
+    <string name="lock_screen_preview">Kilit Ekranı Önizlemesi</string>
+    <string name="tap_to_preview_full">Kontrolleri değiştirmek için ekrana dokunun</string>
 </resources>

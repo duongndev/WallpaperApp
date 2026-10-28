@@ -24,6 +24,12 @@
     <string name="czech">Τσεχικά</string>
     <string name="greek">Ελληνικά</string>
     <string name="chinese_traditional">Κινέζικα (Παραδοσιακά)</string>
+
+    <string name="permission">Άδεια</string>
+    <string name="permission_message">Αυτή η εφαρμογή χρειάζεται τις παρακάτω άδειες για να λειτουργήσει σωστά.</string>
+    <string name="camera">Κάμερα</string>
+    <string name="_continue">Συνέχεια</string>
+
     <string name="language">Γλώσσα</string>
     <string name="next">Επόμενο</string>
     <string name="action_contain_ads">Αυτή η ενέργεια μπορεί να περιλαμβάνει διαφημίσεις</string>
@@ -33,7 +39,13 @@
     <string name="connection_lost_message">Φαίνεται ότι η σύνδεσή σας είναι εκτός λειτουργίας.</string>
     <string name="go_to_setting">Μετάβαση στις Ρυθμίσεις</string>
     <string name="cancel">Ακύρωση</string>
+    <string name="exit">Έξοδος</string>
     <string name="retry">Επανάληψη</string>
+    <string name="favorite">Αγαπημένα</string>
+    <string name="emty_list">Άδεια λίστα</string>
+    <string name="emty_list_message">Προς το παρόν δεν υπάρχουν δεδομένα προς εμφάνιση</string>
+    <string name="wallpaper_set_successfully">Η ταπετσαρία ορίστηκε με επιτυχία!</string>
+
     <string name="title_onboarding_1">Σύρετε για περισσότερα.</string>
     <string name="des_onboarding_1">Ανακαλύψτε συναρπαστικές νέες ιστορίες με κάθε σύρσιμο.</string>
     <string name="title_onboarding_2">Ανακαλύψτε ιστορίες που θα αγαπήσετε.</string>
@@ -42,21 +54,25 @@
     <string name="des_onboarding_3">Βουτήξτε σε ρομαντισμό, συγκλονιστικές ανατροπές και εκπλήξεις σε κάθε επεισόδιο.</string>
     <string name="title_onboarding_4">Βρείτε τις Καλύτερες Ταινίες</string>
     <string name="des_onboarding_4">Περιηγηθείτε στις κορυφαίες επιλογές και διαλέξτε την επόμενη αγαπημένη σας.</string>
+
     <string name="rate_1_title">Ω όχι! Λυπόμαστε πολύ που το ακούμε.</string>
     <string name="rate_2_title">Σπαραξικάρδιο!</string>
     <string name="rate_3_title">Ευχαριστούμε για τα σχόλιά σας!</string>
     <string name="rate_4_title">Ευχαριστούμε για την υποστήριξή σας!</string>
     <string name="rate_5_title">Υπέροχα! Μας φτιάξατε τη μέρα!</string>
+
     <string name="rate_1_message">Τα σχόλιά σας είναι πολύ σημαντικά για να βελτιωθούμε. Μπορείτε να μας πείτε τι πήγε στραβά;</string>
     <string name="rate_2_message">Τι θα μπορούσαμε να κάνουμε για να κερδίσουμε 5 αστέρια από εσάς;</string>
     <string name="rate_3_message">Θα θέλαμε να μάθουμε πώς μπορούμε να κάνουμε την εμπειρία σας καλύτερη.</string>
     <string name="rate_4_message">Χαιρόμαστε που απολαμβάνετε την εφαρμογή! Οι δημόσιες κριτικές μας βοηθούν να αναπτυχθούμε.</string>
     <string name="rate_5_message">Η ικανοποίησή σας κάνει όλη τη σκληρή δουλειά μας να αξίζει.</string>
+
     <string name="rate_1_button">Στείλτε ιδιωτικά σχόλια</string>
     <string name="rate_2_button">Στείλτε ιδιωτικά σχόλια</string>
     <string name="rate_3_button">Προτείνετε μια βελτίωση</string>
     <string name="rate_4_button">Αξιολόγηση στο Google Play</string>
     <string name="rate_5_button">Αξιολόγηση στο Google Play</string>
+
     <string name="rate_us">Αξιολογήστε μας</string>
     <string name="share_app">Κοινοποίηση εφαρμογής</string>
     <string name="privacy_policy">Πολιτική απορρήτου</string>
@@ -65,11 +81,13 @@
     <string name="rate_message">Τα σχόλιά σας μας βοηθούν να βελτιωθούμε. Αφιερώστε μια στιγμή για να αξιολογήσετε την εμπειρία σας.</string>
     <string name="rate_us_now">Αξιολογήστε μας τώρα</string>
     <string name="thanks_for_feedback">Ευχαριστούμε για τα σχόλιά σας</string>
+
     <string name="load_ad_fail">Η διαφήμιση δεν φορτώθηκε, δοκιμάστε ξανά αργότερα</string>
     <string name="premium_short_dramas">Premium σύντομα δράματα</string>
     <string name="get_it_now">Αποκτήστε το τώρα</string>
     <string name="loading_ads">Φόρτωση διαφημίσεων…</string>
     <string name="get_started">Ξεκινήστε!</string>
+
     <string name="unlock_vip_access">Ξεκλειδώστε πρόσβαση VIP</string>
     <string name="unlock_vip_access_message">Παρακολουθήστε απεριόριστα δράματα με premium λειτουργίες και αποκλειστικό περιεχόμενο.</string>
     <string name="monthly">Μηνιαία</string>
@@ -105,4 +123,13 @@
     <string name="keep_using_app">Συνέχεια χρήσης της εφαρμογής</string>
     <string name="exit_app">Έξοδος από την εφαρμογή</string>
     <string name="settings">Ρυθμίσεις</string>
+
+    <string name="make_your_screen_look_amazing">Κάντε την οθόνη σας να φαίνεται εκπληκτική</string>
+    <string name="set_wallpaper">Ορισμός ταπετσαρίας</string>
+    <string name="wallpaper_preview">Προεπισκόπηση ταπετσαρίας</string>
+    <string name="home_screen">Αρχική οθόνη</string>
+    <string name="lock_screen">Οθόνη κλειδώματος</string>
+    <string name="both_screens">Και οι δύο οθόνες</string>
+    <string name="lock_screen_preview">Προεπισκόπηση οθόνης κλειδώματος</string>
+    <string name="tap_to_preview_full">Πατήστε στην οθόνη για εναλλαγή στοιχείων ελέγχου</string>
 </resources>

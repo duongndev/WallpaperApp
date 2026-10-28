@@ -128,7 +128,15 @@
     <string name="make_your_screen_look_amazing">Make your screen look amazing</string>
     <string name="set_wallpaper">Set Wallpaper</string>
     <string name="wallpaper_preview">Wallpaper Preview</string>
-    <string name="home_screen" translatable="false">Home Screen</string>
-    <string name="lock_screen" translatable="false">Lock Screen</string>
-    <string name="both_screens" translatable="false">Both Screens</string>
+    <string name="home_screen">Home Screen</string>
+    <string name="lock_screen">Lock Screen</string>
+    <string name="both_screens">Both Screens</string>
+    <string name="lock_screen_preview">Lock Screen Preview</string>
+    <string name="tap_to_preview_full">Tap screen to toggle controls</string>
+    <string name="invalid_image_resource">Invalid image resource.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Setting wallpaper is restricted on this device.</string>
+    <string name="failed_to_decode_image_resource">Failed to decode image resource.</string>
+    <string name="permission_denied_to_set_wallpaper">Permission denied to set wallpaper: %1$s</string>
+    <string name="error_saving_wallpaper">Error saving wallpaper: %1$s</string>
+    <string name="failed_to_set_wallpaper">Failed to set wallpaper: %1$s</string>
 </resources>

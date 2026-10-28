@@ -24,6 +24,10 @@
     <string name="czech">التشيكية</string>
     <string name="greek">اليونانية</string>
     <string name="chinese_traditional">الصينية (التقليدية)</string>
+    <string name="permission">الإذن</string>
+    <string name="permission_message">يحتاج هذا التطبيق إلى الأذونات أدناه ليعمل بشكل صحيح.</string>
+    <string name="camera">الكاميرا</string>
+    <string name="_continue">متابعة</string>
     <string name="language">اللغة</string>
     <string name="next">التالي</string>
     <string name="action_contain_ads">قد يحتوي هذا الإجراء على إعلانات</string>
@@ -33,7 +37,12 @@
     <string name="connection_lost_message">يبدو أن اتصالك غير متوفر.</string>
     <string name="go_to_setting">الانتقال إلى الإعدادات</string>
     <string name="cancel">إلغاء</string>
+    <string name="exit">خروج</string>
     <string name="retry">إعادة المحاولة</string>
+    <string name="favorite">المفضلة</string>
+    <string name="emty_list">قائمة فارغة</string>
+    <string name="emty_list_message">لا توجد بيانات لعرضها حاليًا</string>
+    <string name="wallpaper_set_successfully">تم تعيين الخلفية بنجاح!</string>
     <string name="title_onboarding_1">مرر لمزيد من المحتوى.</string>
     <string name="des_onboarding_1">اكتشف قصصًا جديدة وشيقة مع كل تمريرة.</string>
     <string name="title_onboarding_2">اكتشف قصصًا ستحبها.</string>
@@ -105,4 +114,12 @@
     <string name="keep_using_app">متابعة استخدام التطبيق</string>
     <string name="exit_app">الخروج من التطبيق</string>
     <string name="settings">الإعدادات</string>
+    <string name="make_your_screen_look_amazing">إجعل شاشتك تبدو مذهلة</string>
+    <string name="set_wallpaper">تعيين كخلفية</string>
+    <string name="wallpaper_preview">معاينة الخلفية</string>
+    <string name="home_screen">الشاشة الرئيسية</string>
+    <string name="lock_screen">شاشة القفل</string>
+    <string name="both_screens">كلا الشاشتين</string>
+    <string name="lock_screen_preview">معاينة شاشة القفل</string>
+    <string name="tap_to_preview_full">اضغط على الشاشة لإظهار/إخفاء أدوات التحكم</string>
 </resources>

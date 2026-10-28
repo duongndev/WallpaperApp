@@ -6,6 +6,7 @@ import android.view.View
 import com.duongnd.wallpaper.BuildConfig
 import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.base.activity.BaseActivity
+import com.duongnd.wallpaper.component.language.activity.LanguageActivity
 import com.duongnd.wallpaper.databinding.ActivitySettingBinding
 import com.duongnd.wallpaper.dialog.RateDialog
 import com.duongnd.wallpaper.utils.Constant
@@ -37,7 +38,7 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>(), View.OnClickList
     override fun onClick(p0: View?) {
         when(p0?.id) {
             R.id.btnLanguage -> {
-
+                LanguageActivity.start(this@SettingActivity)
             }
 
             R.id.btnShareApp -> {

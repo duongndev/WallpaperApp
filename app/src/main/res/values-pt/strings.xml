@@ -24,6 +24,10 @@
     <string name="czech">Tcheco</string>
     <string name="greek">Grego</string>
     <string name="chinese_traditional">Chinês (Tradicional)</string>
+    <string name="permission">Permissão</string>
+    <string name="permission_message">Este aplicativo precisa das permissões abaixo para funcionar corretamente.</string>
+    <string name="camera">Câmera</string>
+    <string name="_continue">Continuar</string>
     <string name="language">Idioma</string>
     <string name="next">Próximo</string>
     <string name="action_contain_ads">Esta ação pode conter publicidade</string>
@@ -33,7 +37,12 @@
     <string name="connection_lost_message">Parece que sua conexão está offline.</string>
     <string name="go_to_setting">Ir para Configurações</string>
     <string name="cancel">Cancelar</string>
+    <string name="exit">Sair</string>
     <string name="retry">Tentar novamente</string>
+    <string name="favorite">Favorito</string>
+    <string name="emty_list">Lista vazia</string>
+    <string name="emty_list_message">Atualmente não há dados para exibir</string>
+    <string name="wallpaper_set_successfully">Papel de parede definido com sucesso!</string>
     <string name="title_onboarding_1">Deslize para ver mais.</string>
     <string name="des_onboarding_1">Encontre novas histórias fascinantes a cada deslize.</string>
     <string name="title_onboarding_2">Descubra histórias que você vai adorar.</string>
@@ -105,4 +114,12 @@
     <string name="keep_using_app">Continuar Usando o App</string>
     <string name="exit_app">Sair do App</string>
     <string name="settings">Configurações</string>
+    <string name="make_your_screen_look_amazing">Deixe sua tela incrível</string>
+    <string name="set_wallpaper">Definir papel de parede</string>
+    <string name="wallpaper_preview">Pré-visualização do papel de parede</string>
+    <string name="home_screen">Tela inicial</string>
+    <string name="lock_screen">Tela de bloqueio</string>
+    <string name="both_screens">Ambas as telas</string>
+    <string name="lock_screen_preview">Pré-visualização da tela de bloqueio</string>
+    <string name="tap_to_preview_full">Toque na tela para alternar os controles</string>
 </resources>

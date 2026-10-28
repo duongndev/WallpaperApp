@@ -24,6 +24,12 @@
     <string name="czech">செக்</string>
     <string name="greek">கிரீக்</string>
     <string name="chinese_traditional">சீனம் (பாரம்பரியம்)</string>
+
+    <string name="permission">அனுமதி</string>
+    <string name="permission_message">இந்த ஆப் சரியாகச் செயல்பட கீழே உள்ள அனுமதிகள் தேவை.</string>
+    <string name="camera">கேமரா</string>
+    <string name="_continue">தொடரவும்</string>
+
     <string name="language">மொழி</string>
     <string name="next">அடுத்து</string>
     <string name="action_contain_ads">இந்த செயலில் விளம்பரங்கள் இருக்கலாம்</string>
@@ -33,7 +39,13 @@
     <string name="connection_lost_message">உங்கள் இணைப்பு துண்டிக்கப்பட்டதாகத் தெரிகிறது.</string>
     <string name="go_to_setting">அமைப்புகளுக்குச் செல்லவும்</string>
     <string name="cancel">ரத்துசெய்</string>
+    <string name="exit">வெளியேறு</string>
     <string name="retry">மீண்டும் முயற்சிக்கவும்</string>
+    <string name="favorite">விருப்பமானது</string>
+    <string name="emty_list">காலியான பட்டியல்</string>
+    <string name="emty_list_message">தற்போது காட்டுவதற்கு எந்தத் தரவும் இல்லை</string>
+    <string name="wallpaper_set_successfully">வால்பேப்பர் வெற்றிகரமாக அமைக்கப்பட்டது!</string>
+
     <string name="title_onboarding_1">மேலும் அறிய ஸ்வைப் செய்யுங்கள்.</string>
     <string name="des_onboarding_1">ஒவ்வொரு ஸ்வைப்பிலும் கவர்ச்சிகரமான புதிய கதைகளைக் கண்டறியுங்கள்.</string>
     <string name="title_onboarding_2">நீங்கள் விரும்பும் கதைகளைக் கண்டறியுங்கள்.</string>
@@ -42,21 +54,25 @@
     <string name="des_onboarding_3">ஒவ்வொரு எபிசோடிலும் காதல், சுவாரஸ்யமான திருப்பங்கள் மற்றும் அதிர்ச்சிகளில் மூழ்குங்கள்.</string>
     <string name="title_onboarding_4">சிறந்த திரைப்படங்களைக் கண்டறியவும்</string>
     <string name="des_onboarding_4">அதிக மதிப்பீடு பெற்ற தேர்வுகளை உலாவி உங்கள் அடுத்த விருப்பமானதைத் தேர்ந்தெடுக்கவும்.</string>
+
     <string name="rate_1_title">அச்சச்சோ! அதைக் கேட்க வருந்துகிறோம்.</string>
     <string name="rate_2_title">மனதை உடைக்கிறது!</string>
     <string name="rate_3_title">கருத்துக்கு நன்றி!</string>
     <string name="rate_4_title">உங்கள் ஆதரவுக்கு நன்றி!</string>
     <string name="rate_5_title">அற்புதம்! எங்கள் நாளை மகிழ்ச்சியாக்கியீர்கள்!</string>
+
     <string name="rate_1_message">எங்களை மேம்படுத்த உங்கள் கருத்து மிகவும் முக்கியம். என்ன தவறாக இருந்தது என்று எங்களுக்குத் தெரியப்படுத்த முடியுமா?</string>
     <string name="rate_2_message">உங்களிடமிருந்து 5-நட்சத்திர மதிப்பீட்டைப் பெற நாங்கள் என்ன செய்யலாம்?</string>
     <string name="rate_3_message">உங்கள் அனுபவத்தை மேலும் சிறப்பாக்குவது எப்படி என்பதை அறிய விரும்புகிறோம்.</string>
     <string name="rate_4_message">நீங்கள் இந்த ஆப்ஸை விரும்பி பயன்படுத்துவதில் மகிழ்ச்சி! பொது மதிப்பீடுகள் எங்களை வளர உதவுகின்றன.</string>
     <string name="rate_5_message">உங்கள் திருப்தியே எங்கள் அனைத்து கடின உழைப்பையும் மதிப்புள்ளதாக ஆக்குகிறது.</string>
+
     <string name="rate_1_button">தனிப்பட்ட கருத்தைத் தெரிவிக்கவும்</string>
     <string name="rate_2_button">தனிப்பட்ட கருத்தைத் தெரிவிக்கவும்</string>
     <string name="rate_3_button">ஒரு மேம்பாட்டை பரிந்துரைக்கவும்</string>
     <string name="rate_4_button">Google Play-ல் மதிப்பிடுங்கள்</string>
     <string name="rate_5_button">Google Play-ல் மதிப்பிடுங்கள்</string>
+
     <string name="rate_us">எங்களை மதிப்பிடுங்கள்</string>
     <string name="share_app">ஆப்ஸைப் பகிரவும்</string>
     <string name="privacy_policy">தனியுரிமைக் கொள்கை</string>
@@ -65,11 +81,13 @@
     <string name="rate_message">உங்கள் கருத்து எங்களை மேம்படுத்த உதவுகிறது. உங்கள் அனுபவத்தை மதிப்பிட சிறிது நேரம் ஒதுக்குங்கள்.</string>
     <string name="rate_us_now">இப்போது மதிப்பிடுங்கள்</string>
     <string name="thanks_for_feedback">உங்கள் கருத்துக்கு நன்றி</string>
+
     <string name="load_ad_fail">விளம்பரத்தை ஏற்ற முடியவில்லை, பின்னர் மீண்டும் முயற்சிக்கவும்</string>
     <string name="premium_short_dramas">பிரீமியம் குறும் நாடகங்கள்</string>
     <string name="get_it_now">இப்போதே பெறுங்கள்</string>
     <string name="loading_ads">விளம்பரங்கள் ஏற்றப்படுகின்றன…</string>
     <string name="get_started">தொடங்குங்கள்!</string>
+
     <string name="unlock_vip_access">VIP அணுகலை அன்லாக் செய்யுங்கள்</string>
     <string name="unlock_vip_access_message">பிரீமியம் அம்சங்கள் மற்றும் பிரத்யேக உள்ளடக்கத்துடன் வரம்பற்ற நாடகங்களைப் பாருங்கள்.</string>
     <string name="monthly">மாதாந்திரம்</string>
@@ -105,4 +123,13 @@
     <string name="keep_using_app">ஆப்பைத் தொடர்ந்து பயன்படுத்தவும்</string>
     <string name="exit_app">ஆப்பிலிருந்து வெளியேறு</string>
     <string name="settings">அமைப்புகள்</string>
+
+    <string name="make_your_screen_look_amazing">உங்கள் திரையை அற்புதம் ஆக்குங்கள்</string>
+    <string name="set_wallpaper">வால்பேப்பரை அமைக்கவும்</string>
+    <string name="wallpaper_preview">வால்பேப்பர் முன்னோட்டம்</string>
+    <string name="home_screen">முகப்புத் திரை</string>
+    <string name="lock_screen">பூட்டுத் திரை</string>
+    <string name="both_screens">இரண்டு திரைகளும்</string>
+    <string name="lock_screen_preview">பூட்டுத் திரை முன்னோட்டம்</string>
+    <string name="tap_to_preview_full">கட்டுப்பாடுகளை மாற்ற திரையைத் தட்டவும்</string>
 </resources>

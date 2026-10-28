@@ -24,6 +24,10 @@
     <string name="czech">체코어</string>
     <string name="greek">그리스어</string>
     <string name="chinese_traditional">중국어(번체)</string>
+    <string name="permission">권한</string>
+    <string name="permission_message">이 앱이 정상적으로 작동하려면 아래 권한이 필요합니다.</string>
+    <string name="camera">카메라</string>
+    <string name="_continue">계속</string>
     <string name="language">언어</string>
     <string name="next">다음</string>
     <string name="action_contain_ads">이 작업에는 광고가 포함될 수 있습니다</string>
@@ -33,7 +37,12 @@
     <string name="connection_lost_message">인터넷 연결이 끊긴 것 같아요.</string>
     <string name="go_to_setting">설정으로 이동</string>
     <string name="cancel">취소</string>
+    <string name="exit">나가기</string>
     <string name="retry">다시 시도</string>
+    <string name="favorite">즐겨찾기</string>
+    <string name="emty_list">빈 목록</string>
+    <string name="emty_list_message">현재 표시할 데이터가 없습니다</string>
+    <string name="wallpaper_set_successfully">배경화면이 성공적으로 설정되었습니다!</string>
     <string name="title_onboarding_1">스와이프로 더 많은 콘텐츠를.</string>
     <string name="des_onboarding_1">스와이프할 때마다 매력적인 새로운 이야기를 만나보세요.</string>
     <string name="title_onboarding_2">당신이 사랑하게 될 이야기를 발견하세요.</string>
@@ -105,4 +114,12 @@
     <string name="keep_using_app">앱 계속 사용하기</string>
     <string name="exit_app">앱 종료</string>
     <string name="settings">설정</string>
+    <string name="make_your_screen_look_amazing">화면을 멋지게 꾸며보세요</string>
+    <string name="set_wallpaper">배경화면 설정</string>
+    <string name="wallpaper_preview">배경화면 미리보기</string>
+    <string name="home_screen">홈 화면</string>
+    <string name="lock_screen">잠금 화면</string>
+    <string name="both_screens">둘 다 설정</string>
+    <string name="lock_screen_preview">잠금 화면 미리보기</string>
+    <string name="tap_to_preview_full">화면을 탭하여 컨트롤 전환</string>
 </resources>

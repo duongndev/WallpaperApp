@@ -24,6 +24,10 @@
     <string name="czech">Ceco</string>
     <string name="greek">Greco</string>
     <string name="chinese_traditional">Cinese (tradizionale)</string>
+    <string name="permission">Autorizzazione</string>
+    <string name="permission_message">Questa app necessita delle autorizzazioni seguenti per funzionare correttamente.</string>
+    <string name="camera">Fotocamera</string>
+    <string name="_continue">Continua</string>
     <string name="language">Lingua</string>
     <string name="next">Avanti</string>
     <string name="action_contain_ads">Questa azione potrebbe contenere pubblicità</string>
@@ -33,7 +37,12 @@
     <string name="connection_lost_message">Sembra che tu sia offline.</string>
     <string name="go_to_setting">Vai alle impostazioni</string>
     <string name="cancel">Annulla</string>
+    <string name="exit">Esci</string>
     <string name="retry">Riprova</string>
+    <string name="favorite">Preferito</string>
+    <string name="emty_list">Lista vuota</string>
+    <string name="emty_list_message">Al momento non ci sono dati da visualizzare</string>
+    <string name="wallpaper_set_successfully">Sfondo impostato con successo!</string>
     <string name="title_onboarding_1">Scorri per scoprire di più.</string>
     <string name="des_onboarding_1">Trova nuove storie avvincenti a ogni scorrimento.</string>
     <string name="title_onboarding_2">Scopri storie che amerai.</string>
@@ -105,4 +114,12 @@
     <string name="keep_using_app">Continua a usare l\'app</string>
     <string name="exit_app">Esci dall\'app</string>
     <string name="settings">Impostazioni</string>
+    <string name="make_your_screen_look_amazing">Rendi il tuo schermo fantastico</string>
+    <string name="set_wallpaper">Imposta sfondo</string>
+    <string name="wallpaper_preview">Anteprima sfondo</string>
+    <string name="home_screen">Schermata home</string>
+    <string name="lock_screen">Schermata di blocco</string>
+    <string name="both_screens">Entrambi gli schermi</string>
+    <string name="lock_screen_preview">Anteprima schermata di blocco</string>
+    <string name="tap_to_preview_full">Tocca lo schermo per attivare/disattivare i controlli</string>
 </resources>

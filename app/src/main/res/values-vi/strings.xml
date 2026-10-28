@@ -24,6 +24,10 @@
     <string name="czech">Tiếng Séc</string>
     <string name="greek">Tiếng Hy Lạp</string>
     <string name="chinese_traditional">Tiếng Trung (Phồn thể)</string>
+    <string name="permission">Quyền truy cập</string>
+    <string name="permission_message">Ứng dụng này cần các quyền dưới đây để hoạt động bình thường.</string>
+    <string name="camera">Máy ảnh</string>
+    <string name="_continue">Tiếp tục</string>
     <string name="language">Ngôn ngữ</string>
     <string name="next">Tiếp theo</string>
     <string name="action_contain_ads">Hành động này có thể chứa quảng cáo</string>
@@ -33,7 +37,12 @@
     <string name="connection_lost_message">Có vẻ như kết nối của bạn đang ngoại tuyến.</string>
     <string name="go_to_setting">Đi Đến Cài Đặt</string>
     <string name="cancel">Hủy</string>
+    <string name="exit">Thoát</string>
     <string name="retry">Thử lại</string>
+    <string name="favorite">Yêu thích</string>
+    <string name="emty_list">Danh sách trống</string>
+    <string name="emty_list_message">Hiện tại không có dữ liệu để hiển thị</string>
+    <string name="wallpaper_set_successfully">Đặt hình nền thành công!</string>
     <string name="title_onboarding_1">Vuốt Để Xem Thêm.</string>
     <string name="des_onboarding_1">Khám phá những câu chuyện hấp dẫn mới với mỗi lần vuốt.</string>
     <string name="title_onboarding_2">Khám Phá Những Câu Chuyện Bạn Sẽ Yêu Thích.</string>
@@ -105,4 +114,12 @@
     <string name="keep_using_app">Tiếp Tục Sử Dụng Ứng Dụng</string>
     <string name="exit_app">Thoát Ứng Dụng</string>
     <string name="settings">Cài Đặt</string>
+    <string name="make_your_screen_look_amazing">Làm cho màn hình của bạn trông thật tuyệt vời</string>
+    <string name="set_wallpaper">Đặt hình nền</string>
+    <string name="wallpaper_preview">Xem trước hình nền</string>
+    <string name="home_screen">Màn hình chính</string>
+    <string name="lock_screen">Màn hình khóa</string>
+    <string name="both_screens">Cả hai màn hình</string>
+    <string name="lock_screen_preview">Xem trước màn hình khóa</string>
+    <string name="tap_to_preview_full">Chạm vào màn hình để ẩn/hiện công cụ</string>
 </resources>

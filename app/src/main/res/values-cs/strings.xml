@@ -24,6 +24,12 @@
     <string name="czech">Čeština</string>
     <string name="greek">Řečtina</string>
     <string name="chinese_traditional">Čínština (tradiční)</string>
+
+    <string name="permission">Oprávnění</string>
+    <string name="permission_message">Tato aplikace vyžaduje níže uvedená oprávnění k správnému fungování.</string>
+    <string name="camera">Fotoaparát</string>
+    <string name="_continue">Pokračovat</string>
+
     <string name="language">Jazyk</string>
     <string name="next">Další</string>
     <string name="action_contain_ads">Tato akce může obsahovat reklamu</string>
@@ -33,7 +39,13 @@
     <string name="connection_lost_message">Vypadá to, že jste offline.</string>
     <string name="go_to_setting">Přejít do nastavení</string>
     <string name="cancel">Zrušit</string>
+    <string name="exit">Ukončit</string>
     <string name="retry">Zkusit znovu</string>
+    <string name="favorite">Oblíbené</string>
+    <string name="emty_list">Prázdný seznam</string>
+    <string name="emty_list_message">V současné době nejsou k dispozici žádná data k zobrazení</string>
+    <string name="wallpaper_set_successfully">Tapeta byla úspěšně nastavena!</string>
+
     <string name="title_onboarding_1">Přejeďte prstem pro více.</string>
     <string name="des_onboarding_1">Objevujte strhující nové příběhy s každým přejetím prstu.</string>
     <string name="title_onboarding_2">Objevte příběhy, které si zamilujete.</string>
@@ -42,21 +54,25 @@
     <string name="des_onboarding_3">Ponořte se do romance, napínavých zvratů a překvapení v každé epizodě.</string>
     <string name="title_onboarding_4">Najděte Nejlepší Filmy</string>
     <string name="des_onboarding_4">Prohlédněte si nejlépe hodnocené tituly a vyberte si svého dalšího oblíbence.</string>
+
     <string name="rate_1_title">Ach ne! To je nám líto.</string>
     <string name="rate_2_title">Srdcervoucí!</string>
     <string name="rate_3_title">Děkujeme za zpětnou vazbu!</string>
     <string name="rate_4_title">Děkujeme za vaši podporu!</string>
     <string name="rate_5_title">Skvělé! Udělali jste nám den!</string>
+
     <string name="rate_1_message">Vaše zpětná vazba je pro nás klíčová ke zlepšení. Můžete nám prosím napsat, co se stalo?</string>
     <string name="rate_2_message">Co bychom mohli udělat, abychom si od vás vysloužili 5 hvězdiček?</string>
     <string name="rate_3_message">Rádi bychom věděli, jak vám můžeme zlepšit zážitek.</string>
     <string name="rate_4_message">Jsme rádi, že si aplikaci užíváte! Veřejné recenze nám pomáhají růst.</string>
     <string name="rate_5_message">Vaše spokojenost je odměnou za veškerou naši práci.</string>
+
     <string name="rate_1_button">Odeslat soukromou zpětnou vazbu</string>
     <string name="rate_2_button">Odeslat soukromou zpětnou vazbu</string>
     <string name="rate_3_button">Navrhnout zlepšení</string>
     <string name="rate_4_button">Ohodnotit na Google Play</string>
     <string name="rate_5_button">Ohodnotit na Google Play</string>
+
     <string name="rate_us">Ohodnotit nás</string>
     <string name="share_app">Sdílet aplikaci</string>
     <string name="privacy_policy">Zásady ochrany osobních údajů</string>
@@ -65,11 +81,13 @@
     <string name="rate_message">Vaše hodnocení nám pomáhá zlepšovat se. Věnujte prosím chvilku hodnocení vašeho zážitku.</string>
     <string name="rate_us_now">Ohodnotit nás nyní</string>
     <string name="thanks_for_feedback">Děkujeme za vaši zpětnou vazbu</string>
+
     <string name="load_ad_fail">Reklamu se nepodařilo načíst, zkuste to prosím později</string>
     <string name="premium_short_dramas">Prémiová krátká dramata</string>
     <string name="get_it_now">Získat nyní</string>
     <string name="loading_ads">Načítání reklam…</string>
     <string name="get_started">Začínáme!</string>
+
     <string name="unlock_vip_access">Odemkněte VIP přístup</string>
     <string name="unlock_vip_access_message">Sledujte neomezeně dramata s prémiovými funkcemi a exkluzivním obsahem.</string>
     <string name="monthly">Měsíčně</string>
@@ -105,4 +123,13 @@
     <string name="keep_using_app">Pokračovat v používání aplikace</string>
     <string name="exit_app">Ukončit aplikaci</string>
     <string name="settings">Nastavení</string>
+
+    <string name="make_your_screen_look_amazing">Dejte své obrazovce úžasný vzhled</string>
+    <string name="set_wallpaper">Nastavit tapetu</string>
+    <string name="wallpaper_preview">Náhled tapety</string>
+    <string name="home_screen">Domovská obrazovka</string>
+    <string name="lock_screen">Uzamykací obrazovka</string>
+    <string name="both_screens">Obě obrazovky</string>
+    <string name="lock_screen_preview">Náhled uzamykací obrazovky</string>
+    <string name="tap_to_preview_full">Klepnutím na obrazovku přepnete ovládací prvky</string>
 </resources>

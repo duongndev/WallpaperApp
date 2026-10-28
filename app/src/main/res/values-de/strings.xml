@@ -24,6 +24,10 @@
     <string name="czech">Tschechisch</string>
     <string name="greek">Griechisch</string>
     <string name="chinese_traditional">Chinesisch (Traditionell)</string>
+    <string name="permission">Berechtigung</string>
+    <string name="permission_message">Diese App benötigt die folgenden Berechtigungen, um ordnungsgemäß zu funktionieren.</string>
+    <string name="camera">Kamera</string>
+    <string name="_continue">Weiter</string>
     <string name="language">Sprache</string>
     <string name="next">Weiter</string>
     <string name="action_contain_ads">Diese Aktion kann Werbung enthalten</string>
@@ -33,7 +37,12 @@
     <string name="connection_lost_message">Es sieht so aus, als wäre deine Verbindung offline.</string>
     <string name="go_to_setting">Zu den Einstellungen</string>
     <string name="cancel">Abbrechen</string>
+    <string name="exit">Beenden</string>
     <string name="retry">Erneut versuchen</string>
+    <string name="favorite">Favorit</string>
+    <string name="emty_list">Leere Liste</string>
+    <string name="emty_list_message">Derzeit sind keine Daten zum Anzeigen vorhanden</string>
+    <string name="wallpaper_set_successfully">Hintergrundbild erfolgreich festgelegt!</string>
     <string name="title_onboarding_1">Wische für mehr.</string>
     <string name="des_onboarding_1">Entdecke fesselnde neue Geschichten mit jedem Wisch.</string>
     <string name="title_onboarding_2">Entdecke Geschichten, die du lieben wirst.</string>
@@ -105,4 +114,12 @@
     <string name="keep_using_app">App weiter nutzen</string>
     <string name="exit_app">App verlassen</string>
     <string name="settings">Einstellungen</string>
+    <string name="make_your_screen_look_amazing">Lass deinen Bildschirm umwerfend aussehen</string>
+    <string name="set_wallpaper">Hintergrundbild festlegen</string>
+    <string name="wallpaper_preview">Hintergrundbild-Vorschau</string>
+    <string name="home_screen">Startbildschirm</string>
+    <string name="lock_screen">Sperrbildschirm</string>
+    <string name="both_screens">Beide Bildschirme</string>
+    <string name="lock_screen_preview">Sperrbildschirm-Vorschau</string>
+    <string name="tap_to_preview_full">Tippe auf den Bildschirm, um Steuerelemente umzuschalten</string>
 </resources>

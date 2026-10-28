@@ -24,6 +24,10 @@
     <string name="czech">Checo</string>
     <string name="greek">Griego</string>
     <string name="chinese_traditional">Chino (Tradicional)</string>
+    <string name="permission">Permisos</string>
+    <string name="permission_message">Esta aplicación necesita los siguientes permisos para funcionar correctamente.</string>
+    <string name="camera">Cámara</string>
+    <string name="_continue">Continuar</string>
     <string name="language">Idioma</string>
     <string name="next">Siguiente</string>
     <string name="action_contain_ads">Esta acción puede contener publicidad</string>
@@ -33,7 +37,12 @@
     <string name="connection_lost_message">Parece que tu conexión está desconectada.</string>
     <string name="go_to_setting">Ir a Configuración</string>
     <string name="cancel">Cancelar</string>
+    <string name="exit">Salir</string>
     <string name="retry">Reintentar</string>
+    <string name="favorite">Favoritos</string>
+    <string name="emty_list">Lista vacía</string>
+    <string name="emty_list_message">Actualmente no hay datos para mostrar</string>
+    <string name="wallpaper_set_successfully">¡Fondo de pantalla configurado con éxito!</string>
     <string name="title_onboarding_1">Desliza para ver más.</string>
     <string name="des_onboarding_1">Descubre nuevas historias fascinantes con cada deslizamiento.</string>
     <string name="title_onboarding_2">Descubre historias que te encantarán.</string>
@@ -105,4 +114,12 @@
     <string name="keep_using_app">Seguir usando la app</string>
     <string name="exit_app">Salir de la app</string>
     <string name="settings">Configuración</string>
+    <string name="make_your_screen_look_amazing">Haz que tu pantalla se vea increíble</string>
+    <string name="set_wallpaper">Establecer fondo de pantalla</string>
+    <string name="wallpaper_preview">Vista previa del fondo de pantalla</string>
+    <string name="home_screen">Pantalla de inicio</string>
+    <string name="lock_screen">Pantalla de bloqueo</string>
+    <string name="both_screens">Ambas pantallas</string>
+    <string name="lock_screen_preview">Vista previa de la pantalla de bloqueo</string>
+    <string name="tap_to_preview_full">Toca la pantalla para alternar los controles</string>
 </resources>

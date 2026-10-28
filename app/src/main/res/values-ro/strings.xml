@@ -24,6 +24,12 @@
     <string name="czech">Cehă</string>
     <string name="greek">Greacă</string>
     <string name="chinese_traditional">Chineză (Tradițională)</string>
+
+    <string name="permission">Permisiune</string>
+    <string name="permission_message">Această aplicație are nevoie de permisiunile de mai jos pentru a funcționa corect.</string>
+    <string name="camera">Cameră</string>
+    <string name="_continue">Continuă</string>
+
     <string name="language">Limbă</string>
     <string name="next">Următor</string>
     <string name="action_contain_ads">Această acțiune poate conține publicitate</string>
@@ -33,7 +39,13 @@
     <string name="connection_lost_message">Se pare că nu ai conexiune la internet.</string>
     <string name="go_to_setting">Accesează setările</string>
     <string name="cancel">Anulează</string>
+    <string name="exit">Ieșire</string>
     <string name="retry">Reîncearcă</string>
+    <string name="favorite">Favorit</string>
+    <string name="emty_list">Listă goală</string>
+    <string name="emty_list_message">În prezent nu există date de afișat</string>
+    <string name="wallpaper_set_successfully">Fundal setat cu succes!</string>
+
     <string name="title_onboarding_1">Glisează pentru mai multe.</string>
     <string name="des_onboarding_1">Descoperă povești captivante la fiecare glisare.</string>
     <string name="title_onboarding_2">Descoperă povești care îți vor plăcea.</string>
@@ -42,21 +54,25 @@
     <string name="des_onboarding_3">Cufundă-te în romantism, întorsături captivante și surprize la fiecare episod.</string>
     <string name="title_onboarding_4">Găsește Cele Mai Bune Filme</string>
     <string name="des_onboarding_4">Răsfoiește selecțiile cele mai bine cotate și alege-ți următorul favorit.</string>
+
     <string name="rate_1_title">Vai! Ne pare rău să auzim asta.</string>
     <string name="rate_2_title">Ce dezamăgire!</string>
     <string name="rate_3_title">Mulțumim pentru feedback!</string>
     <string name="rate_4_title">Mulțumim pentru susținere!</string>
     <string name="rate_5_title">Genial! Ne-ai făcut ziua!</string>
+
     <string name="rate_1_message">Feedbackul tău este esențial pentru a ne îmbunătăți. Ne poți spune ce a fost în neregulă?</string>
     <string name="rate_2_message">Ce am putea face pentru a merita o evaluare de 5 stele din partea ta?</string>
     <string name="rate_3_message">Ne-ar plăcea să știm cum îți putem îmbunătăți experiența.</string>
     <string name="rate_4_message">Ne bucurăm că îți place aplicația! Recenziile publice ne ajută să creștem.</string>
     <string name="rate_5_message">Satisfacția ta face ca toată munca noastră să merite.</string>
+
     <string name="rate_1_button">Trimite feedback privat</string>
     <string name="rate_2_button">Trimite feedback privat</string>
     <string name="rate_3_button">Sugerează o îmbunătățire</string>
     <string name="rate_4_button">Evaluează pe Google Play</string>
     <string name="rate_5_button">Evaluează pe Google Play</string>
+
     <string name="rate_us">Evaluează-ne</string>
     <string name="share_app">Distribuie aplicația</string>
     <string name="privacy_policy">Politica de confidențialitate</string>
@@ -65,11 +81,13 @@
     <string name="rate_message">Feedbackul tău ne ajută să ne îmbunătățim. Te rugăm să îți acorzi un moment pentru a evalua experiența ta.</string>
     <string name="rate_us_now">Evaluează-ne acum</string>
     <string name="thanks_for_feedback">Mulțumim pentru feedback</string>
+
     <string name="load_ad_fail">Anunțul nu a putut fi încărcat, te rugăm să încerci din nou mai târziu</string>
     <string name="premium_short_dramas">Seriale scurte premium</string>
     <string name="get_it_now">Obține acum</string>
     <string name="loading_ads">Se încarcă anunțurile…</string>
     <string name="get_started">Începe!</string>
+
     <string name="unlock_vip_access">Deblochează accesul VIP</string>
     <string name="unlock_vip_access_message">Urmărește seriale nelimitat cu funcții premium și conținut exclusiv.</string>
     <string name="monthly">Lunar</string>
@@ -105,4 +123,13 @@
     <string name="keep_using_app">Continuă să folosești aplicația</string>
     <string name="exit_app">Ieși din aplicație</string>
     <string name="settings">Setări</string>
+
+    <string name="make_your_screen_look_amazing">Fă-ți ecranul să arate uimitor</string>
+    <string name="set_wallpaper">Setează fundalul</string>
+    <string name="wallpaper_preview">Previzualizare fundal</string>
+    <string name="home_screen">Ecran de pornire</string>
+    <string name="lock_screen">Ecran de blocare</string>
+    <string name="both_screens">Ambele ecrane</string>
+    <string name="lock_screen_preview">Previzualizare ecran de blocare</string>
+    <string name="tap_to_preview_full">Atinge ecranul pentru a comuta controalele</string>
 </resources>

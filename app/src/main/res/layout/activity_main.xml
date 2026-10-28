@@ -24,5 +24,9 @@
         tools:listitem="@layout/item_image"
         />
 
+    <include
+        android:id="@+id/emtyList"
+        layout="@layout/emty_list"
+        android:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

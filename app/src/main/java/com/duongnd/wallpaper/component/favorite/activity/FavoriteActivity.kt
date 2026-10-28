@@ -22,11 +22,11 @@ import kotlinx.coroutines.flow.onEach
 @AndroidEntryPoint
 class FavoriteActivity : BaseActivity<ActivityFavoriteBinding>() {
 
-    override fun provideViewBinding(): ActivityFavoriteBinding = ActivityFavoriteBinding.inflate(layoutInflater)
+    override fun provideViewBinding(): ActivityFavoriteBinding =
+        ActivityFavoriteBinding.inflate(layoutInflater)
 
     private val viewModel: FavoriteViewModel by viewModels()
     private var imageAdapter = ImageAdapter()
-
 
     override fun initViews() = with(viewBinding) {
         super.initViews()
@@ -40,16 +40,14 @@ class FavoriteActivity : BaseActivity<ActivityFavoriteBinding>() {
         }
         rcvImgFav.adapter = imageAdapter
 
-
         imageAdapter.onFavoriteClick = {
             imageAdapter.changeFav(it)
             viewModel.removeFav(it)
         }
 
         imageAdapter.onClick = {
-           PreviewActivity.start(this@FavoriteActivity, it)
+            PreviewActivity.start(this@FavoriteActivity, it)
         }
-
     }
 
     override fun initData() {
@@ -57,17 +55,24 @@ class FavoriteActivity : BaseActivity<ActivityFavoriteBinding>() {
     }
 
     override fun initObserver() {
-        viewModel.listFavorite.onEach {
-            Log.d("TAG", "initObserver: ${it.size}")
-            imageAdapter.setData(ArrayList(it))
+        viewModel.listFavorite.onEach { list ->
+            Log.d("FavoriteActivity", "Favorite list size: ${list.size}")
+            if (list.isEmpty()) {
+                viewBinding.rcvImgFav.gone()
+                viewBinding.emtyList.root.visible()
+            } else {
+                viewBinding.rcvImgFav.visible()
+                viewBinding.emtyList.root.gone()
+                imageAdapter.setData(ArrayList(list))
+            }
         }.flowWithLifecycle(lifecycle, Lifecycle.State.CREATED).launchIn(lifecycleScope)
     }
 
-    companion object { fun start(context: Context) {
-        Intent(context, FavoriteActivity::class.java).also {
-            context.startActivity(it)
+    companion object {
+        fun start(context: Context) {
+            Intent(context, FavoriteActivity::class.java).also {
+                context.startActivity(it)
+            }
         }
-    }
-
     }
 }

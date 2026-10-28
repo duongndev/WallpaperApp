@@ -24,6 +24,12 @@
     <string name="czech">Bahasa Czech</string>
     <string name="greek">Bahasa Yunani</string>
     <string name="chinese_traditional">Bahasa Cina (Tradisional)</string>
+
+    <string name="permission">Kebenaran</string>
+    <string name="permission_message">Aplikasi ini memerlukan kebenaran di bawah untuk berfungsi dengan betul.</string>
+    <string name="camera">Kamera</string>
+    <string name="_continue">Teruskan</string>
+
     <string name="language">Bahasa</string>
     <string name="next">Seterusnya</string>
     <string name="action_contain_ads">Tindakan ini mungkin mengandungi pengiklanan</string>
@@ -33,7 +39,13 @@
     <string name="connection_lost_message">Sepertinya sambungan anda terputus.</string>
     <string name="go_to_setting">Pergi Ke Tetapan</string>
     <string name="cancel">Batal</string>
+    <string name="exit">Keluar</string>
     <string name="retry">Cuba Lagi</string>
+    <string name="favorite">Kegemaran</string>
+    <string name="emty_list">Senarai Kosong</string>
+    <string name="emty_list_message">Buat masa ini tiada data untuk dipaparkan</string>
+    <string name="wallpaper_set_successfully">Kertas dinding berjaya ditetapkan!</string>
+
     <string name="title_onboarding_1">Leret Untuk Lebih Banyak.</string>
     <string name="des_onboarding_1">Temui kisah baharu yang mengujakan pada setiap leretan.</string>
     <string name="title_onboarding_2">Temui Kisah Yang Anda Suka.</string>
@@ -42,21 +54,25 @@
     <string name="des_onboarding_3">Selami kisah cinta, kejutan mendebarkan, dan kelainan dalam setiap episod.</string>
     <string name="title_onboarding_4">Cari Filem Terbaik</string>
     <string name="des_onboarding_4">Semak imbas pilihan berpenarafan tertinggi dan pilih kegemaran seterusnya.</string>
+
     <string name="rate_1_title">Oh tidak! Kami bersimpati mendengarnya.</string>
     <string name="rate_2_title">Menyayat hati!</string>
     <string name="rate_3_title">Terima kasih atas maklum balas anda!</string>
     <string name="rate_4_title">Terima kasih atas sokongan anda!</string>
     <string name="rate_5_title">Hebat! Anda telah membuat hari kami menjadi indah!</string>
+
     <string name="rate_1_message">Maklum balas anda amat penting untuk kami menambah baik. Bolehkah anda beritahu kami apa yang tidak kena?</string>
     <string name="rate_2_message">Apa yang boleh kami lakukan untuk mendapatkan penilaian 5 bintang daripada anda?</string>
     <string name="rate_3_message">Kami ingin tahu bagaimana kami boleh menambah baik pengalaman anda.</string>
     <string name="rate_4_message">Kami gembira anda menikmati aplikasi ini! Ulasan awam membantu kami berkembang.</string>
     <string name="rate_5_message">Kepuasan anda menjadikan semua usaha keras kami berbaloi.</string>
+
     <string name="rate_1_button">Beri Maklum Balas Peribadi</string>
     <string name="rate_2_button">Beri Maklum Balas Peribadi</string>
     <string name="rate_3_button">Cadangkan Penambahbaikan</string>
     <string name="rate_4_button">Nilai di Google Play</string>
     <string name="rate_5_button">Nilai di Google Play</string>
+
     <string name="rate_us">Nilai Kami</string>
     <string name="share_app">Kongsi Aplikasi</string>
     <string name="privacy_policy">Dasar Privasi</string>
@@ -65,11 +81,13 @@
     <string name="rate_message">Maklum balas anda membantu kami menambah baik. Sila luangkan sedikit masa untuk menilai pengalaman anda.</string>
     <string name="rate_us_now">Nilai Kami Sekarang</string>
     <string name="thanks_for_feedback">Terima kasih atas maklum balas anda</string>
+
     <string name="load_ad_fail">Iklan gagal dimuatkan, sila cuba lagi kemudian</string>
     <string name="premium_short_dramas">Drama Pendek Premium</string>
     <string name="get_it_now">Dapatkan Sekarang</string>
     <string name="loading_ads">Memuatkan iklan…</string>
     <string name="get_started">Mulakan!</string>
+
     <string name="unlock_vip_access">Buka Kunci Akses VIP</string>
     <string name="unlock_vip_access_message">Tonton drama tanpa had dengan ciri premium dan kandungan eksklusif.</string>
     <string name="monthly">Bulanan</string>
@@ -105,4 +123,13 @@
     <string name="keep_using_app">Teruskan Menggunakan Apl</string>
     <string name="exit_app">Keluar Apl</string>
     <string name="settings">Tetapan</string>
+
+    <string name="make_your_screen_look_amazing">Jadikan skrin anda kelihatan menakjubkan</string>
+    <string name="set_wallpaper">Tetapkan Kertas Dinding</string>
+    <string name="wallpaper_preview">Pratonton Kertas Dinding</string>
+    <string name="home_screen">Skrin Utama</string>
+    <string name="lock_screen">Skrin Kunci</string>
+    <string name="both_screens">Kedua-dua Skrin</string>
+    <string name="lock_screen_preview">Pratonton Skrin Kunci</string>
+    <string name="tap_to_preview_full">Ketik skrin untuk menukar kawalan</string>
 </resources>

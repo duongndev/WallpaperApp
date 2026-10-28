@@ -24,6 +24,12 @@
     <string name="czech">Czeski</string>
     <string name="greek">Grecki</string>
     <string name="chinese_traditional">Chiński (tradycyjny)</string>
+
+    <string name="permission">Uprawnienie</string>
+    <string name="permission_message">Ta aplikacja wymaga poniższych uprawnień do prawidłowego działania.</string>
+    <string name="camera">Aparat</string>
+    <string name="_continue">Kontynuuj</string>
+
     <string name="language">Język</string>
     <string name="next">Dalej</string>
     <string name="action_contain_ads">Ta czynność może zawierać reklamy</string>
@@ -33,7 +39,13 @@
     <string name="connection_lost_message">Wygląda na to, że nie masz połączenia z internetem.</string>
     <string name="go_to_setting">Przejdź do ustawień</string>
     <string name="cancel">Anuluj</string>
+    <string name="exit">Wyjście</string>
     <string name="retry">Spróbuj ponownie</string>
+    <string name="favorite">Ulubione</string>
+    <string name="emty_list">Pusta lista</string>
+    <string name="emty_list_message">Obecnie brak danych do wyświetlenia</string>
+    <string name="wallpaper_set_successfully">Tapeta została pomyślnie ustawiona!</string>
+
     <string name="title_onboarding_1">Przesuń, aby zobaczyć więcej.</string>
     <string name="des_onboarding_1">Odkrywaj wciągające nowe historie przy każdym przesunięciu.</string>
     <string name="title_onboarding_2">Odkryj historie, które pokochasz.</string>
@@ -42,21 +54,25 @@
     <string name="des_onboarding_3">Zanurz się w romansie, emocjonujących zwrotach akcji i niespodziankach w każdym odcinku.</string>
     <string name="title_onboarding_4">Znajdź Najlepsze Filmy</string>
     <string name="des_onboarding_4">Przeglądaj najwyżej oceniane tytuły i wybierz swój kolejny ulubiony.</string>
+
     <string name="rate_1_title">Och nie! Przepraszamy, że tak się czujesz.</string>
     <string name="rate_2_title">To łamie serce!</string>
     <string name="rate_3_title">Dzięki za opinię!</string>
     <string name="rate_4_title">Dziękujemy za wsparcie!</string>
     <string name="rate_5_title">Super! Uszczęśliwiłeś nas!</string>
+
     <string name="rate_1_message">Twoja opinia jest dla nas bardzo ważna. Czy mógłbyś powiedzieć nam, co poszło nie tak?</string>
     <string name="rate_2_message">Co moglibyśmy zrobić, aby zdobyć od Ciebie 5 gwiazdek?</string>
     <string name="rate_3_message">Chcielibyśmy wiedzieć, jak możemy ulepszyć Twoje doświadczenia.</string>
     <string name="rate_4_message">Cieszymy się, że korzystanie z aplikacji Ci się podoba! Publiczne opinie pomagają nam się rozwijać.</string>
     <string name="rate_5_message">Twoja satysfakcja czyni całą naszą pracę wartą wysiłku.</string>
+
     <string name="rate_1_button">Przekaż prywatną opinię</string>
     <string name="rate_2_button">Przekaż prywatną opinię</string>
     <string name="rate_3_button">Zaproponuj poprawkę</string>
     <string name="rate_4_button">Oceń w Google Play</string>
     <string name="rate_5_button">Oceń w Google Play</string>
+
     <string name="rate_us">Oceń nas</string>
     <string name="share_app">Udostępnij aplikację</string>
     <string name="privacy_policy">Polityka prywatności</string>
@@ -65,11 +81,13 @@
     <string name="rate_message">Twoja opinia pomaga nam się rozwijać. Poświęć chwilę, aby ocenić swoje doświadczenia.</string>
     <string name="rate_us_now">Oceń nas teraz</string>
     <string name="thanks_for_feedback">Dziękujemy za opinię</string>
+
     <string name="load_ad_fail">Nie udało się wczytać reklamy, spróbuj ponownie później</string>
     <string name="premium_short_dramas">Premium krótkie seriale</string>
     <string name="get_it_now">Zdobądź już teraz</string>
     <string name="loading_ads">Wczytywanie reklam…</string>
     <string name="get_started">Zaczynajmy!</string>
+
     <string name="unlock_vip_access">Odblokuj dostęp VIP</string>
     <string name="unlock_vip_access_message">Oglądaj nieograniczoną liczbę seriali z funkcjami premium i ekskluzywną zawartością.</string>
     <string name="monthly">Miesięcznie</string>
@@ -105,4 +123,13 @@
     <string name="keep_using_app">Kontynuuj korzystanie z aplikacji</string>
     <string name="exit_app">Zamknij aplikację</string>
     <string name="settings">Ustawienia</string>
+
+    <string name="make_your_screen_look_amazing">Spraw, aby Twój ekran wyglądał niesamowicie</string>
+    <string name="set_wallpaper">Ustaw tapetę</string>
+    <string name="wallpaper_preview">Podgląd tapety</string>
+    <string name="home_screen">Ekran główny</string>
+    <string name="lock_screen">Ekran blokady</string>
+    <string name="both_screens">Oba ekrany</string>
+    <string name="lock_screen_preview">Podgląd ekranu blokady</string>
+    <string name="tap_to_preview_full">Dotknij ekranu, aby przełączyć elementy sterujące</string>
 </resources>
