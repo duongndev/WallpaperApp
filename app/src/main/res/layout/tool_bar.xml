@@ -47,13 +47,11 @@
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btnFav"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/size40"
         android:layout_height="@dimen/size40"
-        android:layout_marginEnd="@dimen/size10"
         android:background="@drawable/background_transparent_selector"
         android:gravity="center"
-        android:paddingHorizontal="@dimen/size15"
-        android:textSize="@dimen/size16"
+        android:paddingHorizontal="@dimen/size5"
         android:visibility="visible"
         android:tint="@color/white"
         app:srcCompat="@drawable/ic_favorite_selected"
@@ -63,13 +61,12 @@
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btnSetting"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/size40"
         android:layout_height="@dimen/size40"
         android:layout_marginEnd="@dimen/size10"
         android:background="@drawable/background_transparent_selector"
         android:gravity="center"
         android:paddingHorizontal="@dimen/size15"
-        android:textSize="@dimen/size16"
         android:visibility="visible"
         android:tint="@color/white"
         app:srcCompat="@drawable/ic_settings"

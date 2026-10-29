@@ -1,20 +1,23 @@
 package com.duongnd.wallpaper.presentation.preview.viewmodel
 
-import android.app.WallpaperManager
 import android.content.Context
-import android.graphics.BitmapFactory
 import androidx.lifecycle.viewModelScope
 import com.duongnd.wallpaper.base.viewmodel.BaseViewModel
 import com.duongnd.wallpaper.domain.model.ImageEntity
+import com.duongnd.wallpaper.domain.model.SaveImageState
+import com.duongnd.wallpaper.domain.model.ShareImageState
 import com.duongnd.wallpaper.domain.model.WallpaperState
 import com.duongnd.wallpaper.domain.model.WallpaperTarget
 import com.duongnd.wallpaper.domain.usecase.DeleteImageDbUseCase
 import com.duongnd.wallpaper.domain.usecase.InsertImageDbUseCase
+import com.duongnd.wallpaper.domain.usecase.SaveImageUseCase
 import com.duongnd.wallpaper.domain.usecase.SetWallpaperUseCase
-import dagger.hilt.android.internal.Contexts.getApplication
+import com.duongnd.wallpaper.domain.usecase.ShareImageUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -24,7 +27,9 @@ class PreviewViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
     private val insertImageDbUseCase: InsertImageDbUseCase,
     private val deleteImageDbUseCase: DeleteImageDbUseCase,
-    private val setWallpaperUseCase: SetWallpaperUseCase
+    private val setWallpaperUseCase: SetWallpaperUseCase,
+    private val saveImageUseCase: SaveImageUseCase,
+    private val shareImageUseCase: ShareImageUseCase
 ) : BaseViewModel() {
 
     private val imageFlow = MutableStateFlow<ImageEntity?>(null)
@@ -32,6 +37,13 @@ class PreviewViewModel @Inject constructor(
 
     private val _wallpaperStatus = MutableStateFlow<WallpaperState>(WallpaperState.Idle)
     val wallpaperStatus = _wallpaperStatus.asStateFlow()
+
+    private val _saveImageState = MutableStateFlow<SaveImageState>(SaveImageState.Idle)
+    val saveImageState = _saveImageState.asStateFlow()
+
+    private val _shareImageUri = MutableSharedFlow<ShareImageState>()
+    val shareImageUri = _shareImageUri.asSharedFlow()
+
 
     fun setInitialImage(image: ImageEntity) {
         if (imageFlow.value == null) {
@@ -62,16 +74,49 @@ class PreviewViewModel @Inject constructor(
         viewModelScope.launch {
             _wallpaperStatus.value = WallpaperState.Loading
             runCatching {
-               setWallpaperUseCase.execute(SetWallpaperUseCase.Param(image.imgRes, target)).also {
-                   _wallpaperStatus.value = WallpaperState.Success
-               }
+                setWallpaperUseCase.execute(SetWallpaperUseCase.Param(image.imgRes, target)).also {
+                    _wallpaperStatus.value = WallpaperState.Success
+                }
             }.onFailure {
                 _wallpaperStatus.value = WallpaperState.Error(it.message ?: "Unknown error")
             }
         }
     }
 
-    fun resetWallpaperState(){
+    fun resetWallpaperState() {
         _wallpaperStatus.value = WallpaperState.Idle
     }
+
+    fun downloadImage() {
+        val image = imageFlow.value ?: return
+        viewModelScope.launch {
+            _saveImageState.value = SaveImageState.Loading
+            runCatching {
+                saveImageUseCase.execute(SaveImageUseCase.Param(image.imgRes))
+            }.onSuccess {
+                _saveImageState.value = SaveImageState.Success(android.net.Uri.EMPTY)
+            }.onFailure {
+                _saveImageState.value = SaveImageState.Error(it.message ?: "Unknown error")
+            }
+        }
+    }
+
+    fun resetSaveImageState() {
+        _saveImageState.value = SaveImageState.Idle
+    }
+
+
+    fun shareImage(image: ImageEntity) {
+        viewModelScope.launch {
+            _shareImageUri.emit(ShareImageState.Loading)
+            runCatching {
+                shareImageUseCase.execute(ShareImageUseCase.Param(image.imgRes))
+            }.onSuccess {
+                _shareImageUri.emit(ShareImageState.Success(it))
+            }.onFailure {
+                _shareImageUri.emit(ShareImageState.Error(it.message ?: "Unknown error"))
+            }
+        }
+    }
+
 }

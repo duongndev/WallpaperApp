@@ -10,10 +10,12 @@ import com.duongnd.wallpaper.presentation.language.activity.LanguageActivity
 import com.duongnd.wallpaper.databinding.ActivitySettingBinding
 import com.duongnd.wallpaper.presentation.dialog.RateDialog
 import com.duongnd.wallpaper.utils.Constant
+import com.duongnd.wallpaper.utils.Logger
 import com.duongnd.wallpaper.utils.gone
 import com.duongnd.wallpaper.utils.openBrowser
 import com.duongnd.wallpaper.utils.share
 import com.duongnd.wallpaper.utils.visible
+import com.google.android.ump.UserMessagingPlatform
 
 class SettingActivity : BaseActivity<ActivitySettingBinding>(), View.OnClickListener {
     override fun provideViewBinding(): ActivitySettingBinding =
@@ -60,9 +62,9 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>(), View.OnClickList
     }
 
     private fun showPolicySetting() {
-//        UserMessagingPlatform.showPrivacyOptionsForm(this) { formError ->
-//            Logger.e("${formError?.errorCode} -- ${formError?.message}")
-//        }
+        UserMessagingPlatform.showPrivacyOptionsForm(this) { formError ->
+            Logger.e("${formError?.errorCode} -- ${formError?.message}")
+        }
     }
 
     companion object {

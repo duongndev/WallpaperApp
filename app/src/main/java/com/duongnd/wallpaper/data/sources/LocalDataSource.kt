@@ -69,11 +69,9 @@ class LocalDataSource @Inject constructor(
 
 
 
-
-
-
     fun getListPermission(): List<PermissionModel> =
         buildList {
             add(PermissionModel(R.string.camera, listOf(PermissionRequest.CAMERA)))
+            add(PermissionModel(R.string.write_external_storage, listOf(PermissionRequest.WRITE_EXTERNAL_STORAGE)))
         }
 }

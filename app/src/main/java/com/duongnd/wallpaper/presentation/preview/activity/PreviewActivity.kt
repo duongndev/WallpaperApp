@@ -1,23 +1,29 @@
 package com.duongnd.wallpaper.presentation.preview.activity
 
+import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.base.activity.BaseActivity
-import com.duongnd.wallpaper.presentation.preview.viewmodel.PreviewViewModel
 import com.duongnd.wallpaper.databinding.ActivityPreviewBinding
-import com.duongnd.wallpaper.presentation.dialog.SetWallpaperDialog
 import com.duongnd.wallpaper.domain.model.ImageEntity
+import com.duongnd.wallpaper.domain.model.SaveImageState
+import com.duongnd.wallpaper.domain.model.ShareImageState
 import com.duongnd.wallpaper.domain.model.WallpaperState
 import com.duongnd.wallpaper.domain.model.WallpaperTarget
+import com.duongnd.wallpaper.presentation.dialog.SetWallpaperDialog
+import com.duongnd.wallpaper.presentation.preview.viewmodel.PreviewViewModel
 import com.duongnd.wallpaper.utils.NetworkConnectivityUtils
+import com.duongnd.wallpaper.utils.Permission
+import com.duongnd.wallpaper.utils.runWithPermissionChecker
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -78,8 +84,28 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>() {
             ).show()
         }
 
-    }
+        btnDown.setOnClickListener {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                // Trên Android 10 trở lên, không cần quyền WRITE_EXTERNAL_STORAGE để tải ảnh vào public thư mục
+                viewModel.downloadImage()
+            } else {
+                runWithPermissionChecker(
+                    permission = Permission.WRITE_EXTERNAL_STORAGE,
+                    isRequestPermission = true,
+                    onPermissionGranted = {
+                        viewModel.downloadImage()
+                    },
+                    onPermissionDeny = {
+                        showToast(getString(R.string.permission_message))
+                    }
+                )
+            }
+        }
 
+        btnShare.setOnClickListener {
+            viewModel.shareImage(imgRes)
+        }
+    }
 
     override fun initObserver() {
         viewModel.imageF.onEach { image ->
@@ -95,14 +121,8 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>() {
 
         viewModel.wallpaperStatus.onEach { state ->
             when (state) {
-                is WallpaperState.Idle -> {
-                    // Do nothing
-                }
-
-                is WallpaperState.Loading -> {
-                    showLoading()
-                }
-
+                is WallpaperState.Idle -> {}
+                is WallpaperState.Loading -> showLoading()
                 is WallpaperState.Success -> {
                     hideLoading()
                     showToast(getString(R.string.wallpaper_set_successfully))
@@ -115,7 +135,46 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>() {
             }
 
             viewModel.resetWallpaperState()
-        }.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED).launchIn(lifecycleScope)
+        }.flowWithLifecycle(lifecycle, Lifecycle.State.CREATED).launchIn(lifecycleScope)
+
+        viewModel.saveImageState.onEach { state ->
+            when (state) {
+                is SaveImageState.Idle -> {}
+                is SaveImageState.Loading -> showLoading()
+                is SaveImageState.Success -> {
+                    hideLoading()
+                    showToast("Downloaded successfully")
+                }
+
+                is SaveImageState.Error -> {
+                    hideLoading()
+                    showToast(state.message)
+                }
+            }
+            viewModel.resetSaveImageState()
+        }.flowWithLifecycle(lifecycle, Lifecycle.State.CREATED).launchIn(lifecycleScope)
+
+        viewModel.shareImageUri.onEach { state ->
+            when (state) {
+                is ShareImageState.Error -> {
+                    hideLoading()
+                    showToast(state.message)
+                }
+                ShareImageState.Idle -> {}
+                ShareImageState.Loading -> showLoading()
+                is ShareImageState.Success -> {
+                    hideLoading()
+                    val intent = Intent(Intent.ACTION_SEND).apply {
+                        type = "image/png"
+                        putExtra(Intent.EXTRA_STREAM, state.uri)
+                        clipData = ClipData.newUri(contentResolver, "Wallpaper", state.uri)
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
+                    startActivity(Intent.createChooser(intent, getString(R.string.share)))
+                }
+            }
+        }.flowWithLifecycle(lifecycle, Lifecycle.State.CREATED).launchIn(lifecycleScope)
+
     }
 
     companion object {

@@ -73,7 +73,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent">
 
-
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/btnFav"
                 android:layout_width="@dimen/size44"
@@ -113,24 +112,55 @@
             android:textSize="@dimen/text_size_14"
             android:gravity="center" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSetWallpaper"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size56"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginTop="@dimen/size18"
-            android:text="@string/set_wallpaper"
-            android:textAllCaps="false"
-            android:textSize="@dimen/text_size_16"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            app:icon="@drawable/ic_wallpaper"
-            app:iconTint="@color/white"
-            app:iconGravity="textStart"
-            app:iconPadding="@dimen/size10"
-            app:cornerRadius="@dimen/size20"
-            app:backgroundTint="@null"
-            android:background="@drawable/bg_button_set_wallpaper" />
+            android:gravity="center_horizontal">
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnDown"
+                android:layout_width="@dimen/size44"
+                android:layout_height="@dimen/size44"
+                android:background="@drawable/bg_circle_glass"
+                android:src="@drawable/ic_download"
+                android:scaleType="center"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/favorite"
+                app:tint="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSetWallpaper"
+                android:layout_width="@dimen/size190"
+                android:layout_height="@dimen/size56"
+                android:text="@string/set_wallpaper"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/size17"
+                android:layout_marginEnd="@dimen/size17"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_wallpaper"
+                app:iconTint="@color/white"
+                app:iconGravity="textStart"
+                app:iconPadding="@dimen/size10"
+                app:cornerRadius="@dimen/size20"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_button_set_wallpaper" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnShare"
+                android:layout_width="@dimen/size44"
+                android:layout_height="@dimen/size44"
+                android:background="@drawable/bg_circle_glass"
+                android:src="@drawable/ic_share"
+                android:scaleType="center"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/favorite"
+                app:tint="@color/white" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

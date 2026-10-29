@@ -139,4 +139,11 @@
     <string name="permission_denied_to_set_wallpaper">Permission denied to set wallpaper: %1$s</string>
     <string name="error_saving_wallpaper">Error saving wallpaper: %1$s</string>
     <string name="failed_to_set_wallpaper">Failed to set wallpaper: %1$s</string>
+    <string name="write_external_storage">Write External Storage</string>
+    <string name="failed_to_save_image">Failed to save image</string>
+    <string name="share" translatable="false">Share</string>
+    <string name="error" translatable="false">Error</string>
+    <string name="can_create_photo_folder">Can\'t create photo folder</string>
+    <string name="can__save_the_image">Can\'t save the image</string>
+    <string name="can_share_photo">Can\'t share photo</string>
 </resources>

@@ -6,10 +6,9 @@ import android.preference.PreferenceManager
 import androidx.room.Room
 import com.duongnd.wallpaper.data.database.AppDatabase
 import com.duongnd.wallpaper.data.database.ImageDao
-import com.duongnd.wallpaper.domain.repository.WallpaperRepository
-import com.duongnd.wallpaper.domain.repository.WallpaperRepositoryImpl
+import com.duongnd.wallpaper.domain.repository.PreviewRepository
+import com.duongnd.wallpaper.domain.repository.PreviewRepositoryImpl
 import com.duongnd.wallpaper.utils.SpManager
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -47,7 +46,7 @@ object AppModule {
     @Singleton
     fun provideWallpaperRepository(
         @ApplicationContext context: Context
-    ): WallpaperRepository {
-        return WallpaperRepositoryImpl(context)
+    ): PreviewRepository {
+        return PreviewRepositoryImpl(context)
     }
 }
