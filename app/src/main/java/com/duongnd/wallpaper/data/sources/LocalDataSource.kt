@@ -45,33 +45,36 @@ class LocalDataSource @Inject constructor(
     fun getListImage(): List<ImageEntity> {
 
         return listOf(
-            ImageEntity(1, R.mipmap.img_01),
-            ImageEntity(2, R.mipmap.img_02),
-            ImageEntity(3, R.mipmap.img_03),
-            ImageEntity(4, R.mipmap.img_04),
-            ImageEntity(5, R.mipmap.img_05),
-            ImageEntity(6, R.mipmap.img_06),
-            ImageEntity(7, R.mipmap.img_07),
-            ImageEntity(8, R.mipmap.img_08),
-            ImageEntity(9, R.mipmap.img_09),
-            ImageEntity(10, R.mipmap.img_01),
-            ImageEntity(11, R.mipmap.img_02),
-            ImageEntity(12, R.mipmap.img_03),
-            ImageEntity(13, R.mipmap.img_04),
-            ImageEntity(14, R.mipmap.img_05),
-            ImageEntity(15, R.mipmap.img_06),
-            ImageEntity(16, R.mipmap.img_07),
-            ImageEntity(17, R.mipmap.img_08),
-            ImageEntity(18, R.mipmap.img_09),
+            ImageEntity(1, title = "Anh 1", R.mipmap.img_01, category = "Nature"),
+            ImageEntity(2, title = "Anh 2", R.mipmap.img_02, category = "Nature"),
+            ImageEntity(3, title = "Anh 3", R.mipmap.img_03, category = "Animals"),
+            ImageEntity(4, title = "Anh 4", R.mipmap.img_04, category = "Abstract"),
+            ImageEntity(5, title = "Anh 5", R.mipmap.img_05, category = "Abstract"),
+            ImageEntity(6, title = "Anh 6", R.mipmap.img_06, category = "Dark"),
+            ImageEntity(7, title = "Anh 7", R.mipmap.img_07, category = "Dark"),
+            ImageEntity(8, title = "Anh 8", R.mipmap.img_08, category = "Anime"),
+            ImageEntity(9, title = "Anh 9", R.mipmap.img_09, category = "Anime"),
+            ImageEntity(10, title = "Anh 10", R.mipmap.img_01, category = "Nature"),
+            ImageEntity(11, title = "Anh 11", R.mipmap.img_02, category = "Nature"),
+            ImageEntity(12, title = "Anh 12", R.mipmap.img_03, category = "Animals"),
+            ImageEntity(13, title = "Anh 13", R.mipmap.img_04, category = "Abstract"),
+            ImageEntity(14, title = "Anh 14", R.mipmap.img_05, category = "Abstract"),
+            ImageEntity(15, title = "Anh 15", R.mipmap.img_06, category = "Dark"),
+            ImageEntity(16, title = "Anh 16", R.mipmap.img_07, category = "Dark"),
+            ImageEntity(17, title = "Anh 17", R.mipmap.img_08, category = "Anime"),
+            ImageEntity(18, title = "Anh 18", R.mipmap.img_09, category = "Anime"),
         )
     }
-
-
 
 
     fun getListPermission(): List<PermissionModel> =
         buildList {
             add(PermissionModel(R.string.camera, listOf(PermissionRequest.CAMERA)))
-            add(PermissionModel(R.string.write_external_storage, listOf(PermissionRequest.WRITE_EXTERNAL_STORAGE)))
+            add(
+                PermissionModel(
+                    R.string.write_external_storage,
+                    listOf(PermissionRequest.WRITE_EXTERNAL_STORAGE)
+                )
+            )
         }
 }

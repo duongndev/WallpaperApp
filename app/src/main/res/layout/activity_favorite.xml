@@ -17,6 +17,8 @@
         android:layout_height="0dp"
         android:clipToPadding="false"
         android:orientation="vertical"
+        android:paddingHorizontal="@dimen/size5"
+        android:paddingVertical="@dimen/size15"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolBar"

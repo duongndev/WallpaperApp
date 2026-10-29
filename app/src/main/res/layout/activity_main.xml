@@ -11,18 +11,30 @@
         android:id="@+id/toolBar"
         layout="@layout/tool_bar" />
 
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/rcvCate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:tabMode="scrollable"
+        app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+    </com.google.android.material.tabs.TabLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvImg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:clipToPadding="false"
-        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         android:orientation="vertical"
+        android:paddingHorizontal="@dimen/size5"
+        android:paddingVertical="@dimen/size15"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintTop_toBottomOf="@id/rcvCate"
         app:spanCount="3"
-        tools:listitem="@layout/item_image"
-        />
+        tools:listitem="@layout/item_image" />
 
     <include
         android:id="@+id/emtyList"

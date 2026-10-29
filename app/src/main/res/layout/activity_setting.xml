@@ -33,4 +33,9 @@
         android:id="@+id/btnPolicySetting"
         style="@style/ItemSetting"
         android:text="@string/policy_setting" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnTheme"
+        style="@style/ItemSetting"
+        android:text="@string/theme" />
 </LinearLayout>

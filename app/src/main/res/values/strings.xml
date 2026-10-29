@@ -146,4 +146,11 @@
     <string name="can_create_photo_folder">Can\'t create photo folder</string>
     <string name="can__save_the_image">Can\'t save the image</string>
     <string name="can_share_photo">Can\'t share photo</string>
+    <string name="all">All</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="theme">Theme</string>
+    <string name="set_theme">Set theme</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+    <string name="system">System</string>
 </resources>

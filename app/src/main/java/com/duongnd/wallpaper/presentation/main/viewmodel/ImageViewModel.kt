@@ -19,20 +19,39 @@ class ImageViewModel @Inject constructor(
     private val insertImageDbUseCase: InsertImageDbUseCase,
     private val deleteImageDbUseCase: DeleteImageDbUseCase,
     private val getImageDbUseCase: GetImageDbUseCase
-): BaseViewModel() {
+) : BaseViewModel() {
     private val listImageUseCase = MutableStateFlow<List<ImageEntity>>(emptyList())
     var listImage = listImageUseCase.asStateFlow()
+
+    private var allImages: List<ImageEntity> = emptyList()
+    private var currentCategory: String = "All"
+
+    private val listCategory = MutableStateFlow<List<String>>(emptyList())
+    var listCategoryState = listCategory.asStateFlow()
+
+
+
 
     fun getListImage() {
         viewModelScope.launch {
             val localList = getListImageUseCase.execute(GetListImageUseCase.Param())
             getImageDbUseCase.execute(GetImageDbUseCase.Param()).collect { dbList ->
                 val dbIds = dbList.map { it.id }.toSet()
-                val mergedList = localList.map { 
+                allImages = localList.map {
                     it.copy(isFavorite = dbIds.contains(it.id))
                 }
-                listImageUseCase.value = mergedList
+                listCategory.value = listOf("All") + allImages.map { it.category }.distinct()
+                filterByCategory(currentCategory)
             }
+        }
+    }
+
+    fun filterByCategory(category: String) {
+        currentCategory = category
+        if (category == "All") {
+            listImageUseCase.value = allImages
+        } else {
+            listImageUseCase.value = allImages.filter { it.category == category }
         }
     }
 
@@ -45,4 +64,18 @@ class ImageViewModel @Inject constructor(
             }
         }
     }
+
+    fun searchImage(query: String) {
+        viewModelScope.launch {
+            if (query.isEmpty()) {
+                filterByCategory(currentCategory)
+            } else {
+                listImageUseCase.value = allImages.filter {
+                    it.title.contains(query, ignoreCase = true)
+                }
+            }
+        }
+    }
+
+
 }

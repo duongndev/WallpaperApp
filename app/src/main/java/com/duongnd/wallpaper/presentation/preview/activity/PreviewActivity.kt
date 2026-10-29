@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
@@ -24,6 +25,7 @@ import com.duongnd.wallpaper.presentation.preview.viewmodel.PreviewViewModel
 import com.duongnd.wallpaper.utils.NetworkConnectivityUtils
 import com.duongnd.wallpaper.utils.Permission
 import com.duongnd.wallpaper.utils.runWithPermissionChecker
+import com.duongnd.wallpaper.utils.shareImage
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -103,7 +105,13 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>() {
         }
 
         btnShare.setOnClickListener {
-            viewModel.shareImage(imgRes)
+            val drawable = ivPreview.drawable
+            val bitmap = (drawable as? android.graphics.drawable.BitmapDrawable)?.bitmap
+            if (bitmap != null) {
+                viewModel.shareImage(imgRes, bitmap)
+            } else {
+                Log.d("TAG", "initViewsPrv: ${ivPreview.drawable} & $bitmap")
+            }
         }
     }
 
@@ -159,6 +167,8 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>() {
                 is ShareImageState.Error -> {
                     hideLoading()
                     showToast(state.message)
+                    viewModel.resetSaveImageState()
+                    Log.d("TAG", "initObserver: ${state.message}")
                 }
                 ShareImageState.Idle -> {}
                 ShareImageState.Loading -> showLoading()

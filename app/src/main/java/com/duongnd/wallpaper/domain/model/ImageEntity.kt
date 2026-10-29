@@ -10,9 +10,11 @@ import java.io.Serializable
 @Entity(tableName = "images")
 @Parcelize
 data class ImageEntity(
-    @PrimaryKey(autoGenerate = true) val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val title: String,
     val imgRes: Int,
-    var isFavorite: Boolean = false
+    var isFavorite: Boolean = false,
+    var category: String = "All"
 ) : Parcelable {
     @Ignore
     var isSelected: Boolean = false

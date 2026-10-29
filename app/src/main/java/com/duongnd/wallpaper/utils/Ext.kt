@@ -24,6 +24,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.ColorInt
+import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import com.bumptech.glide.Glide
@@ -32,6 +33,8 @@ import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.domain.model.Language
 import com.google.android.material.tabs.TabLayout
 import com.google.gson.Gson
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -123,6 +126,14 @@ fun Context.share(text: String) {
     intent.type = "text/plain"
     intent.putExtra(Intent.EXTRA_SUBJECT, this.getString(R.string.app_name))
     intent.putExtra(Intent.EXTRA_TEXT, text)
+    this.startActivity(Intent.createChooser(intent, this.getString(R.string.choose_one)))
+}
+
+fun Context.shareImage(uri: Uri?) {
+    val intent = Intent(Intent.ACTION_SEND)
+    intent.type = "image/*"
+    intent.putExtra(Intent.EXTRA_STREAM, uri)
+    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
     this.startActivity(Intent.createChooser(intent, this.getString(R.string.choose_one)))
 }
 
@@ -221,4 +232,21 @@ fun TextView.setGradientText(
         Shader.TileMode.CLAMP
     )
     invalidate()
+}
+
+fun SearchView.getQueryTextChangeStateFlow(): StateFlow<String> {
+    val queryState = MutableStateFlow("")
+
+    setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        override fun onQueryTextSubmit(query: String?): Boolean {
+            return true
+        }
+
+        override fun onQueryTextChange(newText: String?): Boolean {
+            queryState.value = newText.orEmpty().trim()
+            return true
+        }
+    })
+
+    return queryState
 }

@@ -9,6 +9,7 @@ import com.duongnd.wallpaper.base.activity.BaseActivity
 import com.duongnd.wallpaper.presentation.language.activity.LanguageActivity
 import com.duongnd.wallpaper.databinding.ActivitySettingBinding
 import com.duongnd.wallpaper.presentation.dialog.RateDialog
+import com.duongnd.wallpaper.presentation.dialog.ThemeDialog
 import com.duongnd.wallpaper.utils.Constant
 import com.duongnd.wallpaper.utils.Logger
 import com.duongnd.wallpaper.utils.gone
@@ -35,6 +36,7 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>(), View.OnClickList
         btnRateUs.setOnClickListener(this@SettingActivity)
         btnPrivacyPolicy.setOnClickListener(this@SettingActivity)
         btnPolicySetting.setOnClickListener(this@SettingActivity)
+        btnTheme.setOnClickListener(this@SettingActivity)
     }
 
     override fun onClick(p0: View?) {
@@ -57,6 +59,9 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>(), View.OnClickList
 
             R.id.btnPolicySetting -> {
                 showPolicySetting()
+            }
+            R.id.btnTheme -> {
+                ThemeDialog(this).show()
             }
         }
     }

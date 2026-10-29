@@ -105,12 +105,7 @@ class PreviewRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun shareImage(imageRes: Int): Uri = withContext(Dispatchers.IO) {
-        val bitmap = BitmapFactory.decodeResource(
-            context.resources,
-            imageRes
-        ) ?: throw IOException(context.getString(R.string.failed_to_decode_image_resource))
-
+    override suspend fun shareImage(bitmap: Bitmap): Uri = withContext(Dispatchers.IO) {
         var imgFile: File? = null
 
         try {
@@ -147,9 +142,19 @@ class PreviewRepositoryImpl @Inject constructor(
         } catch (e: Exception) {
             imgFile?.delete()
             throw e
+        }
+    }
+
+    override suspend fun shareImage(imageRes: Int): Uri = withContext(Dispatchers.IO) {
+        val bitmap = BitmapFactory.decodeResource(
+            context.resources,
+            imageRes
+        ) ?: throw IOException(context.getString(R.string.failed_to_decode_image_resource))
+        
+        try {
+            shareImage(bitmap)
         } finally {
             bitmap.recycle()
         }
-
     }
 }

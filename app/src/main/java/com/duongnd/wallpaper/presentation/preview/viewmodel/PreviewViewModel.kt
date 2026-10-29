@@ -2,6 +2,7 @@ package com.duongnd.wallpaper.presentation.preview.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.viewModelScope
+import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.base.viewmodel.BaseViewModel
 import com.duongnd.wallpaper.domain.model.ImageEntity
 import com.duongnd.wallpaper.domain.model.SaveImageState
@@ -78,7 +79,7 @@ class PreviewViewModel @Inject constructor(
                     _wallpaperStatus.value = WallpaperState.Success
                 }
             }.onFailure {
-                _wallpaperStatus.value = WallpaperState.Error(it.message ?: "Unknown error")
+                _wallpaperStatus.value = WallpaperState.Error(it.message ?: context.getString(R.string.unknown_error))
             }
         }
     }
@@ -106,11 +107,11 @@ class PreviewViewModel @Inject constructor(
     }
 
 
-    fun shareImage(image: ImageEntity) {
+    fun shareImage(image: ImageEntity, bitmap: android.graphics.Bitmap? = null) {
         viewModelScope.launch {
             _shareImageUri.emit(ShareImageState.Loading)
             runCatching {
-                shareImageUseCase.execute(ShareImageUseCase.Param(image.imgRes))
+                shareImageUseCase.execute(ShareImageUseCase.Param(image.imgRes, bitmap))
             }.onSuccess {
                 _shareImageUri.emit(ShareImageState.Success(it))
             }.onFailure {

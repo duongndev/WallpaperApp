@@ -6,7 +6,7 @@ import com.duongnd.wallpaper.domain.model.ImageEntity
 
 @Database(
     entities = [ImageEntity::class],
-    version = 1,
+    version = 3,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {

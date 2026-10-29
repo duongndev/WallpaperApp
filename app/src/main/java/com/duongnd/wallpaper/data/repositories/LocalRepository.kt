@@ -19,4 +19,6 @@ class LocalRepository @Inject constructor(
     suspend fun insert(favorites: ImageEntity) = imageDao.insert(favorites)
     suspend fun deleteFavorite(id: Int) = imageDao.deleteFavorite(id)
 
+
+
 }
