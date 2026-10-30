@@ -7,6 +7,7 @@ import android.content.res.Configuration
 import android.os.Bundle
 import com.duongnd.wallpaper.utils.LocaleHelper
 import com.duongnd.wallpaper.utils.SpManager
+import com.duongnd.wallpaper.utils.applyThemeMode
 import com.duongnd.wallpaper.utils.getDeviceLanguage
 import dagger.hilt.android.HiltAndroidApp
 import java.util.Locale
@@ -33,9 +34,7 @@ class App : Application(), Application.ActivityLifecycleCallbacks {
         super.onCreate()
         mInstance = this
         context = applicationContext
-        registerActivityLifecycleCallbacks(this)
-        
-        com.duongnd.wallpaper.utils.FirebaseAnalyticsUtils.init(this)
+        applyThemeMode(spManager.getThemeMode())
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {

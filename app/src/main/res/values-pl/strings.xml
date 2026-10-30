@@ -132,4 +132,23 @@
     <string name="both_screens">Oba ekrany</string>
     <string name="lock_screen_preview">Podgląd ekranu blokady</string>
     <string name="tap_to_preview_full">Dotknij ekranu, aby przełączyć elementy sterujące</string>
+
+    <string name="invalid_image_resource">Nieprawidłowy zasób obrazu.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Ustawianie tapety jest ograniczone na tym urządzeniu.</string>
+    <string name="failed_to_decode_image_resource">Nie udało się zdekodować zasobu obrazu.</string>
+    <string name="permission_denied_to_set_wallpaper">Brak uprawnień do ustawienia tapety: %1$s</string>
+    <string name="error_saving_wallpaper">Błąd podczas zapisywania tapety: %1$s</string>
+    <string name="failed_to_set_wallpaper">Nie udało się ustawić tapety: %1$s</string>
+    <string name="write_external_storage">Zapis w pamięci zewnętrznej</string>
+    <string name="failed_to_save_image">Nie udało się zapisać obrazu</string>
+    <string name="can_create_photo_folder">Nie można utworzyć folderu zdjęć</string>
+    <string name="can__save_the_image">Nie można zapisać obrazu</string>
+    <string name="can_share_photo">Nie można udostępnić zdjęcia</string>
+    <string name="all">Wszystkie</string>
+    <string name="unknown_error">Nieznany błąd</string>
+    <string name="theme">Motyw</string>
+    <string name="set_theme">Ustaw motyw</string>
+    <string name="dark">Ciemny</string>
+    <string name="light">Jasny</string>
+    <string name="system">Systemowy</string>
 </resources>

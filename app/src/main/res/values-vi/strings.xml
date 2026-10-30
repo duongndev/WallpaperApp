@@ -122,4 +122,22 @@
     <string name="both_screens">Cả hai màn hình</string>
     <string name="lock_screen_preview">Xem trước màn hình khóa</string>
     <string name="tap_to_preview_full">Chạm vào màn hình để ẩn/hiện công cụ</string>
+    <string name="invalid_image_resource">Tài nguyên hình ảnh không hợp lệ.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Việc cài đặt hình nền bị hạn chế trên thiết bị này.</string>
+    <string name="failed_to_decode_image_resource">Không thể giải mã tài nguyên hình ảnh.</string>
+    <string name="permission_denied_to_set_wallpaper">Bị từ chối quyền cài đặt hình nền: %1$s</string>
+    <string name="error_saving_wallpaper">Lỗi khi lưu hình nền: %1$s</string>
+    <string name="failed_to_set_wallpaper">Không thể cài đặt hình nền: %1$s</string>
+    <string name="write_external_storage">Ghi vào bộ nhớ ngoài</string>
+    <string name="failed_to_save_image">Không thể lưu hình ảnh</string>
+    <string name="can_create_photo_folder">Không thể tạo thư mục ảnh</string>
+    <string name="can__save_the_image">Không thể lưu hình ảnh</string>
+    <string name="can_share_photo">Không thể chia sẻ ảnh</string>
+    <string name="all">Tất cả</string>
+    <string name="unknown_error">Lỗi không xác định</string>
+    <string name="theme">Giao diện</string>
+    <string name="set_theme">Chọn giao diện</string>
+    <string name="dark">Tối</string>
+    <string name="light">Sáng</string>
+    <string name="system">Hệ thống</string>
 </resources>

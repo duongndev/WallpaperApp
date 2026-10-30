@@ -122,4 +122,22 @@
     <string name="both_screens">Beide Bildschirme</string>
     <string name="lock_screen_preview">Sperrbildschirm-Vorschau</string>
     <string name="tap_to_preview_full">Tippe auf den Bildschirm, um Steuerelemente umzuschalten</string>
+    <string name="invalid_image_resource">Ungültige Bildressource.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Das Festlegen von Hintergrundbildern ist auf diesem Gerät eingeschränkt.</string>
+    <string name="failed_to_decode_image_resource">Bildressource konnte nicht dekodiert werden.</string>
+    <string name="permission_denied_to_set_wallpaper">Berechtigung zum Festlegen des Hintergrundbilds verweigert: %1$s</string>
+    <string name="error_saving_wallpaper">Fehler beim Speichern des Hintergrundbilds: %1$s</string>
+    <string name="failed_to_set_wallpaper">Hintergrundbild konnte nicht festgelegt werden: %1$s</string>
+    <string name="write_external_storage">In externen Speicher schreiben</string>
+    <string name="failed_to_save_image">Bild konnte nicht gespeichert werden</string>
+    <string name="can_create_photo_folder">Foto-Ordner kann nicht erstellt werden</string>
+    <string name="can__save_the_image">Bild kann nicht gespeichert werden</string>
+    <string name="can_share_photo">Foto kann nicht geteilt werden</string>
+    <string name="all">Alle</string>
+    <string name="unknown_error">Unbekannter Fehler</string>
+    <string name="theme">Design</string>
+    <string name="set_theme">Design festlegen</string>
+    <string name="dark">Dunkel</string>
+    <string name="light">Hell</string>
+    <string name="system">System</string>
 </resources>

@@ -122,4 +122,22 @@
     <string name="both_screens">主螢幕與鎖定螢幕</string>
     <string name="lock_screen_preview">鎖定螢幕預覽</string>
     <string name="tap_to_preview_full">輕觸螢幕切換控制項</string>
+    <string name="invalid_image_resource">無效的圖片資源。</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">此裝置限制設定桌布。</string>
+    <string name="failed_to_decode_image_resource">解碼圖片資源失敗。</string>
+    <string name="permission_denied_to_set_wallpaper">設定桌布的權限被拒絕：%1$s</string>
+    <string name="error_saving_wallpaper">儲存桌布時發生錯誤：%1$s</string>
+    <string name="failed_to_set_wallpaper">設定桌布失敗：%1$s</string>
+    <string name="write_external_storage">寫入外部儲存空間</string>
+    <string name="failed_to_save_image">儲存圖片失敗</string>
+    <string name="can_create_photo_folder">無法建立相片資料夾</string>
+    <string name="can__save_the_image">無法儲存圖片</string>
+    <string name="can_share_photo">無法分享相片</string>
+    <string name="all">全部</string>
+    <string name="unknown_error">未知錯誤</string>
+    <string name="theme">主題</string>
+    <string name="set_theme">設定主題</string>
+    <string name="dark">深色</string>
+    <string name="light">淺色</string>
+    <string name="system">系統預設</string>
 </resources>

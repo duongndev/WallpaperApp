@@ -93,4 +93,12 @@ class SpManager(private val preferences: SharedPreferences) {
         return preferences.getBoolean(Constant.KEY_SP_IS_PURCHASED, false)
     }
 
+    fun saveThemeMode(themeMode: Int) {
+        putInt(Constant.KEY_SP_THEME_MODE, themeMode)
+    }
+
+    fun getThemeMode(): Int {
+        return getInt(Constant.KEY_SP_THEME_MODE, Constant.THEME_SYSTEM)
+    }
+
 }

@@ -122,4 +122,22 @@
     <string name="both_screens">दोनों स्क्रीन</string>
     <string name="lock_screen_preview">लॉक स्क्रीन पूर्वावलोकन</string>
     <string name="tap_to_preview_full">नियंत्रण टॉगल करने के लिए स्क्रीन पर टैप करें</string>
+    <string name="invalid_image_resource">अमान्य छवि संसाधन।</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">इस डिवाइस पर वॉलपेपर सेट करना प्रतिबंधित है।</string>
+    <string name="failed_to_decode_image_resource">छवि संसाधन को डिकोड करने में विफल।</string>
+    <string name="permission_denied_to_set_wallpaper">वॉलपेपर सेट करने की अनुमति अस्वीकृत: %1$s</string>
+    <string name="error_saving_wallpaper">वॉलपेपर सहेजने में त्रुटि: %1$s</string>
+    <string name="failed_to_set_wallpaper">वॉलपेपर सेट करने में विफल: %1$s</string>
+    <string name="write_external_storage">बाहरी स्टोरेज में लिखें</string>
+    <string name="failed_to_save_image">छवि सहेजने में विफल</string>
+    <string name="can_create_photo_folder">फ़ोटो फ़ोल्डर नहीं बनाया जा सकता</string>
+    <string name="can__save_the_image">छवि सहेजी नहीं जा सकती</string>
+    <string name="can_share_photo">फ़ोटो शेयर नहीं की जा सकती</string>
+    <string name="all">सभी</string>
+    <string name="unknown_error">अज्ञात त्रुटि</string>
+    <string name="theme">थीम</string>
+    <string name="set_theme">थीम सेट करें</string>
+    <string name="dark">डार्क</string>
+    <string name="light">लाइट</string>
+    <string name="system">सिस्टम</string>
 </resources>

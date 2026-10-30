@@ -132,4 +132,23 @@
     <string name="both_screens">இரண்டு திரைகளும்</string>
     <string name="lock_screen_preview">பூட்டுத் திரை முன்னோட்டம்</string>
     <string name="tap_to_preview_full">கட்டுப்பாடுகளை மாற்ற திரையைத் தட்டவும்</string>
+
+    <string name="invalid_image_resource">செல்லுபடியாகாத பட வளம்.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">இந்தச் சாதனத்தில் வால்பேப்பரை அமைப்பது கட்டுப்படுத்தப்பட்டுள்ளது.</string>
+    <string name="failed_to_decode_image_resource">பட வளத்தை டீகோட் செய்ய முடியவில்லை.</string>
+    <string name="permission_denied_to_set_wallpaper">வால்பேப்பரை அமைக்க அனுமதி மறுக்கப்பட்டது: %1$s</string>
+    <string name="error_saving_wallpaper">வால்பேப்பரைச் சேமிப்பதில் பிழை: %1$s</string>
+    <string name="failed_to_set_wallpaper">வால்பேப்பரை அமைக்க முடியவில்லை: %1$s</string>
+    <string name="write_external_storage">வெளிப்புற சேமிப்பகத்தில் எழுது</string>
+    <string name="failed_to_save_image">படத்தை சேமிக்க முடியவில்லை</string>
+    <string name="can_create_photo_folder">புகைப்படக் கோப்புறையை உருவாக்க முடியவில்லை</string>
+    <string name="can__save_the_image">படத்தை சேமிக்க முடியவில்லை</string>
+    <string name="can_share_photo">புகைப்படத்தைப் பகிர முடியவில்லை</string>
+    <string name="all">அனைத்தும்</string>
+    <string name="unknown_error">தெரியாத பிழை</string>
+    <string name="theme">தீம்</string>
+    <string name="set_theme">தீமை அமை</string>
+    <string name="dark">இருண்ட</string>
+    <string name="light">வெளிச்சமான</string>
+    <string name="system">சிஸ்டம்</string>
 </resources>

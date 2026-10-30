@@ -4,6 +4,7 @@ package com.duongnd.wallpaper.utils
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
+import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -24,6 +25,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.ColorInt
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
@@ -63,6 +65,15 @@ fun String.toLanguageModel(): Language? {
 
 fun Context.setAppLanguage(languageCode: String) {
     LocaleHelper.setLocale(this, languageCode)
+}
+
+fun Context.applyThemeMode(themeMode: Int) {
+    val nightMode = when (themeMode) {
+        Constant.THEME_LIGHT -> AppCompatDelegate.MODE_NIGHT_NO
+        Constant.THEME_DARK -> AppCompatDelegate.MODE_NIGHT_YES
+        else -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+    }
+    AppCompatDelegate.setDefaultNightMode(nightMode)
 }
 
 fun Context.getDeviceLanguage(): String {
@@ -130,10 +141,13 @@ fun Context.share(text: String) {
 }
 
 fun Context.shareImage(uri: Uri?) {
-    val intent = Intent(Intent.ACTION_SEND)
-    intent.type = "image/*"
-    intent.putExtra(Intent.EXTRA_STREAM, uri)
-    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    if (uri == null) return
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = "image/jpeg"
+        putExtra(Intent.EXTRA_STREAM, uri)
+        clipData = ClipData.newUri(contentResolver, "Wallpaper", uri)
+        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    }
     this.startActivity(Intent.createChooser(intent, this.getString(R.string.choose_one)))
 }
 

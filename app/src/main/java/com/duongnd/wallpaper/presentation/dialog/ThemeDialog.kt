@@ -1,13 +1,21 @@
 package com.duongnd.wallpaper.presentation.dialog
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
+import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.base.dialog.BaseDialog
 import com.duongnd.wallpaper.databinding.DialogSetThemeBinding
-import com.duongnd.wallpaper.utils.FirebaseAnalyticsUtils
+import com.duongnd.wallpaper.utils.Constant
+import com.duongnd.wallpaper.utils.SpManager
+import com.duongnd.wallpaper.utils.applyThemeMode
 
+class ThemeDialog(
+    private val context: Context,
+    private val onThemeChanged: ((Int) -> Unit)? = null
+) : BaseDialog<DialogSetThemeBinding>(context) {
 
-class ThemeDialog(private val context: Context): BaseDialog<DialogSetThemeBinding>(context)  {
+    private val spManager by lazy { SpManager.getInstance(context) }
+
     override fun provideViewBinding(): DialogSetThemeBinding {
         return DialogSetThemeBinding.inflate(layoutInflater)
     }
@@ -16,26 +24,38 @@ class ThemeDialog(private val context: Context): BaseDialog<DialogSetThemeBindin
         super.initViews()
         setCancelable(true)
 
+        updateSelection(spManager.getThemeMode())
+
         tvDark.setOnClickListener {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            FirebaseAnalyticsUtils.logChangeTheme("dark")
-            dismiss()
+            selectTheme(Constant.THEME_DARK)
         }
 
         tvLight.setOnClickListener {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            FirebaseAnalyticsUtils.logChangeTheme("light")
-            dismiss()
+            selectTheme(Constant.THEME_LIGHT)
         }
 
         tvSystem.setOnClickListener {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-            FirebaseAnalyticsUtils.logChangeTheme("system")
-            dismiss()
+            selectTheme(Constant.THEME_SYSTEM)
         }
 
         btnCancel.setOnClickListener {
             dismiss()
         }
+    }
+
+    private fun updateSelection(themeMode: Int) = with(viewBinding) {
+        val selectedColor = ContextCompat.getColor(context, R.color.purple2)
+        val defaultColor = ContextCompat.getColor(context, R.color.white)
+
+        tvDark.setTextColor(if (themeMode == Constant.THEME_DARK) selectedColor else defaultColor)
+        tvLight.setTextColor(if (themeMode == Constant.THEME_LIGHT) selectedColor else defaultColor)
+        tvSystem.setTextColor(if (themeMode == Constant.THEME_SYSTEM) selectedColor else defaultColor)
+    }
+
+    private fun selectTheme(themeMode: Int) {
+        spManager.saveThemeMode(themeMode)
+        context.applyThemeMode(themeMode)
+        onThemeChanged?.invoke(themeMode)
+        dismiss()
     }
 }

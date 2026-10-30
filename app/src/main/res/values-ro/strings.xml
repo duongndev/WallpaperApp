@@ -132,4 +132,23 @@
     <string name="both_screens">Ambele ecrane</string>
     <string name="lock_screen_preview">Previzualizare ecran de blocare</string>
     <string name="tap_to_preview_full">Atinge ecranul pentru a comuta controalele</string>
+
+    <string name="invalid_image_resource">Resursă de imagine nevalidă.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Setarea fundalului este restricționată pe acest dispozitiv.</string>
+    <string name="failed_to_decode_image_resource">Nu s-a putut decoda resursa de imagine.</string>
+    <string name="permission_denied_to_set_wallpaper">Permisiune refuzată pentru setarea fundalului: %1$s</string>
+    <string name="error_saving_wallpaper">Eroare la salvarea fundalului: %1$s</string>
+    <string name="failed_to_set_wallpaper">Nu s-a putut seta fundalul: %1$s</string>
+    <string name="write_external_storage">Scriere în stocarea externă</string>
+    <string name="failed_to_save_image">Nu s-a putut salva imaginea</string>
+    <string name="can_create_photo_folder">Nu se poate crea folderul foto</string>
+    <string name="can__save_the_image">Nu se poate salva imaginea</string>
+    <string name="can_share_photo">Nu se poate distribui fotografia</string>
+    <string name="all">Toate</string>
+    <string name="unknown_error">Eroare necunoscută</string>
+    <string name="theme">Temă</string>
+    <string name="set_theme">Setează tema</string>
+    <string name="dark">Întunecat</string>
+    <string name="light">Luminos</string>
+    <string name="system">Sistem</string>
 </resources>

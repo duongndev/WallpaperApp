@@ -132,4 +132,23 @@
     <string name="both_screens">Obě obrazovky</string>
     <string name="lock_screen_preview">Náhled uzamykací obrazovky</string>
     <string name="tap_to_preview_full">Klepnutím na obrazovku přepnete ovládací prvky</string>
+
+    <string name="invalid_image_resource">Neplatný zdroj obrázku.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Nastavení tapety je na tomto zařízení omezeno.</string>
+    <string name="failed_to_decode_image_resource">Nepodařilo se dekódovat zdroj obrázku.</string>
+    <string name="permission_denied_to_set_wallpaper">Oprávnění k nastavení tapety odepřeno: %1$s</string>
+    <string name="error_saving_wallpaper">Chyba při ukládání tapety: %1$s</string>
+    <string name="failed_to_set_wallpaper">Nepodařilo se nastavit tapetu: %1$s</string>
+    <string name="write_external_storage">Zápis do externího úložiště</string>
+    <string name="failed_to_save_image">Nepodařilo se uložit obrázek</string>
+    <string name="can_create_photo_folder">Nelze vytvořit složku fotografií</string>
+    <string name="can__save_the_image">Nelze uložit obrázek</string>
+    <string name="can_share_photo">Nelze sdílet fotografii</string>
+    <string name="all">Vše</string>
+    <string name="unknown_error">Neznámá chyba</string>
+    <string name="theme">Téma</string>
+    <string name="set_theme">Nastavit téma</string>
+    <string name="dark">Tmavé</string>
+    <string name="light">Světlé</string>
+    <string name="system">Systém</string>
 </resources>

@@ -114,19 +114,21 @@ class PreviewRepositoryImpl @Inject constructor(
                 "shared_images"
             )
 
-            if (!directory.exists() && !directory.mkdirs()) {
+            if (directory.exists()) {
+                directory.listFiles()?.forEach { it.delete() }
+            } else if (!directory.mkdirs()) {
                 throw IOException(context.getString(R.string.can_create_photo_folder))
             }
 
             imgFile = File(
                 directory,
-                "wallpaper_${System.currentTimeMillis()}.png"
+                "wallpaper_${System.currentTimeMillis()}.jpg"
             )
 
             FileOutputStream(imgFile).use { output ->
                 if (!bitmap.compress(
-                        Bitmap.CompressFormat.PNG,
-                        100,
+                        Bitmap.CompressFormat.JPEG,
+                        95,
                         output
                     )
                 ) {

@@ -134,4 +134,23 @@
     <string name="both_screens">Parehong Screen</string>
     <string name="lock_screen_preview">Preview ng Lock Screen</string>
     <string name="tap_to_preview_full">I-tap ang screen upang i-toggle ang mga kontrol</string>
+
+    <string name="invalid_image_resource">Di-wastong resource ng larawan.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Nakalimita ang pag-set ng wallpaper sa aparatong ito.</string>
+    <string name="failed_to_decode_image_resource">Nabigong i-decode ang resource ng larawan.</string>
+    <string name="permission_denied_to_set_wallpaper">Tinanggihan ang permiso sa pag-set ng wallpaper: %1$s</string>
+    <string name="error_saving_wallpaper">Error sa pag-save ng wallpaper: %1$s</string>
+    <string name="failed_to_set_wallpaper">Nabigong i-set ang wallpaper: %1$s</string>
+    <string name="write_external_storage">Sumulat sa External Storage</string>
+    <string name="failed_to_save_image">Nabigong i-save ang larawan</string>
+    <string name="can_create_photo_folder">Hindi makagawa ng folder ng larawan</string>
+    <string name="can__save_the_image">Hindi mai-save ang larawan</string>
+    <string name="can_share_photo">Hindi maibahagi ang larawan</string>
+    <string name="all">Lahat</string>
+    <string name="unknown_error">Hindi kilalang error</string>
+    <string name="theme">Tema</string>
+    <string name="set_theme">I-set ang tema</string>
+    <string name="dark">Madilim</string>
+    <string name="light">Maliwanag</string>
+    <string name="system">Sistema</string>
 </resources>

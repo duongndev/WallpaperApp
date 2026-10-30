@@ -132,4 +132,23 @@
     <string name="both_screens">Her İki Ekran</string>
     <string name="lock_screen_preview">Kilit Ekranı Önizlemesi</string>
     <string name="tap_to_preview_full">Kontrolleri değiştirmek için ekrana dokunun</string>
+
+    <string name="invalid_image_resource">Geçersiz görsel kaynağı.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Duvar kağıdı ayarlama bu cihazda kısıtlanmıştır.</string>
+    <string name="failed_to_decode_image_resource">Görsel kaynağı çözümlenemedi.</string>
+    <string name="permission_denied_to_set_wallpaper">Duvar kağıdı ayarlama izni reddedildi: %1$s</string>
+    <string name="error_saving_wallpaper">Duvar kağıdı kaydedilirken hata oluştu: %1$s</string>
+    <string name="failed_to_set_wallpaper">Duvar kağıdı ayarlanamadı: %1$s</string>
+    <string name="write_external_storage">Harici Depolamaya Yaz</string>
+    <string name="failed_to_save_image">Görsel kaydedilemedi</string>
+    <string name="can_create_photo_folder">Fotoğraf klasörü oluşturulamıyor</string>
+    <string name="can__save_the_image">Görsel kaydedilemiyor</string>
+    <string name="can_share_photo">Fotoğraf paylaşılamıyor</string>
+    <string name="all">Tümü</string>
+    <string name="unknown_error">Bilinmeyen hata</string>
+    <string name="theme">Tema</string>
+    <string name="set_theme">Temayı ayarla</string>
+    <string name="dark">Koyu</string>
+    <string name="light">Açık</string>
+    <string name="system">Sistem</string>
 </resources>
