@@ -132,4 +132,23 @@
     <string name="both_screens">উভয় স্ক্রিন</string>
     <string name="lock_screen_preview">লক স্ক্রিন প্রিভিউ</string>
     <string name="tap_to_preview_full">নিয়ন্ত্রণগুলো পরিবর্তন করতে স্ক্রিনে ট্যাপ করুন</string>
+
+    <string name="invalid_image_resource">অবৈধ ইমেজ রিসোর্স।</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">এই ডিভাইসে ওয়ালপেপার সেট করা নিষিদ্ধ।</string>
+    <string name="failed_to_decode_image_resource">ইমেজ রিসোর্স ডিকোড করতে ব্যর্থ হয়েছে।</string>
+    <string name="permission_denied_to_set_wallpaper">ওয়ালপেপার সেট করার অনুমতি প্রত্যাখ্যান করা হয়েছে: %1$s</string>
+    <string name="error_saving_wallpaper">ওয়ালপেপার সেভ করার সময় ত্রুটি: %1$s</string>
+    <string name="failed_to_set_wallpaper">ওয়ালপেপার সেট করতে ব্যর্থ হয়েছে: %1$s</string>
+    <string name="write_external_storage">এক্সটার্নাল স্টোরেজ লিখুন</string>
+    <string name="failed_to_save_image">ইমেজ সেভ করতে ব্যর্থ হয়েছে</string>
+    <string name="can_create_photo_folder">ফটো ফোল্ডার তৈরি করা যাচ্ছে না</string>
+    <string name="can__save_the_image">ইমেজ সেভ করা যাচ্ছে না</string>
+    <string name="can_share_photo">ফটো শেয়ার করা যাচ্ছে না</string>
+    <string name="all">সব</string>
+    <string name="unknown_error">অজানা ত্রুটি</string>
+    <string name="theme">থিম</string>
+    <string name="set_theme">থিম সেট করুন</string>
+    <string name="dark">ডার্ক</string>
+    <string name="light">লাইট</string>
+    <string name="system">সিস্টেম</string>
 </resources>

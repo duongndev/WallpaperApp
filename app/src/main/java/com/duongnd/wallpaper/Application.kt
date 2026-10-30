@@ -7,6 +7,7 @@ import android.content.res.Configuration
 import android.os.Bundle
 import com.duongnd.wallpaper.utils.LocaleHelper
 import com.duongnd.wallpaper.utils.SpManager
+import com.duongnd.wallpaper.utils.applyThemeMode
 import com.duongnd.wallpaper.utils.getDeviceLanguage
 import dagger.hilt.android.HiltAndroidApp
 import java.util.Locale
@@ -27,6 +28,13 @@ class App : Application(), Application.ActivityLifecycleCallbacks {
         var context: Context? = null
         private var mInstance: App? = null
         val instance get() = mInstance
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        mInstance = this
+        context = applicationContext
+        applyThemeMode(spManager.getThemeMode())
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {

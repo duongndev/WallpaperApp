@@ -122,4 +122,22 @@
     <string name="both_screens">Ambas as telas</string>
     <string name="lock_screen_preview">Pré-visualização da tela de bloqueio</string>
     <string name="tap_to_preview_full">Toque na tela para alternar os controles</string>
+    <string name="invalid_image_resource">Recurso de imagem inválido.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">A definição de papel de parede está restrita neste dispositivo.</string>
+    <string name="failed_to_decode_image_resource">Falha ao decodificar o recurso de imagem.</string>
+    <string name="permission_denied_to_set_wallpaper">Permissão negada para definir o papel de parede: %1$s</string>
+    <string name="error_saving_wallpaper">Erro ao salvar o papel de parede: %1$s</string>
+    <string name="failed_to_set_wallpaper">Falha ao definir o papel de parede: %1$s</string>
+    <string name="write_external_storage">Gravar no armazenamento externo</string>
+    <string name="failed_to_save_image">Falha ao salvar a imagem</string>
+    <string name="can_create_photo_folder">Não é possível criar a pasta de fotos</string>
+    <string name="can__save_the_image">Não é possível salvar a imagem</string>
+    <string name="can_share_photo">Não é possível compartilhar a foto</string>
+    <string name="all">Tudo</string>
+    <string name="unknown_error">Erro desconhecido</string>
+    <string name="theme">Tema</string>
+    <string name="set_theme">Definir tema</string>
+    <string name="dark">Escuro</string>
+    <string name="light">Claro</string>
+    <string name="system">Sistema</string>
 </resources>

@@ -132,4 +132,23 @@
     <string name="both_screens">Και οι δύο οθόνες</string>
     <string name="lock_screen_preview">Προεπισκόπηση οθόνης κλειδώματος</string>
     <string name="tap_to_preview_full">Πατήστε στην οθόνη για εναλλαγή στοιχείων ελέγχου</string>
+
+    <string name="invalid_image_resource">Μη έγκυρος πόρος εικόνας.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Ο ορισμός ταπετσαρίας είναι περιορισμένος σε αυτή τη συσκευή.</string>
+    <string name="failed_to_decode_image_resource">Αποτυχία αποκωδικοποίησης πόρου εικόνας.</string>
+    <string name="permission_denied_to_set_wallpaper">Δεν δόθηκε άδεια για τον ορισμό ταπετσαρίας: %1$s</string>
+    <string name="error_saving_wallpaper">Σφάλμα κατά την αποθήκευση της ταπετσαρίας: %1$s</string>
+    <string name="failed_to_set_wallpaper">Αποτυχία ορισμού ταπετσαρίας: %1$s</string>
+    <string name="write_external_storage">Εγγραφή σε εξωτερικό χώρο αποθήκευσης</string>
+    <string name="failed_to_save_image">Αποτυχία αποθήκευσης εικόνας</string>
+    <string name="can_create_photo_folder">Δεν είναι δυνατή η δημιουργία φακέλου φωτογραφιών</string>
+    <string name="can__save_the_image">Δεν είναι δυνατή η αποθήκευση της εικόνας</string>
+    <string name="can_share_photo">Δεν είναι δυνατή η κοινοποίηση της φωτογραφίας</string>
+    <string name="all">Όλα</string>
+    <string name="unknown_error">Άγνωστο σφάλμα</string>
+    <string name="theme">Θέμα</string>
+    <string name="set_theme">Ορισμός θέματος</string>
+    <string name="dark">Σκούρο</string>
+    <string name="light">Φωτεινό</string>
+    <string name="system">Σύστημα</string>
 </resources>

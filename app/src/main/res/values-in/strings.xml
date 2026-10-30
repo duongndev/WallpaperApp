@@ -132,4 +132,23 @@
     <string name="both_screens">Kedua Layar</string>
     <string name="lock_screen_preview">Pratinjau Layar Kunci</string>
     <string name="tap_to_preview_full">Ketuk layar untuk beralih kontrol</string>
+
+    <string name="invalid_image_resource">Sumber daya gambar tidak valid.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Pengaturan wallpaper dibatasi pada perangkat ini.</string>
+    <string name="failed_to_decode_image_resource">Gagal mendekode sumber daya gambar.</string>
+    <string name="permission_denied_to_set_wallpaper">Izin mengatur wallpaper ditolak: %1$s</string>
+    <string name="error_saving_wallpaper">Kesalahan saat menyimpan wallpaper: %1$s</string>
+    <string name="failed_to_set_wallpaper">Gagal mengatur wallpaper: %1$s</string>
+    <string name="write_external_storage">Tulis Penyimpanan Eksternal</string>
+    <string name="failed_to_save_image">Gagal menyimpan gambar</string>
+    <string name="can_create_photo_folder">Tidak dapat membuat folder foto</string>
+    <string name="can__save_the_image">Tidak dapat menyimpan gambar</string>
+    <string name="can_share_photo">Tidak dapat membagikan foto</string>
+    <string name="all">Semua</string>
+    <string name="unknown_error">Kesalahan tidak dikenal</string>
+    <string name="theme">Tema</string>
+    <string name="set_theme">Atur tema</string>
+    <string name="dark">Gelap</string>
+    <string name="light">Terang</string>
+    <string name="system">Sistem</string>
 </resources>

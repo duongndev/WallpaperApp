@@ -132,4 +132,23 @@
     <string name="both_screens">ทั้งสองหน้าจอ</string>
     <string name="lock_screen_preview">ตัวอย่างหน้าจอล็อก</string>
     <string name="tap_to_preview_full">แตะหน้าจอเพื่อสลับการควบคุม</string>
+
+    <string name="invalid_image_resource">ทรัพยากรรูปภาพไม่ถูกต้อง</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">การตั้งค่าวอลเปเปอร์ถูกจำกัดในอุปกรณ์นี้</string>
+    <string name="failed_to_decode_image_resource">ถอดรหัสทรัพยากรรูปภาพไม่สำเร็จ</string>
+    <string name="permission_denied_to_set_wallpaper">ปฏิเสธการอนุญาตในการตั้งค่าวอลเปเปอร์: %1$s</string>
+    <string name="error_saving_wallpaper">ข้อผิดพลาดในการบันทึกวอลเปเปอร์: %1$s</string>
+    <string name="failed_to_set_wallpaper">ตั้งค่าวอลเปเปอร์ไม่สำเร็จ: %1$s</string>
+    <string name="write_external_storage">เขียนพื้นที่จัดเก็บข้อมูลภายนอก</string>
+    <string name="failed_to_save_image">บันทึกรูปภาพไม่สำเร็จ</string>
+    <string name="can_create_photo_folder">ไม่สามารถสร้างโฟลเดอร์รูปภาพได้</string>
+    <string name="can__save_the_image">ไม่สามารถบันทึกรูปภาพได้</string>
+    <string name="can_share_photo">ไม่สามารถแชร์รูปภาพได้</string>
+    <string name="all">ทั้งหมด</string>
+    <string name="unknown_error">ข้อผิดพลาดที่ไม่ทราบสาเหตุ</string>
+    <string name="theme">ธีม</string>
+    <string name="set_theme">ตั้งค่าธีม</string>
+    <string name="dark">มืด</string>
+    <string name="light">สว่าง</string>
+    <string name="system">ระบบ</string>
 </resources>

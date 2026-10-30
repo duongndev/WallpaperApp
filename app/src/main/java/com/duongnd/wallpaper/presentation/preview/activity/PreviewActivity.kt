@@ -8,7 +8,6 @@ import android.os.Build
 import android.util.Log
 import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
-import androidx.core.content.FileProvider
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
@@ -157,6 +156,7 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>() {
                 is SaveImageState.Error -> {
                     hideLoading()
                     showToast(state.message)
+                    viewModel.resetSaveImageState()
                 }
             }
             viewModel.resetSaveImageState()
@@ -167,20 +167,12 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>() {
                 is ShareImageState.Error -> {
                     hideLoading()
                     showToast(state.message)
-                    viewModel.resetSaveImageState()
-                    Log.d("TAG", "initObserver: ${state.message}")
                 }
                 ShareImageState.Idle -> {}
                 ShareImageState.Loading -> showLoading()
                 is ShareImageState.Success -> {
                     hideLoading()
-                    val intent = Intent(Intent.ACTION_SEND).apply {
-                        type = "image/png"
-                        putExtra(Intent.EXTRA_STREAM, state.uri)
-                        clipData = ClipData.newUri(contentResolver, "Wallpaper", state.uri)
-                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                    }
-                    startActivity(Intent.createChooser(intent, getString(R.string.share)))
+                    shareImage(state.uri)
                 }
             }
         }.flowWithLifecycle(lifecycle, Lifecycle.State.CREATED).launchIn(lifecycleScope)

@@ -122,4 +122,22 @@
     <string name="both_screens">Les deux écrans</string>
     <string name="lock_screen_preview">Aperçu de l\'écran de verrouillage</string>
     <string name="tap_to_preview_full">Appuyez sur l\'écran pour afficher/masquer les commandes</string>
+    <string name="invalid_image_resource">Ressource d\'image non valide.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">La définition du fond d\'écran est restreinte sur cet appareil.</string>
+    <string name="failed_to_decode_image_resource">Échec du décodage de la ressource d\'image.</string>
+    <string name="permission_denied_to_set_wallpaper">Autorisation refusée pour définir le fond d\'écran : %1$s</string>
+    <string name="error_saving_wallpaper">Erreur lors de l\'enregistrement du fond d\'écran : %1$s</string>
+    <string name="failed_to_set_wallpaper">Échec de la définition du fond d\'écran : %1$s</string>
+    <string name="write_external_storage">Écrire sur le stockage externe</string>
+    <string name="failed_to_save_image">Échec de l\'enregistrement de l\'image</string>
+    <string name="can_create_photo_folder">Impossible de créer le dossier de photos</string>
+    <string name="can__save_the_image">Impossible d\'enregistrer l\'image</string>
+    <string name="can_share_photo">Impossible de partager la photo</string>
+    <string name="all">Tout</string>
+    <string name="unknown_error">Erreur inconnue</string>
+    <string name="theme">Thème</string>
+    <string name="set_theme">Définir le thème</string>
+    <string name="dark">Sombre</string>
+    <string name="light">Clair</string>
+    <string name="system">Système</string>
 </resources>

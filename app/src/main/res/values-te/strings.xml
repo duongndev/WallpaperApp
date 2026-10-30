@@ -132,4 +132,23 @@
     <string name="both_screens">రెండూ స్క్రీన్‌లు</string>
     <string name="lock_screen_preview">లాక్ స్క్రీన్ ప్రివ్యూ</string>
     <string name="tap_to_preview_full">కంట్రోల్స్ టోగుల్ చేయడానికి స్క్రీన్‌పై టాప్ చేయండి</string>
+
+    <string name="invalid_image_resource">చెల్లని ఇమేజ్ రిసోర్స్.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">ఈ పరికరంలో వాల్‌పేపర్‌ను సెట్ చేయడం నియంత్రించబడింది.</string>
+    <string name="failed_to_decode_image_resource">ఇమేజ్ రిసోర్స్‌ను డీకోడ్ చేయడంలో విఫలమైంది.</string>
+    <string name="permission_denied_to_set_wallpaper">వాల్‌పేపర్‌ను సెట్ చేయడానికి అనుమతి నిరాకరించబడింది: %1$s</string>
+    <string name="error_saving_wallpaper">వాల్‌పేపర్‌ను సేవ్ చేయడంలో లోపం: %1$s</string>
+    <string name="failed_to_set_wallpaper">వాల్‌పేపర్‌ను సెట్ చేయడంలో విఫలమైంది: %1$s</string>
+    <string name="write_external_storage">ఎక్స్‌టర్నల్ స్టోరేజ్ రైట్</string>
+    <string name="failed_to_save_image">చిత్రాన్ని సేవ్ చేయడంలో విఫలమైంది</string>
+    <string name="can_create_photo_folder">ఫోటో ఫోల్డర్‌ను సృష్టించలేకపోయాము</string>
+    <string name="can__save_the_image">చిత్రాన్ని సేవ్ చేయలేకపోయాము</string>
+    <string name="can_share_photo">ఫోటోను షేర్ చేయలేకపోయాము</string>
+    <string name="all">అన్నీ</string>
+    <string name="unknown_error">తెలియని లోపం</string>
+    <string name="theme">థీమ్</string>
+    <string name="set_theme">థీమ్‌ను సెట్ చేయండి</string>
+    <string name="dark">డార్క్</string>
+    <string name="light">లైట్</string>
+    <string name="system">సిస్టమ్</string>
 </resources>

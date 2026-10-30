@@ -16,7 +16,7 @@ import com.duongnd.wallpaper.presentation.main.adapter.ImageAdapter
 import com.duongnd.wallpaper.presentation.main.viewmodel.ImageViewModel
 import com.duongnd.wallpaper.presentation.preview.activity.PreviewActivity
 import com.duongnd.wallpaper.presentation.setting.SettingActivity
-import com.duongnd.wallpaper.utils.LocalConfig
+import com.duongnd.wallpaper.utils.RemoteConfigManager
 import com.duongnd.wallpaper.utils.Utils
 import com.duongnd.wallpaper.utils.getQueryTextChangeStateFlow
 import com.duongnd.wallpaper.utils.gone
@@ -126,18 +126,20 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     override fun initData() {
-//        checkForceUpdate()
+        checkForceUpdate()
         viewModel.getListImage()
     }
 
     private fun checkForceUpdate() {
-        val currentVersion = BuildConfig.VERSION_NAME
-        val minRequiredVersion = LocalConfig.minRequiredVersion
-        val isForceFlag = LocalConfig.isForceUpdateEnabled
-        val isVersionOutdated = Utils.isVersionLower(currentVersion, minRequiredVersion)
+        RemoteConfigManager.fetchAndActivate {
+            if (isFinishing || isDestroyed) return@fetchAndActivate
 
-        if (isForceFlag || isVersionOutdated) {
-            if (!isFinishing && !isDestroyed) {
+            val currentVersion = BuildConfig.VERSION_NAME
+            val minRequiredVersion = RemoteConfigManager.getMinRequiredVersion()
+            val isForceFlag = RemoteConfigManager.isForceUpdateEnabled()
+            val isVersionOutdated = Utils.isVersionLower(currentVersion, minRequiredVersion)
+
+            if (isForceFlag || isVersionOutdated) {
                 ForceUpdateDialog(this@MainActivity).apply {
                     onExit = {
                         finishAffinity()

@@ -122,4 +122,22 @@
     <string name="both_screens">كلا الشاشتين</string>
     <string name="lock_screen_preview">معاينة شاشة القفل</string>
     <string name="tap_to_preview_full">اضغط على الشاشة لإظهار/إخفاء أدوات التحكم</string>
+    <string name="invalid_image_resource">مورد صورة غير صالحة.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">تعيين الخلفية محظور على هذا الجهاز.</string>
+    <string name="failed_to_decode_image_resource">فشل فك تشفير مورد الصورة.</string>
+    <string name="permission_denied_to_set_wallpaper">تم رفض الإذن لتعيين الخلفية: %1$s</string>
+    <string name="error_saving_wallpaper">خطأ في حفظ الخلفية: %1$s</string>
+    <string name="failed_to_set_wallpaper">فشل تعيين الخلفية: %1$s</string>
+    <string name="write_external_storage">الكتابة على وحدة التخزين الخارجية</string>
+    <string name="failed_to_save_image">فشل حفظ الصورة</string>
+    <string name="can_create_photo_folder">لا يمكن إنشاء مجلد الصور</string>
+    <string name="can__save_the_image">لا يمكن حفظ الصورة</string>
+    <string name="can_share_photo">لا يمكن مشاركة الصورة</string>
+    <string name="all">الكل</string>
+    <string name="unknown_error">خطأ غير معروف</string>
+    <string name="theme">المظهر</string>
+    <string name="set_theme">تعيين المظهر</string>
+    <string name="dark">داكن</string>
+    <string name="light">فاتح</string>
+    <string name="system">النظام</string>
 </resources>

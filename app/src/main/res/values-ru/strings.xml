@@ -122,4 +122,22 @@
     <string name="both_screens">Оба экрана</string>
     <string name="lock_screen_preview">Предпросмотр экрана блокировки</string>
     <string name="tap_to_preview_full">Нажмите на экран, чтобы переключить элементы управления</string>
+    <string name="invalid_image_resource">Недопустимый ресурс изображения.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Установка обоев ограничена на этом устройстве.</string>
+    <string name="failed_to_decode_image_resource">Не удалось декодировать ресурс изображения.</string>
+    <string name="permission_denied_to_set_wallpaper">Отказано в разрешении на установку обоев: %1$s</string>
+    <string name="error_saving_wallpaper">Ошибка при сохранении обоев: %1$s</string>
+    <string name="failed_to_set_wallpaper">Не удалось установить обои: %1$s</string>
+    <string name="write_external_storage">Запись во внешнее хранилище</string>
+    <string name="failed_to_save_image">Не удалось сохранить изображение</string>
+    <string name="can_create_photo_folder">Не удалось создать папку для фото</string>
+    <string name="can__save_the_image">Не удалось сохранить изображение</string>
+    <string name="can_share_photo">Не удалось поделиться фото</string>
+    <string name="all">Все</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
+    <string name="theme">Тема</string>
+    <string name="set_theme">Установить тему</string>
+    <string name="dark">Темная</string>
+    <string name="light">Светлая</string>
+    <string name="system">Системная</string>
 </resources>

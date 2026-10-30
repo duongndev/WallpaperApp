@@ -122,4 +122,22 @@
     <string name="both_screens">Ambas pantallas</string>
     <string name="lock_screen_preview">Vista previa de la pantalla de bloqueo</string>
     <string name="tap_to_preview_full">Toca la pantalla para alternar los controles</string>
+    <string name="invalid_image_resource">Recurso de imagen no válido.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">La configuración del fondo de pantalla está restringida en este dispositivo.</string>
+    <string name="failed_to_decode_image_resource">Error al decodificar el recurso de imagen.</string>
+    <string name="permission_denied_to_set_wallpaper">Permiso denegado para establecer el fondo de pantalla: %1$s</string>
+    <string name="error_saving_wallpaper">Error al guardar el fondo de pantalla: %1$s</string>
+    <string name="failed_to_set_wallpaper">Error al establecer el fondo de pantalla: %1$s</string>
+    <string name="write_external_storage">Escribir en el almacenamiento externo</string>
+    <string name="failed_to_save_image">Error al guardar la imagen</string>
+    <string name="can_create_photo_folder">No se puede crear la carpeta de fotos</string>
+    <string name="can__save_the_image">No se puede guardar la imagen</string>
+    <string name="can_share_photo">No se puede compartir la foto</string>
+    <string name="all">Todo</string>
+    <string name="unknown_error">Error desconocido</string>
+    <string name="theme">Tema</string>
+    <string name="set_theme">Establecer tema</string>
+    <string name="dark">Oscuro</string>
+    <string name="light">Claro</string>
+    <string name="system">Sistema</string>
 </resources>

@@ -132,4 +132,23 @@
     <string name="both_screens">Kedua-dua Skrin</string>
     <string name="lock_screen_preview">Pratonton Skrin Kunci</string>
     <string name="tap_to_preview_full">Ketik skrin untuk menukar kawalan</string>
+
+    <string name="invalid_image_resource">Sumber imej tidak sah.</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">Tetapan kertas dinding dihadkan pada peranti ini.</string>
+    <string name="failed_to_decode_image_resource">Gagal mendikod sumber imej.</string>
+    <string name="permission_denied_to_set_wallpaper">Kebenaran ditolak untuk menetapkan kertas dinding: %1$s</string>
+    <string name="error_saving_wallpaper">Ralat menyimpan kertas dinding: %1$s</string>
+    <string name="failed_to_set_wallpaper">Gagal menetapkan kertas dinding: %1$s</string>
+    <string name="write_external_storage">Tulis Storan Luaran</string>
+    <string name="failed_to_save_image">Gagal menyimpan imej</string>
+    <string name="can_create_photo_folder">Tidak dapat mencipta folder foto</string>
+    <string name="can__save_the_image">Tidak dapat menyimpan imej</string>
+    <string name="can_share_photo">Tidak dapat berkongsi foto</string>
+    <string name="all">Semua</string>
+    <string name="unknown_error">Ralat tidak diketahui</string>
+    <string name="theme">Tema</string>
+    <string name="set_theme">Tetapkan tema</string>
+    <string name="dark">Gelap</string>
+    <string name="light">Cerah</string>
+    <string name="system">Sistem</string>
 </resources>

@@ -122,4 +122,22 @@
     <string name="both_screens">両方の画面</string>
     <string name="lock_screen_preview">ロック画面のプレビュー</string>
     <string name="tap_to_preview_full">画面をタップしてコントロールを切り替え</string>
+    <string name="invalid_image_resource">無効な画像リソースです。</string>
+    <string name="setting_wallpaper_is_restricted_on_this_device">このデバイスでは壁紙の設定が制限されています。</string>
+    <string name="failed_to_decode_image_resource">画像リソースのデコードに失敗しました。</string>
+    <string name="permission_denied_to_set_wallpaper">壁紙を設定する権限が拒否されました: %1$s</string>
+    <string name="error_saving_wallpaper">壁紙の保存エラー: %1$s</string>
+    <string name="failed_to_set_wallpaper">壁紙の設定に失敗しました: %1$s</string>
+    <string name="write_external_storage">外部ストレージの書き込み</string>
+    <string name="failed_to_save_image">画像を保存できませんでした</string>
+    <string name="can_create_photo_folder">写真フォルダを作成できません</string>
+    <string name="can__save_the_image">画像を保存できません</string>
+    <string name="can_share_photo">写真を共有できません</string>
+    <string name="all">すべて</string>
+    <string name="unknown_error">不明なエラー</string>
+    <string name="theme">テーマ</string>
+    <string name="set_theme">テーマを設定</string>
+    <string name="dark">ダーク</string>
+    <string name="light">ライト</string>
+    <string name="system">システム</string>
 </resources>
