@@ -79,31 +79,6 @@
         app:layout_constraintTop_toTopOf="@+id/space" />
 
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/size40"
-        android:layout_marginHorizontal="@dimen/size10"
-        android:background="@drawable/bg_search_round"
-        android:visibility="gone"
-        app:iconifiedByDefault="false"
-        app:queryHint="Tìm kiếm..."
-        app:layout_constraintBottom_toBottomOf="@+id/space"
-        app:layout_constraintEnd_toStartOf="@+id/btnCloseSearch"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/space" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btnCloseSearch"
-        android:layout_width="@dimen/size40"
-        android:layout_height="@dimen/size40"
-        android:layout_marginEnd="@dimen/size10"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:visibility="gone"
-        app:srcCompat="@drawable/ic_close"
-        app:tint="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/space"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/space" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

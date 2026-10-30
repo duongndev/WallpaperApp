@@ -29,6 +29,15 @@ class App : Application(), Application.ActivityLifecycleCallbacks {
         val instance get() = mInstance
     }
 
+    override fun onCreate() {
+        super.onCreate()
+        mInstance = this
+        context = applicationContext
+        registerActivityLifecycleCallbacks(this)
+        
+        com.duongnd.wallpaper.utils.FirebaseAnalyticsUtils.init(this)
+    }
+
     override fun onConfigurationChanged(newConfig: Configuration) {
         val locale = getDeviceLanguage()
         val language = spManager.getLanguage()

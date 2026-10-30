@@ -25,4 +25,9 @@ interface ImageDao {
     @Query("DELETE FROM images WHERE id = :id")
     suspend fun deleteFavorite(id: Int): Int
 
+
+    @Query("SELECT * FROM images ORDER BY RANDOM() LIMIT 1")
+    fun getRandomFavorite(): ImageEntity?
+
+
 }

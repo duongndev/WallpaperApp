@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size88"
+    android:background="@color/color_main">
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="@dimen/size10"
+        android:layout_height="@dimen/size24"
+        android:layout_marginBottom="@dimen/size15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size44"
+        android:background="@drawable/bg_search_round"
+        android:elevation="2dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="@string/search"
+        app:searchIcon="@drawable/ic_search"
+        app:closeIcon="@drawable/ic_close"
+        app:queryBackground="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/space"
+        app:layout_constraintEnd_toStartOf="@+id/btnCloseSearch"
+        app:layout_constraintStart_toEndOf="@id/space"
+        app:layout_constraintTop_toTopOf="@+id/space" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnCloseSearch"
+        android:layout_width="@dimen/size44"
+        android:layout_height="@dimen/size44"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/size10"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_close"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/space" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

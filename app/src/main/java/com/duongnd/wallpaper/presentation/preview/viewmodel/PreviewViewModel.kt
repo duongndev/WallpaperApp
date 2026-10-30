@@ -23,6 +23,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+import com.duongnd.wallpaper.utils.FirebaseAnalyticsUtils
+
 @HiltViewModel
 class PreviewViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
@@ -49,6 +51,7 @@ class PreviewViewModel @Inject constructor(
     fun setInitialImage(image: ImageEntity) {
         if (imageFlow.value == null) {
             imageFlow.value = image
+            FirebaseAnalyticsUtils.logViewImageDetail(image.imgRes)
         }
     }
 
@@ -61,10 +64,12 @@ class PreviewViewModel @Inject constructor(
             if (newFavoriteState) {
                 insertImageDbUseCase.execute(InsertImageDbUseCase.Param(updatedImage)).also {
                     imageFlow.value = updatedImage
+                    FirebaseAnalyticsUtils.logAddFavorite(updatedImage.imgRes)
                 }
             } else {
                 deleteImageDbUseCase.execute(DeleteImageDbUseCase.Param(updatedImage.id)).also {
                     imageFlow.value = updatedImage
+                    FirebaseAnalyticsUtils.logRemoveFavorite(updatedImage.imgRes)
                 }
             }
         }
@@ -77,9 +82,16 @@ class PreviewViewModel @Inject constructor(
             runCatching {
                 setWallpaperUseCase.execute(SetWallpaperUseCase.Param(image.imgRes, target)).also {
                     _wallpaperStatus.value = WallpaperState.Success
+                    val targetStr = when (target) {
+                        WallpaperTarget.HOME -> "home"
+                        WallpaperTarget.LOCK -> "lock"
+                        WallpaperTarget.BOTH -> "both"
+                    }
+                    FirebaseAnalyticsUtils.logSetWallpaper(targetStr)
                 }
             }.onFailure {
                 _wallpaperStatus.value = WallpaperState.Error(it.message ?: context.getString(R.string.unknown_error))
+                com.duongnd.wallpaper.utils.CrashlyticsUtils.recordException(it)
             }
         }
     }
@@ -96,8 +108,10 @@ class PreviewViewModel @Inject constructor(
                 saveImageUseCase.execute(SaveImageUseCase.Param(image.imgRes))
             }.onSuccess {
                 _saveImageState.value = SaveImageState.Success(android.net.Uri.EMPTY)
+                FirebaseAnalyticsUtils.logDownloadImage(image.imgRes)
             }.onFailure {
                 _saveImageState.value = SaveImageState.Error(it.message ?: "Unknown error")
+                com.duongnd.wallpaper.utils.CrashlyticsUtils.recordException(it)
             }
         }
     }
@@ -114,8 +128,10 @@ class PreviewViewModel @Inject constructor(
                 shareImageUseCase.execute(ShareImageUseCase.Param(image.imgRes, bitmap))
             }.onSuccess {
                 _shareImageUri.emit(ShareImageState.Success(it))
+                FirebaseAnalyticsUtils.logShareImage(image.imgRes)
             }.onFailure {
                 _shareImageUri.emit(ShareImageState.Error(it.message ?: "Unknown error"))
+                com.duongnd.wallpaper.utils.CrashlyticsUtils.recordException(it)
             }
         }
     }

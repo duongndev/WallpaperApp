@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.WallpaperApp.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.WallpaperApp.AppWidgetContainer">
+
+    <ImageView
+        android:id="@+id/ivWidget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        app:srcCompat="@mipmap/img_07"
+        android:contentDescription="@string/wallpaper_preview"
+        android:focusable="true"
+        android:scaleType="centerCrop" />
+</RelativeLayout>

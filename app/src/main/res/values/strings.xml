@@ -153,4 +153,8 @@
     <string name="dark">Dark</string>
     <string name="light">Light</string>
     <string name="system">System</string>
+    <string name="search">Search</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
 </resources>

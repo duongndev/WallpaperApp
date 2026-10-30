@@ -1,12 +1,9 @@
 package com.duongnd.wallpaper.presentation.main.activity
 
 import androidx.activity.viewModels
-import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import com.duongnd.wallpaper.BuildConfig
 import com.duongnd.wallpaper.base.activity.BaseActivity
 import com.duongnd.wallpaper.databinding.ActivityMainBinding
@@ -18,18 +15,12 @@ import com.duongnd.wallpaper.presentation.preview.activity.PreviewActivity
 import com.duongnd.wallpaper.presentation.setting.SettingActivity
 import com.duongnd.wallpaper.utils.LocalConfig
 import com.duongnd.wallpaper.utils.Utils
-import com.duongnd.wallpaper.utils.getQueryTextChangeStateFlow
 import com.duongnd.wallpaper.utils.gone
 import com.duongnd.wallpaper.utils.visible
 import com.google.android.material.tabs.TabLayout
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.flow.debounce
-import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.launch
-import kotlin.time.Duration.Companion.milliseconds
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
@@ -61,51 +52,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
 
         toolBar.btnSearch.setOnClickListener {
-            // Ẩn thanh header chính
-            toolBar.tvTitle.gone()
-            toolBar.btnBack.gone()
-            toolBar.btnSearch.gone()
-            toolBar.btnFav.gone()
-            toolBar.btnSetting.gone()
-            rcvCate.gone()
-
-            // Hiện khung tìm kiếm và nút đóng
-            toolBar.searchView.visible()
-            toolBar.btnCloseSearch.visible()
-
-            // Tự động focus và bật bàn phím
-            toolBar.searchView.isIconified = false
-            toolBar.searchView.requestFocus()
+            SearchActivity.start(this@MainActivity)
         }
 
-        toolBar.btnCloseSearch.setOnClickListener {
-
-            toolBar.searchView.setQuery("", false)
-            toolBar.searchView.clearFocus()
-
-            // Ẩn khung tìm kiếm và nút đóng
-            toolBar.searchView.gone()
-            toolBar.btnCloseSearch.gone()
-
-            toolBar.tvTitle.visible()
-            toolBar.btnSearch.visible()
-            toolBar.btnFav.visible()
-            toolBar.btnSetting.visible()
-            rcvCate.visible()
-        }
-        setupSearchView()
-
-    }
-
-    @OptIn(FlowPreview::class)
-    private fun setupSearchView() {
-        viewBinding.toolBar.searchView.getQueryTextChangeStateFlow()
-            .debounce(300.milliseconds)
-            .distinctUntilChanged()
-            .onEach {
-                viewModel.searchImage(it)
-            }
-            .launchIn(lifecycleScope)
     }
 
 
@@ -168,7 +117,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 setupCategories(list)
             }
         }.flowWithLifecycle(lifecycle, Lifecycle.State.CREATED).launchIn(lifecycleScope)
-
 
     }
 }
