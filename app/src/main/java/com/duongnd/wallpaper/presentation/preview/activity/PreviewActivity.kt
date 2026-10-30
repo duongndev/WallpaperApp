@@ -180,7 +180,7 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>() {
     }
 
     companion object {
-        private const val EXTRA_IMAGE = "extra_image"
+         const val EXTRA_IMAGE = "extra_image"
 
         fun start(context: Context, imgRes: ImageEntity) {
             Intent(context, PreviewActivity::class.java).also {

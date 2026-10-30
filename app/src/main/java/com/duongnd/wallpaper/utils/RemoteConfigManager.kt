@@ -25,10 +25,7 @@ object RemoteConfigManager {
         }
     }
 
-    /**
-     * Fetches and activates Remote Config values.
-     * Executes [onComplete] with a boolean indicating whether the fetch/activate succeeded.
-     */
+
     fun fetchAndActivate(onComplete: ((Boolean) -> Unit)? = null) {
         remoteConfig.fetchAndActivate()
             .addOnCompleteListener { task ->

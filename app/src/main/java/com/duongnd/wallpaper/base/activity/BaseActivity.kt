@@ -1,6 +1,7 @@
 package com.duongnd.wallpaper.base.activity
 
 import android.content.Context
+import android.content.res.Configuration
 import android.graphics.Color
 import android.net.ConnectivityManager
 import android.os.Bundle
@@ -26,6 +27,7 @@ import com.duongnd.wallpaper.presentation.dialog.LoadingDialog
 import com.duongnd.wallpaper.presentation.dialog.NoInternetFullDialog
 import com.duongnd.wallpaper.utils.NetworkConnectivityUtils
 import com.duongnd.wallpaper.utils.SpManager
+import com.duongnd.wallpaper.utils.applyThemeMode
 
 abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
     lateinit var viewBinding: V
@@ -77,7 +79,9 @@ abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
     }
 
     override fun attachBaseContext(newBase: Context) {
-        language = SpManager.getInstance(this).getLanguage()
+        val sp = SpManager.getInstance(newBase)
+        applyThemeMode(sp.getThemeMode())
+        language = sp.getLanguage()
         val context = LocaleHelper.setLocale(newBase, language.languageCode)
         super.attachBaseContext(context)
     }
@@ -159,8 +163,8 @@ abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
             window.statusBarColor = bgColor
             window.decorView.setBackgroundColor(bgColor)
         }
-        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars =
-            false
+        val isNightMode = (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
+        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = !isNightMode
     }
 
     private fun hideSystemUI() {
@@ -185,6 +189,7 @@ abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
     open fun initObserver() {}
 
     fun showLoading() {
+        if (isFinishing || isDestroyed) return
         loadingDialog.showProgressDialog()
     }
 

@@ -5,6 +5,7 @@ import android.app.Application
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
+import com.duongnd.wallpaper.utils.FirebaseAnalyticsUtils
 import com.duongnd.wallpaper.utils.LocaleHelper
 import com.duongnd.wallpaper.utils.SpManager
 import com.duongnd.wallpaper.utils.applyThemeMode
@@ -34,13 +35,16 @@ class App : Application(), Application.ActivityLifecycleCallbacks {
         super.onCreate()
         mInstance = this
         context = applicationContext
+        FirebaseAnalyticsUtils.init(this)
         applyThemeMode(spManager.getThemeMode())
     }
+
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         val locale = getDeviceLanguage()
         val language = spManager.getLanguage()
         LocaleHelper.onAttach(this, language.languageCode)
+        applyThemeMode(spManager.getThemeMode())
         super.onConfigurationChanged(newConfig)
     }
 

@@ -14,6 +14,8 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import com.duongnd.wallpaper.BuildConfig
+import com.duongnd.wallpaper.presentation.dialog.ForceUpdateDialog
 
 object Utils {
     fun showToast(context: Context, message: String) {
@@ -24,7 +26,8 @@ object Utils {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         WindowInsetsControllerCompat(window, window.decorView).let { controller ->
             controller.hide(WindowInsetsCompat.Type.systemBars())
-            controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+            controller.systemBarsBehavior =
+                WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
     }
 
@@ -87,6 +90,25 @@ object Utils {
             false
         } catch (_: Exception) {
             false
+        }
+    }
+
+    fun checkForceUpdate(context: Context, isForceUpdate: Boolean, versionForce: String) {
+        if (context !is Activity || context.isFinishing || context.isDestroyed) return
+
+        RemoteConfigManager.fetchAndActivate {
+            if (context.isFinishing || context.isDestroyed) return@fetchAndActivate
+
+            val currentVersion = BuildConfig.VERSION_NAME
+            val isVersionOutdated = isVersionLower(currentVersion, versionForce)
+            if (isForceUpdate || isVersionOutdated) {
+                ForceUpdateDialog(context).apply {
+                    onExit = {
+                        context.finishAffinity()
+                    }
+                    show()
+                }
+            }
         }
     }
 }

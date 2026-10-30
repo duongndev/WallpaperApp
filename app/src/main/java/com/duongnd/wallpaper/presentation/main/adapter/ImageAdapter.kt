@@ -23,9 +23,8 @@ class ImageAdapter : BaseAdapter<ImageEntity, ItemImageBinding>() {
     override fun binData(viewBinding: ItemImageBinding, item: ImageEntity, position: Int) {
 
         viewBinding.apply {
-//            ivWallpaper.setImageResource(item.imgRes)
-
-            Glide.with(root.context).load(item.imgRes).into(ivWallpaper)
+            
+            Glide.with(root.context).load(item.imgRes).dontAnimate().into(ivWallpaper)
 
 
             if (item.isFavorite) {
@@ -43,7 +42,7 @@ class ImageAdapter : BaseAdapter<ImageEntity, ItemImageBinding>() {
     }
 
     fun changeFav(image: ImageEntity) {
-        val index = dataSet.indexOf(image)
+        val index = dataSet.indexOfFirst { it.id == image.id }
         if (index != -1) {
             dataSet[index].isFavorite = !dataSet[index].isFavorite
             notifyItemChanged(index)

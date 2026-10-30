@@ -26,6 +26,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.ColorInt
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
@@ -48,8 +49,7 @@ fun isTiramisuPlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
 fun Context?.isPermissionGranted(permission: String?): Boolean {
     val context = this
     return if (context == null || permission.isNullOrEmpty()) false else ContextCompat.checkSelfPermission(
-        context,
-        permission
+        context, permission
     ) == PackageManager.PERMISSION_GRANTED
 }
 
@@ -103,6 +103,10 @@ inline fun <reified T : Parcelable> Bundle.parcelable(key: String): T? = getParc
 
 inline fun <reified T : Parcelable> Intent.getParcelableArrayList(key: String): ArrayList<T>? =
     getParcelableArrayListExtra(key)
+
+inline fun <reified T : Parcelable> Bundle.getParcelableExtra(key: String): T? =
+    getParcelable(key) as? T
+
 
 fun TextView.strikeThrough(text: String) {
     val spannable = SpannableString(text)
@@ -171,30 +175,22 @@ fun View.hideKeyboard(context: Context) {
 }
 
 fun ImageView.setImageView(
-    context: Context,
-    urlString: String
+    context: Context, urlString: String
 ) {
-    Glide.with(context)
-        .load(urlString)
-        .dontAnimate()
-        .centerCrop()
-        .diskCacheStrategy(DiskCacheStrategy.ALL)
-        .override(150, 150)
-        .into(this)
+    Glide.with(context).load(urlString).dontAnimate().centerCrop()
+        .diskCacheStrategy(DiskCacheStrategy.ALL).override(150, 150).into(this)
 }
 
 fun ImageView.setImageView(
-    context: Context,
-    urlString: String,
-    width: Int, height: Int
+    context: Context, urlString: String, width: Int, height: Int
 ) {
-    Glide.with(context)
-        .load(urlString)
-        .dontAnimate()
-        .centerCrop()
-        .diskCacheStrategy(DiskCacheStrategy.ALL)
-        .override(width, height)
-        .into(this)
+    Glide.with(context).load(urlString).dontAnimate().centerCrop()
+        .diskCacheStrategy(DiskCacheStrategy.ALL).override(width, height).into(this)
+}
+
+fun AppCompatImageView.setImage(context: Context, imgRes: Int){
+    Glide.with(context).load(imgRes).dontAnimate().centerCrop()
+        .diskCacheStrategy(DiskCacheStrategy.ALL).into(this)
 }
 
 fun Context.openApp(packageName: String) {
@@ -233,17 +229,10 @@ fun View.visible() {
 }
 
 fun TextView.setGradientText(
-    @ColorInt startColor: Int,
-    @ColorInt endColor: Int
+    @ColorInt startColor: Int, @ColorInt endColor: Int
 ) {
     paint.shader = LinearGradient(
-        0f,
-        0f,
-        paint.measureText(text.toString()),
-        0f,
-        startColor,
-        endColor,
-        Shader.TileMode.CLAMP
+        0f, 0f, paint.measureText(text.toString()), 0f, startColor, endColor, Shader.TileMode.CLAMP
     )
     invalidate()
 }
@@ -253,6 +242,7 @@ fun SearchView.getQueryTextChangeStateFlow(): StateFlow<String> {
 
     setOnQueryTextListener(object : SearchView.OnQueryTextListener {
         override fun onQueryTextSubmit(query: String?): Boolean {
+            queryState.value = query.orEmpty().trim()
             return true
         }
 

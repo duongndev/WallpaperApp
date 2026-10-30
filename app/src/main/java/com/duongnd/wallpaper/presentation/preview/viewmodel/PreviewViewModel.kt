@@ -23,6 +23,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+import com.duongnd.wallpaper.presentation.widget.WallpaperAppWidget
 import com.duongnd.wallpaper.utils.FirebaseAnalyticsUtils
 
 @HiltViewModel
@@ -64,11 +65,13 @@ class PreviewViewModel @Inject constructor(
             if (newFavoriteState) {
                 insertImageDbUseCase.execute(InsertImageDbUseCase.Param(updatedImage)).also {
                     imageFlow.value = updatedImage
+                    WallpaperAppWidget.sendRefreshBroadcast(context)
                     FirebaseAnalyticsUtils.logAddFavorite(updatedImage.imgRes)
                 }
             } else {
                 deleteImageDbUseCase.execute(DeleteImageDbUseCase.Param(updatedImage.id)).also {
                     imageFlow.value = updatedImage
+                    WallpaperAppWidget.sendRefreshBroadcast(context)
                     FirebaseAnalyticsUtils.logRemoveFavorite(updatedImage.imgRes)
                 }
             }

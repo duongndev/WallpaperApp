@@ -30,12 +30,23 @@ object Logger {
     }
 
     fun e(message: String?) {
+        message?.let { CrashlyticsUtils.log(it) }
         if (!mIsDebuggable)
             return
 
         // Throwable instance must be created before any methods
         getMethodNames(Throwable().stackTrace)
         Log.e(mClassName, createLog(message))
+    }
+
+    fun e(throwable: Throwable, message: String? = null) {
+        message?.let { CrashlyticsUtils.log(it) }
+        CrashlyticsUtils.recordException(throwable)
+        if (!mIsDebuggable)
+            return
+
+        getMethodNames(Throwable().stackTrace)
+        Log.e(mClassName, createLog(message ?: throwable.message))
     }
 
     fun i(message: String) {

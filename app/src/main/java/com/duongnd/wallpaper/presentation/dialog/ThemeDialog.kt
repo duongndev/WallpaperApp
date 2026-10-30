@@ -1,11 +1,13 @@
 package com.duongnd.wallpaper.presentation.dialog
 
+import android.app.Activity
 import android.content.Context
 import androidx.core.content.ContextCompat
 import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.base.dialog.BaseDialog
 import com.duongnd.wallpaper.databinding.DialogSetThemeBinding
 import com.duongnd.wallpaper.utils.Constant
+import com.duongnd.wallpaper.utils.FirebaseAnalyticsUtils
 import com.duongnd.wallpaper.utils.SpManager
 import com.duongnd.wallpaper.utils.applyThemeMode
 
@@ -56,6 +58,15 @@ class ThemeDialog(
         spManager.saveThemeMode(themeMode)
         context.applyThemeMode(themeMode)
         onThemeChanged?.invoke(themeMode)
+
+        val themeStr = when (themeMode) {
+            Constant.THEME_DARK -> "dark"
+            Constant.THEME_LIGHT -> "light"
+            Constant.THEME_SYSTEM -> "system"
+            else -> "system"
+        }
+        FirebaseAnalyticsUtils.logChangeTheme(themeStr)
         dismiss()
+        (context as? Activity)?.recreate()
     }
 }
