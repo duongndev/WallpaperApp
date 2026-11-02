@@ -7,7 +7,7 @@ class SaveImageUseCase @Inject constructor(
     private val previewRepository: PreviewRepository
 ) : UseCase<SaveImageUseCase.Param, Unit>() {
 
-    data class Param(val imageRes: Int) : UseCase.Param()
+    data class Param(val imageRes: String) : UseCase.Param()
 
     override suspend fun execute(param: Param) {
         previewRepository.saveImage(param.imageRes)

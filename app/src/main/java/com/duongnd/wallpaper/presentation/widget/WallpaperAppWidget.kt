@@ -6,6 +6,7 @@ import android.appwidget.AppWidgetProvider
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.util.Log
 import android.widget.RemoteViews
 import com.duongnd.wallpaper.R
@@ -55,7 +56,8 @@ class WallpaperAppWidget : AppWidgetProvider() {
                 for (appWidgetId in appWidgetIds) {
                     val views = RemoteViews(context.packageName, R.layout.wallpaper_app_widget)
 
-                    views.setImageViewResource(R.id.ivWidget, photo.imgRes)
+                    val bitmap = context.assets.open(photo.imgRes).use { BitmapFactory.decodeStream(it) }
+                    views.setImageViewBitmap(R.id.ivWidget, bitmap)
 
                     val previewIntent = Intent(context, PreviewActivity::class.java).apply {
                         putExtra(PreviewActivity.EXTRA_IMAGE, photo)

@@ -11,5 +11,5 @@ class SetWallpaperUseCase @Inject constructor(
         previewRepository.setWallpaper(imgRes = param.imgRes, target = param.target)
     }
 
-    data class Param(val imgRes: Int, val target: WallpaperTarget) : UseCase.Param()
+    data class Param(val imgRes: String, val target: WallpaperTarget) : UseCase.Param()
 }

@@ -140,4 +140,8 @@
     <string name="dark">داكن</string>
     <string name="light">فاتح</string>
     <string name="system">النظام</string>
+    <string name="search">بحث</string>
+    <string name="appwidget_text">مثال</string>
+    <string name="add_widget">إضافة أداة</string>
+    <string name="app_widget_description">هذا وصف أداة التطبيق</string>
 </resources>

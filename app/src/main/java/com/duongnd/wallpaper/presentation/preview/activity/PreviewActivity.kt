@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
+import com.bumptech.glide.Glide
 import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.base.activity.BaseActivity
 import com.duongnd.wallpaper.databinding.ActivityPreviewBinding
@@ -52,13 +53,13 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>() {
         }
 
         // Edge case handling: Empty or invalid image resource
-        if (imgRes == null || imgRes.imgRes <= 0) {
+        if (imgRes == null || imgRes.imgRes.isEmpty()) {
             showToast(getString(R.string.emty_list_message))
             finish()
             return@with
         }
 
-        ivPreview.setImageResource(imgRes.imgRes)
+        Glide.with(this@PreviewActivity).load("file:///android_asset/${imgRes.imgRes}").into(ivPreview)
         viewModel.setInitialImage(imgRes)
 
         btnFav.setOnClickListener {
@@ -122,7 +123,7 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>() {
                 viewBinding.btnFav.setColorFilter(ContextCompat.getColor(this, R.color.red))
             } else {
                 viewBinding.btnFav.setImageResource(R.drawable.ic_favorite)
-                viewBinding.btnFav.setColorFilter(Color.WHITE)
+                viewBinding.btnFav.setColorFilter(Color.RED)
             }
         }.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED).launchIn(lifecycleScope)
 

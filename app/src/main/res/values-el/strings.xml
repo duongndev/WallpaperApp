@@ -151,4 +151,8 @@
     <string name="dark">Σκούρο</string>
     <string name="light">Φωτεινό</string>
     <string name="system">Σύστημα</string>
+    <string name="search">Αναζήτηση</string>
+    <string name="appwidget_text">ΠΑΡΑΔΕΙΓΜΑ</string>
+    <string name="add_widget">Προσθήκη widget</string>
+    <string name="app_widget_description">Αυτή είναι μια περιγραφή widget εφαρμογής</string>
 </resources>

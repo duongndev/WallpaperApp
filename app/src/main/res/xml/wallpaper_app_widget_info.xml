@@ -7,7 +7,7 @@
     android:minHeight="@dimen/size180"
     android:minResizeWidth="110dp"
     android:minResizeHeight="110dp"
-    android:previewImage="@mipmap/img_06"
+    android:previewImage="@drawable/ic_wallpaper"
     android:previewLayout="@layout/wallpaper_app_widget"
     android:resizeMode="horizontal|vertical"
     android:targetCellWidth="3"

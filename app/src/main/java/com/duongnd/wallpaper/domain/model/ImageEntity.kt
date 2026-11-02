@@ -12,7 +12,7 @@ import java.io.Serializable
 data class ImageEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val title: String,
-    val imgRes: Int,
+    val imgRes: String,
     var isFavorite: Boolean = false,
     var category: String = "All"
 ) : Parcelable {

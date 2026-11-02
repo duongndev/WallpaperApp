@@ -151,4 +151,8 @@
     <string name="dark">Tmavé</string>
     <string name="light">Světlé</string>
     <string name="system">Systém</string>
+    <string name="search">Hledat</string>
+    <string name="appwidget_text">PŘÍKLAD</string>
+    <string name="add_widget">Přidat widget</string>
+    <string name="app_widget_description">Toto je popis widgetu aplikace</string>
 </resources>

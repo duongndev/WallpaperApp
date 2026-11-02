@@ -39,7 +39,7 @@ class FavoriteViewModel @Inject constructor(
         viewModelScope.launch {
             runCatching {
                 deleteImageDbUseCase.execute(DeleteImageDbUseCase.Param(image.id))
-                FirebaseAnalyticsUtils.logRemoveFavorite(image.imgRes)
+                FirebaseAnalyticsUtils.logRemoveFavorite(image.id)
             }.onFailure {
                 CrashlyticsUtils.recordException(it)
             }

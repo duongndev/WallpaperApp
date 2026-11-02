@@ -151,4 +151,8 @@
     <string name="dark">Ciemny</string>
     <string name="light">Jasny</string>
     <string name="system">Systemowy</string>
+    <string name="search">Szukaj</string>
+    <string name="appwidget_text">PRZYKŁAD</string>
+    <string name="add_widget">Dodaj widżet</string>
+    <string name="app_widget_description">To jest opis widżetu aplikacji</string>
 </resources>

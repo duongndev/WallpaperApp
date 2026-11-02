@@ -24,7 +24,7 @@ class ImageAdapter : BaseAdapter<ImageEntity, ItemImageBinding>() {
 
         viewBinding.apply {
             
-            Glide.with(root.context).load(item.imgRes).dontAnimate().into(ivWallpaper)
+            Glide.with(root.context).load("file:///android_asset/${item.imgRes}").dontAnimate().into(ivWallpaper)
 
 
             if (item.isFavorite) {

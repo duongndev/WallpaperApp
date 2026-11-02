@@ -140,4 +140,8 @@
     <string name="dark">ダーク</string>
     <string name="light">ライト</string>
     <string name="system">システム</string>
+    <string name="search">検索</string>
+    <string name="appwidget_text">例</string>
+    <string name="add_widget">ウィジェットを追加</string>
+    <string name="app_widget_description">これはアプリウィジェットの説明です</string>
 </resources>

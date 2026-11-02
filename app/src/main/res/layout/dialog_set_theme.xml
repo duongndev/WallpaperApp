@@ -1,59 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/background_black_radius"
-    android:padding="@dimen/size17">
+    android:orientation="vertical"
+    android:padding="@dimen/size20">
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/set_theme"
-        android:textColor="@color/white"
+        android:textColor="@color/text_main"
         android:textSize="@dimen/size20"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tvDark"
-        style="@style/CustomTextDialog"
+    <LinearLayout
+        android:id="@+id/layoutDark"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/dark"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+        android:layout_height="@dimen/size50"
+        android:layout_marginTop="@dimen/size15"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/size10">
 
-    <TextView
-        android:id="@+id/tvLight"
-        style="@style/CustomTextDialog"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/light"
-        app:layout_constraintTop_toBottomOf="@id/tvDark" />
+        <TextView
+            android:id="@+id/tvDark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dark"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/size16" />
 
-    <TextView
-        android:id="@+id/tvSystem"
-        style="@style/CustomTextDialog"
+        <ImageView
+            android:id="@+id/imgDarkCheck"
+            android:layout_width="@dimen/size24"
+            android:layout_height="@dimen/size24"
+            app:srcCompat="@drawable/ic_checkbox_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutLight"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/system"
-        app:layout_constraintTop_toBottomOf="@id/tvLight" />
+        android:layout_height="@dimen/size50"
+        android:layout_marginTop="@dimen/size5"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/size10">
+
+        <TextView
+            android:id="@+id/tvLight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/light"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/size16" />
+
+        <ImageView
+            android:id="@+id/imgLightCheck"
+            android:layout_width="@dimen/size24"
+            android:layout_height="@dimen/size24"
+            app:srcCompat="@drawable/ic_checkbox_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSystem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:layout_marginTop="@dimen/size5"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/size10">
+
+        <TextView
+            android:id="@+id/tvSystem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/system"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/size16" />
+
+        <ImageView
+            android:id="@+id/imgSystemCheck"
+            android:layout_width="@dimen/size24"
+            android:layout_height="@dimen/size24"
+            app:srcCompat="@drawable/ic_checkbox_normal" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/btnCancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/size10"
+        android:layout_marginTop="@dimen/size15"
         android:background="?attr/selectableItemBackground"
         android:gravity="center"
         android:padding="@dimen/size13"
         android:text="@string/cancel"
         android:textColor="@color/purple2"
         android:textSize="@dimen/size17"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/tvSystem" />
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

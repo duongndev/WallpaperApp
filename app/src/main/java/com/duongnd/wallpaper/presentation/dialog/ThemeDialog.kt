@@ -28,15 +28,15 @@ class ThemeDialog(
 
         updateSelection(spManager.getThemeMode())
 
-        tvDark.setOnClickListener {
+        layoutDark.setOnClickListener {
             selectTheme(Constant.THEME_DARK)
         }
 
-        tvLight.setOnClickListener {
+        layoutLight.setOnClickListener {
             selectTheme(Constant.THEME_LIGHT)
         }
 
-        tvSystem.setOnClickListener {
+        layoutSystem.setOnClickListener {
             selectTheme(Constant.THEME_SYSTEM)
         }
 
@@ -46,12 +46,20 @@ class ThemeDialog(
     }
 
     private fun updateSelection(themeMode: Int) = with(viewBinding) {
-        val selectedColor = ContextCompat.getColor(context, R.color.purple2)
-        val defaultColor = ContextCompat.getColor(context, R.color.white)
+        val isDark = themeMode == Constant.THEME_DARK
+        val isLight = themeMode == Constant.THEME_LIGHT
+        val isSystem = themeMode == Constant.THEME_SYSTEM
 
-        tvDark.setTextColor(if (themeMode == Constant.THEME_DARK) selectedColor else defaultColor)
-        tvLight.setTextColor(if (themeMode == Constant.THEME_LIGHT) selectedColor else defaultColor)
-        tvSystem.setTextColor(if (themeMode == Constant.THEME_SYSTEM) selectedColor else defaultColor)
+        imgDarkCheck.setImageResource(if (isDark) R.drawable.ic_checkbox_checked else R.drawable.ic_checkbox_normal)
+        imgLightCheck.setImageResource(if (isLight) R.drawable.ic_checkbox_checked else R.drawable.ic_checkbox_normal)
+        imgSystemCheck.setImageResource(if (isSystem) R.drawable.ic_checkbox_checked else R.drawable.ic_checkbox_normal)
+
+        val selectedColor = ContextCompat.getColor(context, R.color.purple2)
+        val defaultColor = ContextCompat.getColor(context, R.color.text_main)
+
+        tvDark.setTextColor(if (isDark) selectedColor else defaultColor)
+        tvLight.setTextColor(if (isLight) selectedColor else defaultColor)
+        tvSystem.setTextColor(if (isSystem) selectedColor else defaultColor)
     }
 
     private fun selectTheme(themeMode: Int) {

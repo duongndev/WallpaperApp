@@ -25,7 +25,7 @@ class PreviewRepositoryImpl @Inject constructor(
 ) : PreviewRepository {
 
     override suspend fun setWallpaper(
-        imgRes: Int,
+        imgRes: String,
         target: WallpaperTarget
     ): Unit = withContext(Dispatchers.IO) {
 
@@ -36,7 +36,7 @@ class PreviewRepositoryImpl @Inject constructor(
         }
 
         val bitmap = try {
-            BitmapFactory.decodeResource(context.resources, imgRes)
+            context.assets.open(imgRes).use { BitmapFactory.decodeStream(it) }
         } catch (_: Exception) {
             null
         } ?: throw IOException(context.getString(R.string.failed_to_decode_image_resource))
@@ -67,12 +67,12 @@ class PreviewRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun saveImage(imageRes: Int) = withContext(Dispatchers.IO) {
+    override suspend fun saveImage(imageRes: String) = withContext(Dispatchers.IO) {
         val resolver = context.contentResolver
         var imageUri: Uri? = null
 
         val bitmap = try {
-            BitmapFactory.decodeResource(context.resources, imageRes)
+            context.assets.open(imageRes).use { BitmapFactory.decodeStream(it) }
         } catch (_: Exception) {
             null
         } ?: throw IOException(context.getString(R.string.failed_to_decode_image_resource))
@@ -147,11 +147,12 @@ class PreviewRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun shareImage(imageRes: Int): Uri = withContext(Dispatchers.IO) {
-        val bitmap = BitmapFactory.decodeResource(
-            context.resources,
-            imageRes
-        ) ?: throw IOException(context.getString(R.string.failed_to_decode_image_resource))
+    override suspend fun shareImage(imageRes: String): Uri = withContext(Dispatchers.IO) {
+        val bitmap = try {
+            context.assets.open(imageRes).use { BitmapFactory.decodeStream(it) }
+        } catch (_: Exception) {
+            null
+        } ?: throw IOException(context.getString(R.string.failed_to_decode_image_resource))
         
         try {
             shareImage(bitmap)

@@ -151,4 +151,8 @@
     <string name="dark">இருண்ட</string>
     <string name="light">வெளிச்சமான</string>
     <string name="system">சிஸ்டம்</string>
+    <string name="search">தேடு</string>
+    <string name="appwidget_text">உதாரணம்</string>
+    <string name="add_widget">விட்செட்டைச் சேர்</string>
+    <string name="app_widget_description">இது ஒரு பயன்பாட்டு விட்செட் விளக்கம்</string>
 </resources>

@@ -32,6 +32,7 @@ class ImageViewModel @Inject constructor(
 
     private var allImages: List<ImageEntity> = emptyList()
     private var currentCategory: String = "All"
+    private var currentQuery: String = ""
 
     private val listCategory = MutableStateFlow<List<String>>(emptyList())
     var listCategoryState = listCategory.asStateFlow()
@@ -49,7 +50,12 @@ class ImageViewModel @Inject constructor(
                         it.copy(isFavorite = dbIds.contains(it.id))
                     }
                     listCategory.value = listOf("All") + allImages.map { it.category }.distinct()
-                    filterByCategory(currentCategory)
+
+                    if (currentQuery.isNotEmpty()){
+                        searchImage(currentQuery)
+                    } else {
+                        filterByCategory(currentCategory)
+                    }
                 }
             }.onFailure {
                 CrashlyticsUtils.recordException(it)
@@ -59,6 +65,7 @@ class ImageViewModel @Inject constructor(
 
     fun filterByCategory(category: String) {
         currentCategory = category
+        currentQuery = ""
         if (category == "All") {
             listImageUseCase.value = allImages
         } else {
@@ -72,11 +79,11 @@ class ImageViewModel @Inject constructor(
                 if (image.isFavorite) {
                     insertImageDbUseCase.execute(InsertImageDbUseCase.Param(image))
                     WallpaperAppWidget.sendRefreshBroadcast(context)
-                    FirebaseAnalyticsUtils.logAddFavorite(image.imgRes)
+                    FirebaseAnalyticsUtils.logAddFavorite(image.id)
                 } else {
                     deleteImageDbUseCase.execute(DeleteImageDbUseCase.Param(image.id))
                     WallpaperAppWidget.sendRefreshBroadcast(context)
-                    FirebaseAnalyticsUtils.logRemoveFavorite(image.imgRes)
+                    FirebaseAnalyticsUtils.logRemoveFavorite(image.id)
                 }
             }.onFailure {
                 CrashlyticsUtils.recordException(it)

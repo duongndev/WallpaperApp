@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_preview_bottom"
+    android:background="@drawable/background_black_radius"
     android:padding="@dimen/size17">
 
     <TextView
@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/set_wallpaper"
-        android:textColor="@color/white"
+        android:textColor="@color/text_main"
         android:textSize="@dimen/size20"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/home_screen"
+        android:textColor="@color/text_main"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
     <TextView
@@ -32,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/lock_screen"
+        android:textColor="@color/text_main"
         app:layout_constraintTop_toBottomOf="@id/tvHomeScreen" />
 
     <TextView
@@ -40,6 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/both_screens"
+        android:textColor="@color/text_main"
         app:layout_constraintTop_toBottomOf="@id/tvLockScreen" />
 
     <TextView

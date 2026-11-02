@@ -140,4 +140,8 @@
     <string name="dark">Темная</string>
     <string name="light">Светлая</string>
     <string name="system">Системная</string>
+    <string name="search">Поиск</string>
+    <string name="appwidget_text">ПРИМЕР</string>
+    <string name="add_widget">Добавить виджет</string>
+    <string name="app_widget_description">Это описание виджета приложения</string>
 </resources>

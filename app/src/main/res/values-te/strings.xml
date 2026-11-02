@@ -151,4 +151,8 @@
     <string name="dark">డార్క్</string>
     <string name="light">లైట్</string>
     <string name="system">సిస్టమ్</string>
+    <string name="search">శోధించండి</string>
+    <string name="appwidget_text">ఉదాహరణ</string>
+    <string name="add_widget">విడ్జెట్‌ను జోడించండి</string>
+    <string name="app_widget_description">ఇది అనువర్తన విడ్జెట్ వివరణ</string>
 </resources>

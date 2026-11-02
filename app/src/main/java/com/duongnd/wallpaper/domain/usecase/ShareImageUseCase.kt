@@ -14,6 +14,6 @@ class ShareImageUseCase @Inject constructor(
         } ?: previewRepository.shareImage(param.imgRes)
     }
 
-    data class Param(val imgRes: Int = 0, val bitmap: Bitmap? = null) : UseCase.Param()
+    data class Param(val imgRes: String = "", val bitmap: Bitmap? = null) : UseCase.Param()
 
 }

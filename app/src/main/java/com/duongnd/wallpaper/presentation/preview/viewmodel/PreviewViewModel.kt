@@ -52,7 +52,7 @@ class PreviewViewModel @Inject constructor(
     fun setInitialImage(image: ImageEntity) {
         if (imageFlow.value == null) {
             imageFlow.value = image
-            FirebaseAnalyticsUtils.logViewImageDetail(image.imgRes)
+            FirebaseAnalyticsUtils.logViewImageDetail(image.id)
         }
     }
 
@@ -66,13 +66,13 @@ class PreviewViewModel @Inject constructor(
                 insertImageDbUseCase.execute(InsertImageDbUseCase.Param(updatedImage)).also {
                     imageFlow.value = updatedImage
                     WallpaperAppWidget.sendRefreshBroadcast(context)
-                    FirebaseAnalyticsUtils.logAddFavorite(updatedImage.imgRes)
+                    FirebaseAnalyticsUtils.logAddFavorite(updatedImage.id)
                 }
             } else {
                 deleteImageDbUseCase.execute(DeleteImageDbUseCase.Param(updatedImage.id)).also {
                     imageFlow.value = updatedImage
                     WallpaperAppWidget.sendRefreshBroadcast(context)
-                    FirebaseAnalyticsUtils.logRemoveFavorite(updatedImage.imgRes)
+                    FirebaseAnalyticsUtils.logRemoveFavorite(updatedImage.id)
                 }
             }
         }
@@ -111,7 +111,7 @@ class PreviewViewModel @Inject constructor(
                 saveImageUseCase.execute(SaveImageUseCase.Param(image.imgRes))
             }.onSuccess {
                 _saveImageState.value = SaveImageState.Success(android.net.Uri.EMPTY)
-                FirebaseAnalyticsUtils.logDownloadImage(image.imgRes)
+                FirebaseAnalyticsUtils.logDownloadImage(image.id)
             }.onFailure {
                 _saveImageState.value = SaveImageState.Error(it.message ?: "Unknown error")
                 com.duongnd.wallpaper.utils.CrashlyticsUtils.recordException(it)
@@ -131,7 +131,7 @@ class PreviewViewModel @Inject constructor(
                 shareImageUseCase.execute(ShareImageUseCase.Param(image.imgRes, bitmap))
             }.onSuccess {
                 _shareImageUri.emit(ShareImageState.Success(it))
-                FirebaseAnalyticsUtils.logShareImage(image.imgRes)
+                FirebaseAnalyticsUtils.logShareImage(image.id)
             }.onFailure {
                 _shareImageUri.emit(ShareImageState.Error(it.message ?: "Unknown error"))
                 com.duongnd.wallpaper.utils.CrashlyticsUtils.recordException(it)

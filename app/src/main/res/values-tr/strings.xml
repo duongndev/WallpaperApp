@@ -151,4 +151,8 @@
     <string name="dark">Koyu</string>
     <string name="light">Açık</string>
     <string name="system">Sistem</string>
+    <string name="search">Ara</string>
+    <string name="appwidget_text">ÖRNEK</string>
+    <string name="add_widget">Widget ekle</string>
+    <string name="app_widget_description">Bu bir uygulama widget açıklamasıdır</string>
 </resources>

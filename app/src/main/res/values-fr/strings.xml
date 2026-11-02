@@ -140,4 +140,8 @@
     <string name="dark">Sombre</string>
     <string name="light">Clair</string>
     <string name="system">Système</string>
+    <string name="search">Rechercher</string>
+    <string name="appwidget_text">EXEMPLE</string>
+    <string name="add_widget">Ajouter un widget</string>
+    <string name="app_widget_description">Ceci est la description du widget de l\'application</string>
 </resources>

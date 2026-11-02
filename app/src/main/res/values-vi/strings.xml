@@ -140,4 +140,8 @@
     <string name="dark">Tối</string>
     <string name="light">Sáng</string>
     <string name="system">Hệ thống</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="appwidget_text">VÍ DỤ</string>
+    <string name="add_widget">Thêm tiện ích</string>
+    <string name="app_widget_description">Đây là mô tả tiện ích ứng dụng</string>
 </resources>

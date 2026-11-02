@@ -74,7 +74,7 @@
 
 
     <style name="ItemSetting" parent="Base.Theme.WallpaperApp">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/text_main</item>
         <item name="android:textSize">@dimen/size16</item>
         <item name="android:paddingStart">@dimen/size15</item>
         <item name="android:layout_marginTop">@dimen/size15</item>

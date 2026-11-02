@@ -151,4 +151,8 @@
     <string name="dark">Întunecat</string>
     <string name="light">Luminos</string>
     <string name="system">Sistem</string>
+    <string name="search">Caută</string>
+    <string name="appwidget_text">EXEMPLU</string>
+    <string name="add_widget">Adaugă widget</string>
+    <string name="app_widget_description">Aceasta este o descriere a widget-ului aplicației</string>
 </resources>

@@ -151,4 +151,8 @@
     <string name="dark">ডার্ক</string>
     <string name="light">লাইট</string>
     <string name="system">সিস্টেম</string>
+    <string name="search">অনুসন্ধান</string>
+    <string name="appwidget_text">উদাহরণ</string>
+    <string name="add_widget">উইজেট যোগ করুন</string>
+    <string name="app_widget_description">এটি একটি অ্যাপ উইজেটের বিবরণ</string>
 </resources>

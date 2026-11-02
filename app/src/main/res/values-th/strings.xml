@@ -151,4 +151,8 @@
     <string name="dark">มืด</string>
     <string name="light">สว่าง</string>
     <string name="system">ระบบ</string>
+    <string name="search">ค้นหา</string>
+    <string name="appwidget_text">ตัวอย่าง</string>
+    <string name="add_widget">เพิ่มวิดเจ็ต</string>
+    <string name="app_widget_description">นี่คือคำอธิบายวิดเจ็ตแอป</string>
 </resources>

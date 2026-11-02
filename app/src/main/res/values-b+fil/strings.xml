@@ -153,4 +153,8 @@
     <string name="dark">Madilim</string>
     <string name="light">Maliwanag</string>
     <string name="system">Sistema</string>
+    <string name="search">Hanapin</string>
+    <string name="appwidget_text">HALIMBAWA</string>
+    <string name="add_widget">Magdagdag ng widget</string>
+    <string name="app_widget_description">Ito ang paglalarawan ng widget ng app</string>
 </resources>
