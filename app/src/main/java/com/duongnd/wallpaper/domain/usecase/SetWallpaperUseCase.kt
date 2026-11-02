@@ -1,5 +1,6 @@
 package com.duongnd.wallpaper.domain.usecase
 
+import android.graphics.Bitmap
 import com.duongnd.wallpaper.domain.model.WallpaperTarget
 import com.duongnd.wallpaper.domain.repository.PreviewRepository
 import javax.inject.Inject
@@ -8,8 +9,12 @@ class SetWallpaperUseCase @Inject constructor(
     private val previewRepository: PreviewRepository
 ) : UseCase<SetWallpaperUseCase.Param, Unit>() {
     override suspend fun execute(param: Param) {
-        previewRepository.setWallpaper(imgRes = param.imgRes, target = param.target)
+        previewRepository.setWallpaper(imgRes = param.imgRes, target = param.target, preloadedBitmap = param.bitmap)
     }
 
-    data class Param(val imgRes: String, val target: WallpaperTarget) : UseCase.Param()
+    data class Param(
+        val imgRes: String,
+        val target: WallpaperTarget,
+        val bitmap: Bitmap? = null
+    ) : UseCase.Param()
 }

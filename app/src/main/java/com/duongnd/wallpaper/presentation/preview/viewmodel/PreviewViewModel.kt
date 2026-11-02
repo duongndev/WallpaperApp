@@ -1,6 +1,7 @@
 package com.duongnd.wallpaper.presentation.preview.viewmodel
 
 import android.content.Context
+import android.graphics.Bitmap
 import androidx.lifecycle.viewModelScope
 import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.base.viewmodel.BaseViewModel
@@ -78,12 +79,12 @@ class PreviewViewModel @Inject constructor(
         }
     }
 
-    fun setWallpaper(target: WallpaperTarget) {
+    fun setWallpaper(target: WallpaperTarget, bitmap: Bitmap? = null) {
         val image = imageFlow.value ?: return
         viewModelScope.launch {
             _wallpaperStatus.value = WallpaperState.Loading
             runCatching {
-                setWallpaperUseCase.execute(SetWallpaperUseCase.Param(image.imgRes, target)).also {
+                setWallpaperUseCase.execute(SetWallpaperUseCase.Param(image.imgRes, target, bitmap)).also {
                     _wallpaperStatus.value = WallpaperState.Success
                     val targetStr = when (target) {
                         WallpaperTarget.HOME -> "home"
@@ -124,7 +125,7 @@ class PreviewViewModel @Inject constructor(
     }
 
 
-    fun shareImage(image: ImageEntity, bitmap: android.graphics.Bitmap? = null) {
+    fun shareImage(image: ImageEntity, bitmap: Bitmap? = null) {
         viewModelScope.launch {
             _shareImageUri.emit(ShareImageState.Loading)
             runCatching {

@@ -26,7 +26,8 @@ class PreviewRepositoryImpl @Inject constructor(
 
     override suspend fun setWallpaper(
         imgRes: String,
-        target: WallpaperTarget
+        target: WallpaperTarget,
+        preloadedBitmap: Bitmap?
     ): Unit = withContext(Dispatchers.IO) {
 
         val wallpaperManager = WallpaperManager.getInstance(context)
@@ -35,7 +36,7 @@ class PreviewRepositoryImpl @Inject constructor(
             throw IllegalStateException(context.getString(R.string.setting_wallpaper_is_restricted_on_this_device))
         }
 
-        val bitmap = try {
+        val bitmap = preloadedBitmap ?: try {
             context.assets.open(imgRes).use { BitmapFactory.decodeStream(it) }
         } catch (_: Exception) {
             null
@@ -61,7 +62,7 @@ class PreviewRepositoryImpl @Inject constructor(
         } catch (e: Exception) {
             throw Exception(context.getString(R.string.failed_to_set_wallpaper, e.message))
         } finally {
-            if (!bitmap.isRecycled) {
+            if (preloadedBitmap == null && !bitmap.isRecycled) {
                 bitmap.recycle()
             }
         }

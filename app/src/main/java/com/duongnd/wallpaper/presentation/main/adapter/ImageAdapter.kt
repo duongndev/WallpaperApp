@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.duongnd.wallpaper.R
 import com.duongnd.wallpaper.base.adapter.BaseAdapter
-import com.duongnd.wallpaper.domain.model.ImageEntity
 import com.duongnd.wallpaper.databinding.ItemImageBinding
+import com.duongnd.wallpaper.domain.model.ImageEntity
 
 class ImageAdapter : BaseAdapter<ImageEntity, ItemImageBinding>() {
 
@@ -23,8 +23,9 @@ class ImageAdapter : BaseAdapter<ImageEntity, ItemImageBinding>() {
     override fun binData(viewBinding: ItemImageBinding, item: ImageEntity, position: Int) {
 
         viewBinding.apply {
-            
-            Glide.with(root.context).load("file:///android_asset/${item.imgRes}").dontAnimate().into(ivWallpaper)
+
+            Glide.with(root.context).load("file:///android_asset/${item.imgRes}").dontAnimate()
+                .into(ivWallpaper)
 
 
             if (item.isFavorite) {

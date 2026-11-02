@@ -4,6 +4,7 @@ import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.util.Log
 import androidx.activity.viewModels
@@ -72,23 +73,24 @@ class PreviewActivity : BaseActivity<ActivityPreviewBinding>() {
                 return@setOnClickListener
             }
 
+            val bitmap = (ivPreview.drawable as? BitmapDrawable)?.bitmap
+
             SetWallpaperDialog(
                 context = this@PreviewActivity,
                 onHomeScreenClick = {
-                    viewModel.setWallpaper(WallpaperTarget.HOME)
+                    viewModel.setWallpaper(WallpaperTarget.HOME, bitmap)
                 },
                 onLockScreenClick = {
-                    viewModel.setWallpaper(WallpaperTarget.LOCK)
+                    viewModel.setWallpaper(WallpaperTarget.LOCK, bitmap)
                 },
                 onBothScreenClick = {
-                    viewModel.setWallpaper(WallpaperTarget.BOTH)
+                    viewModel.setWallpaper(WallpaperTarget.BOTH, bitmap)
                 }
             ).show()
         }
 
         btnDown.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                // Trên Android 10 trở lên, không cần quyền WRITE_EXTERNAL_STORAGE để tải ảnh vào public thư mục
                 viewModel.downloadImage()
             } else {
                 runWithPermissionChecker(

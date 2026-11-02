@@ -6,6 +6,7 @@ import android.appwidget.AppWidgetProvider
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.Log
 import android.widget.RemoteViews
@@ -56,7 +57,7 @@ class WallpaperAppWidget : AppWidgetProvider() {
                 for (appWidgetId in appWidgetIds) {
                     val views = RemoteViews(context.packageName, R.layout.wallpaper_app_widget)
 
-                    val bitmap = context.assets.open(photo.imgRes).use { BitmapFactory.decodeStream(it) }
+                    val bitmap = loadSampledBitmap(context, photo.imgRes, 512, 512)
                     views.setImageViewBitmap(R.id.ivWidget, bitmap)
 
                     val previewIntent = Intent(context, PreviewActivity::class.java).apply {
@@ -81,6 +82,48 @@ class WallpaperAppWidget : AppWidgetProvider() {
                 pendingResult.finish()
             }
         }
+    }
+
+    private fun loadSampledBitmap(context: Context, assetPath: String, reqWidth: Int, reqHeight: Int): Bitmap {
+        val options = BitmapFactory.Options().apply {
+            inJustDecodeBounds = true
+        }
+        context.assets.open(assetPath).use {
+            BitmapFactory.decodeStream(it, null, options)
+        }
+
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight)
+        options.inJustDecodeBounds = false
+
+        val decodedBitmap = context.assets.open(assetPath).use {
+            BitmapFactory.decodeStream(it, null, options)
+        } ?: return Bitmap.createBitmap(reqWidth, reqHeight, Bitmap.Config.ARGB_8888)
+
+        return if (decodedBitmap.width > reqWidth || decodedBitmap.height > reqHeight) {
+            val scaled = Bitmap.createScaledBitmap(decodedBitmap, reqWidth, reqHeight, true)
+            if (scaled != decodedBitmap) {
+                decodedBitmap.recycle()
+            }
+            scaled
+        } else {
+            decodedBitmap
+        }
+    }
+
+    private fun calculateInSampleSize(options: BitmapFactory.Options, reqWidth: Int, reqHeight: Int): Int {
+        val height = options.outHeight
+        val width = options.outWidth
+        var inSampleSize = 1
+
+        if (height > reqHeight || width > reqWidth) {
+            val halfHeight = height / 2
+            val halfWidth = width / 2
+
+            while ((halfHeight / inSampleSize) >= reqHeight && (halfWidth / inSampleSize) >= reqHeight) {
+                inSampleSize *= 2
+            }
+        }
+        return inSampleSize
     }
 
     companion object {
