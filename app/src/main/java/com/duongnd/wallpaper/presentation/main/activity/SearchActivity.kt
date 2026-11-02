@@ -10,6 +10,7 @@ import com.duongnd.wallpaper.base.activity.BaseActivity
 import com.duongnd.wallpaper.databinding.ActivitySearchBinding
 import com.duongnd.wallpaper.presentation.main.adapter.ImageAdapter
 import com.duongnd.wallpaper.presentation.main.viewmodel.ImageViewModel
+import com.duongnd.wallpaper.presentation.preview.activity.PreviewActivity
 import com.duongnd.wallpaper.utils.getQueryTextChangeStateFlow
 import com.duongnd.wallpaper.utils.gone
 import com.duongnd.wallpaper.utils.visible
@@ -43,6 +44,11 @@ class SearchActivity : BaseActivity<ActivitySearchBinding>() {
             imageAdapter.changeFav(it)
             viewModel.insertImageDb(it)
         }
+
+        imageAdapter.onClick = {
+            PreviewActivity.start(this@SearchActivity, it)
+        }
+
         setupSearchView()
 
         viewBinding.searchBar.searchView.isIconified = false
